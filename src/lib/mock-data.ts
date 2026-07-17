@@ -174,6 +174,51 @@ const professions: Profession[] = [
     category: "STEM",
     iconEmoji: "📊",
   },
+  {
+    id: "p12",
+    slug: "teacher-k12",
+    name: "Teacher (K-12)",
+    description:
+      "Shape young minds and inspire the next generation. K-12 teachers create engaging learning environments, develop curriculum, and help students discover their potential across subjects from reading and math to science and the arts.",
+    category: "Education",
+    iconEmoji: "🍎",
+  },
+  {
+    id: "p13",
+    slug: "dentist",
+    name: "Dentist",
+    description:
+      "Diagnose and treat oral health issues — from cavities and gum disease to complex dental surgeries. Dentists improve patients' health, confidence, and quality of life through preventive care, restorative procedures, and patient education.",
+    category: "Healthcare",
+    iconEmoji: "🦷",
+  },
+  {
+    id: "p14",
+    slug: "civil-engineer",
+    name: "Civil Engineer",
+    description:
+      "Design, build, and maintain the infrastructure that supports modern civilization — bridges, roads, dams, water systems, and buildings. Civil engineers shape the physical world we live in, combining creativity with technical precision to create safe, sustainable structures.",
+    category: "STEM",
+    iconEmoji: "🏗️",
+  },
+  {
+    id: "p15",
+    slug: "psychologist",
+    name: "Psychologist",
+    description:
+      "Study the human mind and behavior to help people understand themselves, cope with challenges, and improve their mental well-being. Psychologists work in clinical settings, schools, research, business, and sports — applying scientific methods to understand how people think, feel, and act.",
+    category: "Healthcare",
+    iconEmoji: "🧠",
+  },
+  {
+    id: "p16",
+    slug: "electrician",
+    name: "Electrician",
+    description:
+      "Install, maintain, and repair electrical systems that power our homes, businesses, and infrastructure. Electricians are skilled tradespeople who combine technical knowledge with hands-on expertise — one of the highest-demand and best-compensated skilled trades with clear apprenticeship-to-mastery pathways.",
+    category: "Trades/Transportation",
+    iconEmoji: "⚡",
+  },
 ];
 
 const gradeLevels: GradeLevel[] = [
@@ -1357,6 +1402,497 @@ const roadmapSteps: RoadmapStep[] = [
       { name: "Google Data Analytics Certificate", url: "https://www.coursera.org/professional-certificates/google-data-analytics", type: "program" },
     ],
   },
+
+  // ── Teacher (K-12) ──────────────────────────────────────────
+  {
+    id: "rs46",
+    professionId: "p12",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description:
+      "Great teachers start with a love of learning and helping others.",
+    subjects: ["Reading & Phonics", "Counting & Numbers", "Social-Emotional Learning", "Creative Play"],
+    extracurriculars: [
+      {
+        name: "Reading Is Fundamental (RIF)",
+        url: "https://www.rif.org/",
+        description: "The nation's largest children's literacy nonprofit — provides books and reading resources.",
+      },
+      {
+        name: "PBS Kids",
+        url: "https://pbskids.org/",
+        description: "Free educational games and videos that build early learning skills.",
+      },
+    ],
+    supplemental: [
+      { name: "Miss Nelson Is Missing by Harry Allard", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs47",
+    professionId: "p12",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Develop strong communication skills and a broad base of knowledge.",
+    subjects: ["English Language Arts", "Math", "Science", "Social Studies"],
+    extracurriculars: [
+      {
+        name: "National Elementary Honor Society",
+        url: "https://www.nehs.org/",
+        description: "Recognition program for elementary students demonstrating academic excellence and leadership.",
+      },
+      {
+        name: "4-H Youth Development",
+        url: "https://4-h.org/",
+        description: "Hands-on programs in STEM, leadership, and healthy living for youth nationwide.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy", url: "https://www.khanacademy.org/", type: "course" },
+    ],
+  },
+  {
+    id: "rs48",
+    professionId: "p12",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description:
+      "High school is where future teachers can explore their passion.",
+    subjects: ["AP English Language", "AP Psychology", "U.S. History", "Speech & Debate", "Child Development"],
+    extracurriculars: [
+      {
+        name: "Educators Rising",
+        url: "https://www.educatorsrising.org/",
+        description: "National organization for aspiring teachers — competitions, conferences, and classroom experience.",
+      },
+      {
+        name: "National Honor Society Tutoring",
+        url: "https://www.nhs.us/",
+        description: "Peer tutoring through National Honor Society — practice teaching while serving your school.",
+      },
+    ],
+    supplemental: [
+      { name: "Crash Course: Psychology", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6", type: "video" },
+    ],
+  },
+  {
+    id: "rs49",
+    professionId: "p12",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description:
+      "Pursue a Bachelor's in Education or subject-area major plus teaching credential.",
+    subjects: ["Educational Psychology", "Curriculum Design", "Classroom Management", "Teaching Practicum"],
+    extracurriculars: [
+      {
+        name: "Student NEA",
+        url: "https://www.nea.org/",
+        description: "National Education Association student program — networking, professional development, and advocacy.",
+      },
+      {
+        name: "Teach For America",
+        url: "https://www.teachforamerica.org/",
+        description: "Leadership program recruiting top graduates to teach in underserved communities for two years.",
+      },
+    ],
+    supplemental: [
+      { name: "Praxis Exam Prep (ETS)", url: "https://www.ets.org/praxis.html", type: "program" },
+    ],
+  },
+  {
+    id: "rs50",
+    professionId: "p12",
+    gradeLevelId: "g16",
+    gradeName: "Graduate",
+    gradeShortCode: "grad",
+    description:
+      "A Master's in Education (M.Ed.) deepens expertise and increases earning potential.",
+    subjects: ["Advanced Educational Theory", "Data-Driven Instruction", "Special Education Law", "Literacy Intervention"],
+    extracurriculars: [
+      {
+        name: "National Board Certification",
+        url: "https://www.nbpts.org/",
+        description: "Advanced teaching credential — the gold standard for teacher excellence and professional growth.",
+      },
+      {
+        name: "ASCD",
+        url: "https://www.ascd.org/",
+        description: "Professional learning community for educators — conferences, publications, and leadership resources.",
+      },
+    ],
+    supplemental: [],
+  },
+
+  // ── Teacher (K-12) — remaining grades ──────────────────────
+  {
+    id: "rs80", professionId: "p12", gradeLevelId: "g1", gradeName: "Pre-K", gradeShortCode: "prek",
+    description: "The earliest teaching instincts emerge in imaginative play. Encourage 'playing school,' reading aloud to stuffed animals, and helping younger siblings learn new things. Great teachers start as caring, curious children who love sharing what they know.",
+    subjects: ["Early Literacy", "Counting & Sorting", "Imaginative Play", "Social-Emotional Skills"],
+    extracurriculars: [
+      { name: "Storytime at Local Library", url: "https://www.ala.org/", description: "Weekly library storytimes build early literacy skills and a love of books — the foundation of teaching." },
+      { name: "Sesame Street / PBS Kids", url: "https://pbskids.org/", description: "Educational content that models positive teaching, curiosity, and social skills for young children." },
+    ],
+    supplemental: [
+      { name: "The Day the Crayons Quit by Drew Daywalt", url: "", type: "book" },
+      { name: "Chicka Chicka Boom Boom by Bill Martin Jr.", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs81", professionId: "p12", gradeLevelId: "g3", gradeName: "1st Grade", gradeShortCode: "1",
+    description: "Build foundational reading and math skills — the core subjects future teachers will one day teach. Practice explaining ideas to friends and family. The best teachers remember what it felt like to learn something for the first time.",
+    subjects: ["Reading (Phonics & Sight Words)", "Math (Addition & Subtraction)", "Science Exploration", "Handwriting & Writing"],
+    extracurriculars: [
+      { name: "Reading Partners", url: "https://readingpartners.org/", description: "Literacy tutoring program where students build reading skills with community volunteers." },
+      { name: "Junior Achievement", url: "https://www.juniorachievement.org/", description: "Programs teaching work readiness, financial literacy, and community engagement from an early age." },
+    ],
+    supplemental: [
+      { name: "Epic! Digital Library for Kids", url: "https://www.getepic.com/", type: "program" },
+      { name: "Starfall Education", url: "https://www.starfall.com/", type: "program" },
+    ],
+  },
+  {
+    id: "rs82", professionId: "p12", gradeLevelId: "g4", gradeName: "2nd Grade", gradeShortCode: "2",
+    description: "Reading comprehension blossoms — a critical skill for future educators. Start keeping a reading journal and practice explaining concepts to classmates. Notice how different teachers explain things and what makes some explanations clearer than others.",
+    subjects: ["Reading Comprehension", "Math (Place Value & Measurement)", "Science (Hands-On Inquiry)", "Cursive & Writing"],
+    extracurriculars: [
+      { name: "Odyssey of the Mind", url: "https://www.odysseyofthemind.com/", description: "Creative problem-solving competition that develops collaboration, critical thinking, and presentation skills." },
+      { name: "Local Children's Theatre", url: "", description: "Drama programs develop confidence, public speaking, and storytelling ability — all essential teaching skills." },
+    ],
+    supplemental: [
+      { name: "BrainPOP Jr.", url: "https://jr.brainpop.com/", type: "program" },
+      { name: "ABCmouse", url: "https://www.abcmouse.com/", type: "program" },
+    ],
+  },
+  {
+    id: "rs83", professionId: "p12", gradeLevelId: "g5", gradeName: "3rd Grade", gradeShortCode: "3",
+    description: "The year students transition from 'learning to read' to 'reading to learn.' Practice peer tutoring — helping classmates understand concepts. These early teaching moments reveal whether education might be your calling.",
+    subjects: ["Reading (Chapter Books & Nonfiction)", "Math (Multiplication & Division)", "Science (Simple Experiments)", "Social Studies"],
+    extracurriculars: [
+      { name: "Scripps National Spelling Bee", url: "https://spellingbee.com/", description: "Build vocabulary and public speaking through spelling competitions." },
+      { name: "After-School Homework Helper", url: "", description: "Volunteer or informally help younger students with homework — early teaching practice." },
+    ],
+    supplemental: [
+      { name: "Prodigy Math Game", url: "https://www.prodigygame.com/", type: "program" },
+      { name: "National Geographic Kids", url: "https://kids.nationalgeographic.com/", type: "article" },
+    ],
+  },
+  {
+    id: "rs84", professionId: "p12", gradeLevelId: "g6", gradeName: "4th Grade", gradeShortCode: "4",
+    description: "Develop research and presentation skills — the backbone of teaching. Create mini-lessons on topics you're passionate about and present them to family or classmates. Notice how the best teachers make complex ideas simple and engaging.",
+    subjects: ["English Language Arts", "Math (Fractions & Geometry)", "Science (Scientific Method)", "State History"],
+    extracurriculars: [
+      { name: "Destination Imagination", url: "https://www.destinationimagination.org/", description: "Team-based creative challenges in STEM, arts, and service learning — develops facilitation skills." },
+      { name: "Student Council", url: "", description: "Early leadership experience — organize school events, represent classmates, and practice public speaking." },
+    ],
+    supplemental: [
+      { name: "Mystery Science", url: "https://mysteryscience.com/", type: "course" },
+      { name: "Wonderopolis", url: "https://wonderopolis.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs85", professionId: "p12", gradeLevelId: "g8", gradeName: "6th Grade", gradeShortCode: "6",
+    description: "Middle school brings new academic depth and social complexity — great teachers understand both. Join peer mentoring programs to practice guiding others. Pay attention to how teachers manage classrooms and support students through challenges.",
+    subjects: ["English (Literary Analysis)", "Pre-Algebra", "Earth & Life Science", "Ancient Civilizations"],
+    extracurriculars: [
+      { name: "Middle School Peer Tutoring", url: "", description: "Volunteer to tutor younger or struggling students — authentic early teaching experience that builds patience and communication." },
+      { name: "National Junior Honor Society", url: "https://www.njhs.us/", description: "Recognition for scholarship, service, leadership, character, and citizenship in middle school." },
+    ],
+    supplemental: [
+      { name: "Crash Course: World History", url: "https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9", type: "video" },
+      { name: "The First Days of School — Harry Wong", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs86", professionId: "p12", gradeLevelId: "g9", gradeName: "7th Grade", gradeShortCode: "7",
+    description: "Deepen subject-matter knowledge across all core areas. Volunteer as a classroom helper, library aide, or after-school program assistant. Broad knowledge and genuine enthusiasm for helping others learn are the foundation of great teaching.",
+    subjects: ["English (Essay Writing)", "Pre-Algebra / Algebra Readiness", "Life Science", "World Geography"],
+    extracurriculars: [
+      { name: "Library Volunteer Program", url: "", description: "Help at the school or public library — organizing, reading to children, and assisting patrons." },
+      { name: "Youth Mentoring Programs (Big Brothers Big Sisters)", url: "https://www.bbbs.org/", description: "Formal mentoring relationships develop the patience, empathy, and communication skills essential to teaching." },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Grammar", url: "https://www.khanacademy.org/humanities/grammar", type: "course" },
+      { name: "TED-Ed", url: "https://ed.ted.com/", type: "video" },
+    ],
+  },
+  {
+    id: "rs87", professionId: "p12", gradeLevelId: "g10", gradeName: "8th Grade", gradeShortCode: "8",
+    description: "Begin thinking about which age group and subject you might want to teach. Observe your own teachers analytically — what makes some lessons engaging? Which classroom management techniques work best? Start keeping a teaching ideas journal.",
+    subjects: ["English (Persuasive Writing)", "Algebra I", "Physical Science", "U.S. History"],
+    extracurriculars: [
+      { name: "Camp Counselor / Junior Counselor", url: "", description: "Summer camp leadership — planning activities, managing groups, and mentoring younger campers develops core teaching competencies." },
+      { name: "Debate Team / Speech Club", url: "", description: "Develop argumentation, research, and public speaking skills directly transferable to classroom teaching." },
+    ],
+    supplemental: [
+      { name: "Teach Like a Champion 3.0 — Doug Lemov", url: "", type: "book" },
+      { name: "Cult of Pedagogy Blog & Podcast", url: "https://www.cultofpedagogy.com/", type: "article" },
+    ],
+  },
+  {
+    id: "rs88", professionId: "p12", gradeLevelId: "g11", gradeName: "9th Grade", gradeShortCode: "9",
+    description: "High school offers first formal explorations of teaching. Take Child Development, Psychology, or Teaching electives if offered. Start volunteering as a tutor or classroom aide at a local elementary school. Future teachers need strong academic records for competitive teacher preparation programs.",
+    subjects: ["English I", "Algebra I / Geometry", "Biology", "Child Development / Psychology (elective)", "World Language"],
+    extracurriculars: [
+      { name: "Educators Rising", url: "https://www.educatorsrising.org/", description: "National career and technical student organization for aspiring educators — competitions, conferences, and classroom field experience." },
+      { name: "Peer Tutoring / Homework Help Club", url: "", description: "Regular tutoring develops teaching skills, patience, and the ability to explain concepts from multiple angles." },
+    ],
+    supplemental: [
+      { name: "Why Don't Students Like School? — Daniel Willingham", url: "", type: "book" },
+      { name: "Crash Course: Psychology", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6", type: "video" },
+    ],
+  },
+  {
+    id: "rs89", professionId: "p12", gradeLevelId: "g13", gradeName: "11th Grade", gradeShortCode: "11",
+    description: "Take AP courses in subjects you might want to teach — English, History, Psychology, or Sciences. Explore dual-enrollment at local colleges for early education coursework. Build a strong academic record for competitive teacher preparation programs.",
+    subjects: ["AP English Literature / Language", "AP U.S. History / Government", "Algebra II / Pre-Calculus", "AP Psychology", "Teaching / Tutoring Internship"],
+    extracurriculars: [
+      { name: "Boys & Girls Club Youth Development Professional", url: "https://www.bgca.org/", description: "Mentor and tutor younger children in after-school programs — hands-on teaching experience in a structured setting." },
+      { name: "Future Teachers of America / Teaching Academy", url: "", description: "School-based club for students exploring education careers — classroom observations, guest speakers, and mini-teaching opportunities." },
+    ],
+    supplemental: [
+      { name: "Edutopia — Teaching Strategies", url: "https://www.edutopia.org/", type: "article" },
+      { name: "The Courage to Teach — Parker Palmer", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs90", professionId: "p12", gradeLevelId: "g14", gradeName: "12th Grade", gradeShortCode: "12",
+    description: "Apply to colleges with strong teacher preparation programs. Look for programs offering a Bachelor's + Credential in 4 years. Some states offer 'Grow Your Own' teacher pipeline programs. Take the SAT/ACT and prepare strong application essays about why you want to teach.",
+    subjects: ["AP English Literature", "AP Government / Civics", "Statistics", "Education Internship / Cadet Teaching", "Foreign Language"],
+    extracurriculars: [
+      { name: "America Reads / America Counts", url: "https://americorps.gov/", description: "Federal work-study tutoring program in many school districts — paid experience working with K-6 students on literacy and math." },
+      { name: "Senior Capstone: Design & Teach a Lesson", url: "", description: "Design and teach a full lesson in a community or school setting — document the experience for college applications and scholarship essays." },
+    ],
+    supplemental: [
+      { name: "Teach.org — Pathways to Teaching", url: "https://www.teach.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs91", professionId: "p12", gradeLevelId: "g17", gradeName: "PhD / Doctoral", gradeShortCode: "phd",
+    description: "A Ph.D. in Education (Curriculum & Instruction, Education Policy, or subject-specific education) opens doors to university teaching, district leadership, and education research. Ed.D. programs focus on practitioner scholarship — applying research to solve real school problems as a superintendent, principal, or curriculum director.",
+    subjects: ["Advanced Research Methods", "Education Policy Analysis", "Curriculum Theory & Design", "Dissertation Research", "Higher Education Teaching"],
+    extracurriculars: [
+      { name: "AERA (American Educational Research Association)", url: "https://www.aera.net/", description: "The premier scholarly organization for education researchers — annual conference, journals, and professional networking." },
+      { name: "University Teaching Fellowship", url: "", description: "Teach undergraduate education courses while completing doctoral work — builds college-level teaching experience." },
+    ],
+    supplemental: [
+      { name: "National Center for Education Statistics (NCES)", url: "https://nces.ed.gov/", type: "article" },
+    ],
+  },
+  // ── Dentist ─────────────────────────────────────────────────
+  {
+    id: "rs63", professionId: "p13", gradeLevelId: "g1", gradeName: "Pre-K", gradeShortCode: "prek",
+    description: "Healthy smiles start early! Teach your child about brushing teeth, visiting the dentist, and why we take care of our mouths. Make dental care fun with songs, stories, and colorful toothbrushes. Positive early experiences at the dentist build a lifetime of oral health habits.",
+    subjects: ["Health & Hygiene", "Counting (Teeth!)", "Colors & Shapes", "Following Instructions"],
+    extracurriculars: [
+      { name: "American Dental Association — Kids' Corner", url: "https://www.mouthhealthy.org/", description: "Free games, videos, and activities teaching children about oral health in a fun, engaging way." },
+      { name: "Local Dentist Office Tour", url: "", description: "Many pediatric dentists offer 'happy visits' — fun, no-treatment tours of the office to build comfort and familiarity." },
+    ],
+    supplemental: [
+      { name: "The Berenstain Bears Visit the Dentist", url: "", type: "book" },
+      { name: "Brush Your Teeth Please (pop-up book)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs64", professionId: "p13", gradeLevelId: "g2", gradeName: "Kindergarten", gradeShortCode: "k",
+    description: "Build fine motor skills and scientific curiosity — both essential for future dentists. Drawing, cutting, and crafting develop the manual dexterity needed in dentistry. Explore how the body works with age-appropriate science activities.",
+    subjects: ["Fine Motor Skills (Drawing & Crafts)", "Counting & Sorting", "Basic Anatomy", "Reading"],
+    extracurriculars: [
+      { name: "Colgate Bright Smiles, Bright Futures", url: "https://www.colgate.com/en-us/oral-health-education", description: "Free dental health education program for schools with activities, videos, and take-home materials." },
+      { name: "Children's Museum Health Exhibits", url: "https://www.childrensmuseums.org/", description: "Interactive health and body exhibits at children's museums — many have dentist-office role-play areas." },
+    ],
+    supplemental: [
+      { name: "Just Going to the Dentist by Mercer Mayer", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs65", professionId: "p13", gradeLevelId: "g3", gradeName: "1st Grade", gradeShortCode: "1",
+    description: "Develop strong personal health habits and scientific curiosity. Learn about teeth — how many we have, what they're called, and why baby teeth fall out. Practice explaining health concepts to friends and family to build early communication skills.",
+    subjects: ["Reading & Writing", "Math (Addition & Subtraction)", "Health Science", "Art (Model Building)"],
+    extracurriculars: [
+      { name: "4-H Healthy Living Programs", url: "https://4-h.org/programs/healthy-living/", description: "Youth programs teaching health, nutrition, and wellness with hands-on activities." },
+      { name: "Dental Health Month Activities (February)", url: "https://www.ada.org/", description: "National Children's Dental Health Month — schools and libraries host special dental health programs each February." },
+    ],
+    supplemental: [
+      { name: "Throw Your Tooth on the Roof — Selby Beeler", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs66", professionId: "p13", gradeLevelId: "g4", gradeName: "2nd Grade", gradeShortCode: "2",
+    description: "Strengthen fine motor control through art, handwriting, and building projects. Start learning basic biology concepts — cells, tissues, and how living things grow. Future dentists need steady hands and a fascination with how living organisms work.",
+    subjects: ["Reading Comprehension", "Math (Measurement)", "Life Science (Basic Biology)", "Art & Craftsmanship"],
+    extracurriculars: [
+      { name: "LEGO / Model Building Clubs", url: "", description: "Building detailed models develops the precision and fine motor skills essential in dentistry." },
+      { name: "Origami & Paper Craft", url: "", description: "Paper folding builds extraordinary hand precision, patience, and attention to detail." },
+    ],
+    supplemental: [
+      { name: "The Skeleton Inside You — Philip Balestrino", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs67", professionId: "p13", gradeLevelId: "g5", gradeName: "3rd Grade", gradeShortCode: "3",
+    description: "Explore the human body in more depth — the skeletal system, how bones grow, and what teeth are made of. Practice precision work: drawing detailed pictures, building intricate models, and doing careful measurements in science experiments.",
+    subjects: ["Reading (Nonfiction)", "Math (Multiplication & Division)", "Science (Human Body Systems)", "Art (Detailed Drawing)"],
+    extracurriculars: [
+      { name: "Science Fair — Human Body Projects", url: "", description: "Enter a school science fair with a project about teeth, bones, or oral health — great early research experience." },
+      { name: "Jewelry Making / Beading", url: "", description: "Small-scale detailed craft work builds the precision manual dexterity that dentistry demands." },
+    ],
+    supplemental: [
+      { name: "KidsHealth.org — Your Teeth", url: "https://kidshealth.org/en/kids/teeth.html", type: "article" },
+    ],
+  },
+  {
+    id: "rs68", professionId: "p13", gradeLevelId: "g6", gradeName: "4th Grade", gradeShortCode: "4",
+    description: "Deepen understanding of biology and chemistry foundations. Excellent dentists combine scientific knowledge with artistic skill. Continue developing hand skills through art, music (instruments), or detailed craftwork. Start a science journal.",
+    subjects: ["English Language Arts", "Math (Fractions & Geometry)", "Life Science", "Art / Music (Manual Dexterity)"],
+    extracurriculars: [
+      { name: "Learn a Musical Instrument", url: "", description: "Playing piano, violin, or guitar develops extraordinary finger dexterity — directly applicable to dental procedures." },
+      { name: "Junior First Aid / CPR Course", url: "https://www.redcross.org/", description: "Basic first aid courses for kids build comfort with healthcare concepts and helping others." },
+    ],
+    supplemental: [
+      { name: "The Way We Work — David Macaulay", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs69", professionId: "p13", gradeLevelId: "g7", gradeName: "5th Grade", gradeShortCode: "5",
+    description: "Science and math foundations become critical. Focus on biology and chemistry readiness. Join a health or science club. Continue developing fine motor precision — consider hobbies like model-building, detailed drawing, or playing a musical instrument.",
+    subjects: ["Math (Pre-Algebra)", "General Science (Biology & Chemistry Intro)", "Health Education", "Art / Music"],
+    extracurriculars: [
+      { name: "FIRST LEGO League", url: "https://www.firstlegoleague.org/", description: "Building and programming LEGO robots develops precision, problem-solving, and teamwork — all relevant to dentistry." },
+      { name: "American Red Cross Babysitting Course", url: "https://www.redcross.org/take-a-class/babysitting", description: "Learn basic first aid, safety, and how to care for others — early healthcare experience for ages 11+." },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Human Body Systems", url: "https://www.khanacademy.org/science/health-and-medicine", type: "course" },
+    ],
+  },
+  {
+    id: "rs70", professionId: "p13", gradeLevelId: "g8", gradeName: "6th Grade", gradeShortCode: "6",
+    description: "Middle school science deepens — pay special attention to biology and chemistry units. Shadow a dentist if possible (many family dentists welcome interested students). Start thinking about the blend of science, art, and people skills that makes dentistry unique.",
+    subjects: ["English (Technical Reading)", "Pre-Algebra", "Life Science", "Art / Design"],
+    extracurriculars: [
+      { name: "Dental Office Shadowing (Intro)", url: "", description: "Ask your family dentist if you can observe for a few hours — most are happy to mentor interested students." },
+      { name: "Science Club / STEM Club", url: "", description: "Join or start a science club to explore biology, chemistry, and health science topics beyond the classroom." },
+    ],
+    supplemental: [
+      { name: "American Dental Association — Becoming a Dentist", url: "https://www.ada.org/en/education-careers", type: "article" },
+    ],
+  },
+  {
+    id: "rs71", professionId: "p13", gradeLevelId: "g9", gradeName: "7th Grade", gradeShortCode: "7",
+    description: "Biology becomes more detailed — focus on anatomy, cells, and body systems. Dentists need a strong grasp of human biology. Continue developing manual dexterity through art, music, or craft hobbies. Good grades in science and math are essential for pre-dental college admission.",
+    subjects: ["English (Scientific Writing)", "Pre-Algebra / Algebra", "Life Science (Anatomy Focus)", "Art / Music (Hand Skills)"],
+    extracurriculars: [
+      { name: "HOSA — Future Health Professionals (Middle School)", url: "https://hosa.org/", description: "Start a HOSA chapter or participate in health science competitions — dental terminology and skills events." },
+      { name: "Community Health Fairs (Volunteer)", url: "", description: "Volunteer at health fairs and community wellness events — exposure to healthcare professions and patient interaction." },
+    ],
+    supplemental: [
+      { name: "Crash Course: Anatomy & Physiology", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOAKed_MxxWBNaPno5h3Zs8", type: "video" },
+    ],
+  },
+  {
+    id: "rs72", professionId: "p13", gradeLevelId: "g10", gradeName: "8th Grade", gradeShortCode: "8",
+    description: "Take the most advanced science and math available. Strong algebra skills are essential — dental school requires excellent quantitative reasoning. Continue shadowing opportunities and consider volunteering at a dental clinic or health fair.",
+    subjects: ["English (Communication Skills)", "Algebra I", "Physical Science / Intro Chemistry", "Health / Biology Elective"],
+    extracurriculars: [
+      { name: "Dental Assistant Exploration", url: "", description: "Some dental offices let mature middle school students observe procedures — call local offices to inquire about observation opportunities." },
+      { name: "Model UN / Debate", url: "", description: "Builds communication and people skills — dentists spend all day talking with patients and explaining procedures clearly." },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Chemistry", url: "https://www.khanacademy.org/science/chemistry", type: "course" },
+    ],
+  },
+  {
+    id: "rs73", professionId: "p13", gradeLevelId: "g11", gradeName: "9th Grade", gradeShortCode: "9",
+    description: "High school academics directly impact dental school admission. Take Honors Biology and start building a strong science GPA. Dentistry requires both academic excellence and manual artistry — continue developing both. Research pre-dental college programs.",
+    subjects: ["Honors Biology", "Algebra I/II", "English (Communication)", "Art / Sculpture (3D Visualization)", "Foreign Language"],
+    extracurriculars: [
+      { name: "HOSA — Future Health Professionals", url: "https://hosa.org/", description: "Join the dental science competitive events — dental terminology, dental spelling, and clinical skills competitions." },
+      { name: "Volunteer at Dental Clinics / Health Fairs", url: "", description: "Seek volunteer opportunities at community dental clinics, Mission of Mercy events, or free dental care days." },
+    ],
+    supplemental: [
+      { name: "ADEA — Explore Careers in Dentistry", url: "https://www.adea.org/GoDental/", type: "article" },
+      { name: "Khan Academy: Biology", url: "https://www.khanacademy.org/science/biology", type: "course" },
+    ],
+  },
+  {
+    id: "rs74", professionId: "p13", gradeLevelId: "g12", gradeName: "10th Grade", gradeShortCode: "10",
+    description: "Take AP Biology or AP Chemistry — strong AP scores demonstrate science readiness to colleges. Start preparing for college pre-dental programs. Continue shadowing dentists and consider a summer dental camp or health careers program.",
+    subjects: ["AP Biology / Honors Chemistry", "Geometry / Algebra II", "English (Technical Writing)", "Art / Ceramics (Manual Dexterity)", "Psychology (Patient Communication)"],
+    extracurriculars: [
+      { name: "Summer Dental Camp / Health Careers Program", url: "", description: "Many dental schools offer summer programs for high school students — hands-on exposure to dental procedures and technology." },
+      { name: "Dental Office Volunteer / Sterilization Tech", url: "", description: "Some dental offices hire or volunteer high school students to help with sterilization and office tasks — invaluable real-world exposure." },
+    ],
+    supplemental: [
+      { name: "American Student Dental Association — Pre-Dental Resources", url: "https://www.asdanet.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs75", professionId: "p13", gradeLevelId: "g13", gradeName: "11th Grade", gradeShortCode: "11",
+    description: "The most critical year for college preparation. Take AP Biology and AP Chemistry. Start researching pre-dental programs at universities. Begin preparing for the SAT/ACT. Shadow general dentists AND specialists (orthodontist, oral surgeon) to understand the breadth of the field.",
+    subjects: ["AP Biology", "AP Chemistry", "Pre-Calculus / Trigonometry", "English (Writing Skills)", "AP Psychology"],
+    extracurriculars: [
+      { name: "Dental Shadowing — General & Specialty Practices", url: "", description: "Shadow at least 3 different dentists — general, orthodontics, oral surgery — to understand different career paths." },
+      { name: "Pre-Dental Summer Programs (University-Based)", url: "https://www.adea.org/GoDental/", description: "Apply to university summer programs like UConn's 'A Taste of Dental Medicine' or similar pre-dental immersion experiences." },
+    ],
+    supplemental: [
+      { name: "DAT (Dental Admission Test) — Preview Resources", url: "https://www.ada.org/en/education-careers/dental-admission-test", type: "article" },
+    ],
+  },
+  {
+    id: "rs76", professionId: "p13", gradeLevelId: "g14", gradeName: "12th Grade", gradeShortCode: "12",
+    description: "Apply to universities with strong pre-dental advising programs. Some offer combined BS/DDS programs (7-8 years total). Keep shadowing dentists and volunteering. Take AP exams — high scores can earn college science credit and strengthen dental school applications years later.",
+    subjects: ["AP Biology", "AP Chemistry", "AP Calculus AB", "Anatomy & Physiology", "English (College Essays)"],
+    extracurriculars: [
+      { name: "Mission of Mercy Dental Volunteer", url: "https://www.americasdentists.org/", description: "Volunteer at large-scale free dental clinics — hundreds of patients treated in a weekend, eye-opening healthcare experience." },
+      { name: "Apply to BS/DDS Combined Programs", url: "", description: "Research and apply to accelerated dental programs that combine undergraduate and dental school into 7-8 years." },
+    ],
+    supplemental: [
+      { name: "Kaplan DAT Prep (Preview)", url: "https://www.kaptest.com/dat", type: "program" },
+    ],
+  },
+  {
+    id: "rs77", professionId: "p13", gradeLevelId: "g15", gradeName: "Undergraduate", gradeShortCode: "ugrad",
+    description: "Major in biology, chemistry, or biochemistry on a pre-dental track. Complete dental school prerequisites (biology, general chemistry, organic chemistry, physics, biochemistry). Maintain 3.5+ GPA. Shadow dentists across specialties (100+ hours recommended). Take the DAT (Dental Admission Test) — typically junior year.",
+    subjects: ["Biology / Chemistry Major", "Organic Chemistry", "Physics with Lab", "Biochemistry", "Anatomy & Physiology"],
+    extracurriculars: [
+      { name: "Pre-Dental Society / ASDA Chapter", url: "https://www.asdanet.org/", description: "Join your university's pre-dental club — networking, DAT prep groups, dental school visits, and mentorship from dental students." },
+      { name: "Dental Research Assistant", url: "", description: "Work in a dental materials or oral biology research lab — research experience strengthens dental school applications significantly." },
+      { name: "Community Dental Clinic Volunteer", url: "", description: "Regular volunteering at free or low-cost dental clinics demonstrates commitment to serving underserved populations." },
+    ],
+    supplemental: [
+      { name: "DAT Prep — DAT Bootcamp / DAT Destroyer", url: "https://datbootcamp.com/", type: "program" },
+      { name: "ADEA AADSAS — Dental School Application", url: "https://www.adea.org/AADSAS/", type: "program" },
+    ],
+  },
+  {
+    id: "rs78", professionId: "p13", gradeLevelId: "g16", gradeName: "Graduate", gradeShortCode: "grad",
+    description: "Dental school (DDS or DMD): 4 years. Years 1-2: classroom and lab — anatomy, pathology, pharmacology, dental materials, and pre-clinical skills. Years 3-4: clinical rotations treating real patients under supervision. Pass National Board Dental Exams (NBDE) Parts I & II. Take regional clinical licensing exams.",
+    subjects: ["Dental Anatomy & Occlusion", "Oral Pathology", "Restorative Dentistry", "Periodontology", "Clinical Rotations (All Specialties)"],
+    extracurriculars: [
+      { name: "ASDA (American Student Dental Association)", url: "https://www.asdanet.org/", description: "National organization for dental students — advocacy, networking, and professional development." },
+      { name: "Community Dental Outreach / Mission Trips", url: "", description: "Participate in organized dental mission trips providing care in underserved communities domestically and internationally." },
+    ],
+    supplemental: [
+      { name: "NBDE Study Materials — Board Vitals / Dental Boards Mastery", url: "", type: "program" },
+      { name: "ADA — Licensure & Continuing Education", url: "https://www.ada.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs79", professionId: "p13", gradeLevelId: "g17", gradeName: "PhD / Doctoral", gradeShortCode: "phd",
+    description: "Post-doctoral options: 1-year General Practice Residency (GPR) or Advanced Education in General Dentistry (AEGD). Specialization requires 2-6 year residencies: Orthodontics, Oral Surgery (MD/DDS), Endodontics, Periodontics, Pediatric Dentistry, Prosthodontics. Ph.D. in Oral Biology or Dental Sciences for academic/research careers.",
+    subjects: ["Chosen Specialty: Advanced Clinical Training", "Board Certification Preparation", "Research Methods (for Ph.D. track)", "Practice Management", "Teaching & Supervision"],
+    extracurriculars: [
+      { name: "American Dental Association — New Dentist Committee", url: "https://www.ada.org/", description: "Leadership development and networking for dentists in their first 10 years of practice." },
+      { name: "Specialty Board Certification", url: "", description: "Pursue board certification in your chosen specialty — the highest credential recognizing expertise and commitment to excellence." },
+    ],
+    supplemental: [
+      { name: "Journal of the American Dental Association (JADA)", url: "https://jada.ada.org/", type: "article" },
+    ],
+  },
 ];
 
 const professionals: Professional[] = [
@@ -1470,6 +2006,26 @@ const professionals: Professional[] = [
     pathBackground: "B.A. in Mathematics from UC San Diego. Ph.D. in Applied Mathematics from the University of Maryland. Worked as a research scientist at the Department of Defense and Institute for Defense Analyses. Joined eBay as Chief Scientist of Security and Fraud. Head of Data Products and Chief Scientist at LinkedIn, where he built the 'People You May Know' feature. Served as U.S. Chief Data Scientist in the Obama White House, establishing data-driven governance practices. Currently a senior fellow at Harvard and venture capitalist.",
     photoUrl: "",
   },
+  {
+    id: "pro12",
+    name: "Marva Collins",
+    title: "Educator & Founder of Westside Preparatory School",
+    professionId: "p12",
+    professionName: "Teacher (K-12)",
+    bio: "Renowned educator who proved low-income children labeled 'learning disabled' could excel with high expectations. Received National Humanities Medal in 2004.",
+    pathBackground: "Began her teaching career in the Chicago Public Schools in the 1960s. Frustrated by low expectations for inner-city children, she founded Westside Preparatory School in her own home in 1975 with just $5,000. Her approach combined classical education — phonics, literature, math — with unwavering belief in every child's potential. Students who had been written off as 'unteachable' went on to succeed in college and become professionals. Her story was told in the 1981 TV movie 'The Marva Collins Story' starring Cicely Tyson. Awarded the National Humanities Medal by President George W. Bush in 2004.",
+    photoUrl: "",
+  },
+  {
+    id: "pro13",
+    name: "Dr. David Satcher",
+    title: "Dentist, Public Health Leader & 16th U.S. Surgeon General",
+    professionId: "p13",
+    professionName: "Dentist",
+    bio: "The first Surgeon General to also hold a dental degree (D.D.S. and M.D.). A pioneer in oral health equity who brought national attention to the connection between oral health and overall health. As Surgeon General, he released the landmark 2000 report 'Oral Health in America.'",
+    pathBackground: "Born in poverty in rural Alabama, Satcher was one of only three African American students admitted to Morehouse College in 1959. Earned his D.D.S. from Meharry Medical College and later his M.D. from Case Western Reserve University. Served as Director of the CDC and Assistant Secretary for Health before being appointed U.S. Surgeon General (1998-2002). His career demonstrates the profound intersection of dentistry, medicine, and public health policy.",
+    photoUrl: "",
+  },
 ];
 
 const schools: School[] = [
@@ -1543,6 +2099,26 @@ const schools: School[] = [
     description: "World-class research university and a pioneer in computer science and data science. CMU's School of Computer Science offers a dedicated undergraduate major in Statistics & Machine Learning, and its Heinz College was one of the first to launch a data science-focused degree. Home to groundbreaking AI and machine learning research.",
     rankingInfo: "#1 Computer Science, #2 Data Science / Analytics (U.S. News)", websiteUrl: "https://www.cmu.edu/",
   },
+  {
+    id: "s15", name: "University of Wisconsin–Madison", state: "WI", type: "public",
+    description: "Home to the #1 ranked School of Education in the nation (U.S. News). A top public research university with outstanding programs in education, teacher preparation, and educational psychology. Deep partnerships with K-12 schools across Wisconsin.",
+    rankingInfo: "#1 School of Education (U.S. News)", websiteUrl: "https://www.wisc.edu/",
+  },
+  {
+    id: "s16", name: "Teachers College, Columbia University", state: "NY", type: "private",
+    description: "The nation's #1 graduate school of education and the oldest and largest graduate school of education in the United States. Affiliated with Columbia University, it produces leaders in education policy, research, and teaching across every discipline.",
+    rankingInfo: "#1 Graduate School of Education (U.S. News)", websiteUrl: "https://www.tc.columbia.edu/",
+  },
+  {
+    id: "s17", name: "University of Michigan School of Dentistry", state: "MI", type: "public",
+    description: "The nation's #1 ranked dental school. World-renowned for dental research, clinical training, and community outreach. Offers D.D.S., dental hygiene, and advanced specialty programs in a comprehensive academic health center.",
+    rankingInfo: "#1 Dental School (QS World Rankings)", websiteUrl: "https://dent.umich.edu/",
+  },
+  {
+    id: "s18", name: "Harvard School of Dental Medicine", state: "MA", type: "private",
+    description: "First university-based dental school in the U.S. Part of Harvard Medical School's ecosystem — unique D.M.D. program integrated with medical education. Strong research emphasis and specialty training in a world-class academic environment.",
+    rankingInfo: "#2 Dental School (QS World Rankings)", websiteUrl: "https://hsdm.harvard.edu/",
+  },
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -1583,6 +2159,12 @@ const professionSchools: ProfessionSchool[] = [
   // Data Scientist schools
   { professionId: "p11", schoolId: "s14", programName: "Statistics & Machine Learning (B.S.)" },
   { professionId: "p11", schoolId: "s1", programName: "Data Science / Computer Science (B.S.)" },
+  // Teacher (K-12) schools
+  { professionId: "p12", schoolId: "s15", programName: "Elementary / Secondary Education (B.S.Ed.)" },
+  { professionId: "p12", schoolId: "s16", programName: "Curriculum & Teaching (M.Ed. / M.A.)" },
+  // Dentist schools
+  { professionId: "p13", schoolId: "s17", programName: "Doctor of Dental Surgery (D.D.S.) / Pre-Dental B.S." },
+  { professionId: "p13", schoolId: "s18", programName: "Doctor of Dental Medicine (D.M.D.)" },
 ];
 
 // ── Data access functions (mock → swap for sql() later) ────────────────────
