@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import {
   getProfessionBySlug,
@@ -46,6 +46,10 @@ function ProfessionDetail() {
   }
 
   const { profession, roadmap, schools, spotlights } = data;
+  const { outlet } = Route.useMatch();
+  if (outlet) {
+    return <Outlet />;
+  }
 
   return (
     <main>
