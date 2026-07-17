@@ -13,6 +13,7 @@ import { Route as SpotlightsRouteImport } from './routes/spotlights'
 import { Route as SchoolsRouteImport } from './routes/schools'
 import { Route as ProfessionsRouteImport } from './routes/professions'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProfessionsIndexRouteImport } from './routes/professions.index'
 import { Route as ProfessionsSlugRouteImport } from './routes/professions/$slug'
 import { Route as ProfessionsSlugRoadmapRouteImport } from './routes/professions/$slug/roadmap'
 
@@ -36,6 +37,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProfessionsIndexRoute = ProfessionsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProfessionsRoute,
+} as any)
 const ProfessionsSlugRoute = ProfessionsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -53,14 +59,15 @@ export interface FileRoutesByFullPath {
   '/schools': typeof SchoolsRoute
   '/spotlights': typeof SpotlightsRoute
   '/professions/$slug': typeof ProfessionsSlugRouteWithChildren
+  '/professions/': typeof ProfessionsIndexRoute
   '/professions/$slug/roadmap': typeof ProfessionsSlugRoadmapRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/professions': typeof ProfessionsRouteWithChildren
   '/schools': typeof SchoolsRoute
   '/spotlights': typeof SpotlightsRoute
   '/professions/$slug': typeof ProfessionsSlugRouteWithChildren
+  '/professions': typeof ProfessionsIndexRoute
   '/professions/$slug/roadmap': typeof ProfessionsSlugRoadmapRoute
 }
 export interface FileRoutesById {
@@ -70,6 +77,7 @@ export interface FileRoutesById {
   '/schools': typeof SchoolsRoute
   '/spotlights': typeof SpotlightsRoute
   '/professions/$slug': typeof ProfessionsSlugRouteWithChildren
+  '/professions/': typeof ProfessionsIndexRoute
   '/professions/$slug/roadmap': typeof ProfessionsSlugRoadmapRoute
 }
 export interface FileRouteTypes {
@@ -80,14 +88,15 @@ export interface FileRouteTypes {
     | '/schools'
     | '/spotlights'
     | '/professions/$slug'
+    | '/professions/'
     | '/professions/$slug/roadmap'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/professions'
     | '/schools'
     | '/spotlights'
     | '/professions/$slug'
+    | '/professions'
     | '/professions/$slug/roadmap'
   id:
     | '__root__'
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/schools'
     | '/spotlights'
     | '/professions/$slug'
+    | '/professions/'
     | '/professions/$slug/roadmap'
   fileRoutesById: FileRoutesById
 }
@@ -136,6 +146,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/professions/': {
+      id: '/professions/'
+      path: '/'
+      fullPath: '/professions/'
+      preLoaderRoute: typeof ProfessionsIndexRouteImport
+      parentRoute: typeof ProfessionsRoute
+    }
     '/professions/$slug': {
       id: '/professions/$slug'
       path: '/$slug'
@@ -167,10 +184,12 @@ const ProfessionsSlugRouteWithChildren = ProfessionsSlugRoute._addFileChildren(
 
 interface ProfessionsRouteChildren {
   ProfessionsSlugRoute: typeof ProfessionsSlugRouteWithChildren
+  ProfessionsIndexRoute: typeof ProfessionsIndexRoute
 }
 
 const ProfessionsRouteChildren: ProfessionsRouteChildren = {
   ProfessionsSlugRoute: ProfessionsSlugRouteWithChildren,
+  ProfessionsIndexRoute: ProfessionsIndexRoute,
 }
 
 const ProfessionsRouteWithChildren = ProfessionsRoute._addFileChildren(
