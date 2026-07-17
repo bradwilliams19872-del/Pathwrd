@@ -93,8 +93,9 @@ function ProfessionsPage() {
         {filtered.map((p) => (
           <Link
             key={p.id}
-            to="/professions/$slug"
+            to="/professions/$slug/roadmap"
             params={{ slug: p.slug }}
+            search={{ grade: 'k' }}
             className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-indigo-300 hover:shadow-lg hover:-translate-y-0.5"
           >
             <div className="flex items-start justify-between">
