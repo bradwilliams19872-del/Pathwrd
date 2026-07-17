@@ -1893,6 +1893,1067 @@ const roadmapSteps: RoadmapStep[] = [
       { name: "Journal of the American Dental Association (JADA)", url: "https://jada.ada.org/", type: "article" },
     ],
   },
+
+  // ── Astronaut — expanded grades ──────────────────────────────
+  {
+    id: "rs92",
+    professionId: "p1",
+    gradeLevelId: "g1",
+    gradeName: "Pre-K",
+    gradeShortCode: "prek",
+    description:
+      "Spark wonder about the sky, moon, and stars! At this age, children are natural explorers — encourage questions about what's 'up there.' Simple activities like watching the moon, spotting airplanes, and looking at star pictures build the earliest foundations for a future astronaut.",
+    subjects: ["Early Science (Sky & Stars)", "Counting & Shapes", "Imaginative Play", "Drawing & Coloring"],
+    extracurriculars: [
+      {
+        name: "NASA Kids' Club",
+        url: "https://www.nasa.gov/learning-resources/nasa-kids-club/",
+        description: "Free online games and coloring pages introducing space themes to preschoolers.",
+      },
+      {
+        name: "Local Planetarium — Preschool Programs",
+        url: "https://www.astc.org/",
+        description: "Many planetariums offer 'Toddler Tuesdays' or preschool sessions with age-appropriate space exploration.",
+      },
+    ],
+    supplemental: [
+      { name: "Mousetronaut by Mark Kelly (Astronaut)", url: "", type: "book" },
+      { name: "PBS Kids — Ready Jet Go!", url: "https://pbskids.org/readyjetgo/", type: "video" },
+    ],
+  },
+  {
+    id: "rs93",
+    professionId: "p1",
+    gradeLevelId: "g3",
+    gradeName: "1st Grade",
+    gradeShortCode: "1",
+    description:
+      "Introduce the solar system! Learn planet names and order, the difference between stars and planets, and what astronauts do in space. Start a 'space journal' to draw and record observations of the night sky. Reading skills unlock space-themed books independently.",
+    subjects: ["Reading (Space & Science Books)", "Math (Counting & Patterns)", "Science (Solar System)", "Art (Drawing Planets & Rockets)"],
+    extracurriculars: [
+      {
+        name: "NASA Space Place",
+        url: "https://spaceplace.nasa.gov/",
+        description: "Free games, crafts, and activities about Earth, the solar system, and space technology for kids.",
+      },
+      {
+        name: "Local Science Museum Space Exhibits",
+        url: "https://www.astc.org/",
+        description: "Hands-on space exhibits at science museums — many have astronaut suits, moon rocks, and space capsules to explore.",
+      },
+    ],
+    supplemental: [
+      { name: "National Geographic Kids First Big Book of Space", url: "", type: "book" },
+      { name: "StoryBots: The Solar System (Netflix/YouTube)", url: "https://www.youtube.com/", type: "video" },
+    ],
+  },
+  {
+    id: "rs94",
+    professionId: "p1",
+    gradeLevelId: "g4",
+    gradeName: "2nd Grade",
+    gradeShortCode: "2",
+    description:
+      "Explore space travel history — the first Moon landing, the Space Shuttle, and the International Space Station. Build simple model rockets and experiment with what makes things fly. Aspiring astronauts need both curiosity and persistence — celebrate 'failure' as part of learning, just like real rocket scientists.",
+    subjects: ["Reading (Nonfiction Space Books)", "Math (Addition & Subtraction)", "Science (Gravity & Motion)", "Art & Building (Model Rockets)"],
+    extracurriculars: [
+      {
+        name: "Estes Model Rockets (Beginner Kits)",
+        url: "https://estesrockets.com/",
+        description: "Build and launch beginner-level model rockets with adult supervision — hands-on rocketry basics.",
+      },
+      {
+        name: "Star Gazing with Family",
+        url: "https://skyandtelescope.org/observing/sky-at-a-glance/",
+        description: "Use a simple star chart to identify constellations, planets, and the Moon's phases — no telescope needed.",
+      },
+    ],
+    supplemental: [
+      { name: "If You Decide to Go to the Moon by Faith McNulty", url: "", type: "book" },
+      { name: "NASA eClips: Our World (K-5)", url: "https://www.youtube.com/playlist?list=PLB6QuGvbuJQLeUvTPHkGom3hqTODZGRNe", type: "video" },
+    ],
+  },
+  {
+    id: "rs95",
+    professionId: "p1",
+    gradeLevelId: "g5",
+    gradeName: "3rd Grade",
+    gradeShortCode: "3",
+    description:
+      "Dive deeper into planetary science and the technology of spaceflight. Learn about rockets, satellites, and the International Space Station. Start a science fair project related to space — growing plants in different 'soils' (like Mars regolith simulant) or testing parachute designs for capsule landings.",
+    subjects: ["Reading (Chapter Books)", "Math (Multiplication & Division)", "Science (Astronomy & Forces)", "Writing (Research Reports)"],
+    extracurriculars: [
+      {
+        name: "NASA Lunar & Meteorite Sample Program",
+        url: "https://ares.jsc.nasa.gov/interaction/lunar-and-meteorite-sample-education-program/",
+        description: "Teachers can borrow real Moon rocks and meteorites for classroom learning — ask your school to participate.",
+      },
+      {
+        name: "Civil Air Patrol (Aerospace Education)",
+        url: "https://www.gocivilairpatrol.com/programs/aerospace-education",
+        description: "Free aerospace/STEM educational materials and programs through CAP's K-6 Aerospace Connections in Education (ACE) program.",
+      },
+    ],
+    supplemental: [
+      { name: "Who Was Neil Armstrong? by Roberta Edwards", url: "", type: "book" },
+      { name: "Mystery Science: Spaceship Earth", url: "https://mysteryscience.com/astronomy/astronomy-mysteries", type: "course" },
+    ],
+  },
+  {
+    id: "rs96",
+    professionId: "p1",
+    gradeLevelId: "g6",
+    gradeName: "4th Grade",
+    gradeShortCode: "4",
+    description:
+      "Explore the physics of flight — lift, thrust, drag, and weight. Build and test paper airplanes, straw rockets, and balloon-powered vehicles. Learn about famous astronauts and their diverse paths: scientists, pilots, engineers, and doctors all become astronauts. Math skills become critical — fractions and decimals for fuel and trajectory calculations.",
+    subjects: ["English Language Arts", "Math (Fractions & Decimals)", "Science (Forces & Motion)", "Social Studies (Space History)"],
+    extracurriculars: [
+      {
+        name: "4-H Aerospace Program",
+        url: "https://4-h.org/programs/stem/",
+        description: "Hands-on rocketry, drone, and aviation projects through 4-H STEM clubs nationwide.",
+      },
+      {
+        name: "Science Fair — Aerospace Topic",
+        url: "",
+        description: "Enter a school or regional science fair with a project on flight, rocketry, or astronomy.",
+      },
+    ],
+    supplemental: [
+      { name: "The Astronaut Instruction Manual by Mike Mongo", url: "", type: "book" },
+      { name: "Crash Course Kids: Engineering", url: "https://www.youtube.com/playlist?list=PLhz12vamHOnZ4ZDC0dS6C9HRN5Qrm0jHO", type: "video" },
+    ],
+  },
+  {
+    id: "rs97",
+    professionId: "p1",
+    gradeLevelId: "g8",
+    gradeName: "6th Grade",
+    gradeShortCode: "6",
+    description:
+      "Middle school is where STEM foundations solidify. Strengthen math skills — pre-algebra and basic geometry are critical for future physics courses. Explore Earth science, astronomy, and the conditions of space (vacuum, radiation, microgravity). Join or start an aerospace club at school.",
+    subjects: ["English (Technical Reading)", "Pre-Algebra", "Earth & Space Science", "Technology/Engineering Elective"],
+    extracurriculars: [
+      {
+        name: "Civil Air Patrol Cadet Program (Age 12+)",
+        url: "https://www.gocivilairpatrol.com/programs/cadets",
+        description: "Leadership training, aerospace education, and five free orientation flights for youth 12 and up.",
+      },
+      {
+        name: "NASA GLOBE Observer",
+        url: "https://observer.globe.gov/",
+        description: "Citizen science program — collect and submit cloud, mosquito habitat, and land cover data used by NASA scientists.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Pre-Algebra", url: "https://www.khanacademy.org/math/pre-algebra", type: "course" },
+      { name: "The Right Stuff by Tom Wolfe", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs98",
+    professionId: "p1",
+    gradeLevelId: "g9",
+    gradeName: "7th Grade",
+    gradeShortCode: "7",
+    description:
+      "Begin formal physical science — understanding motion, forces, and energy. These concepts are the language of spaceflight. Maintain strong math performance; algebra readiness determines future STEM access. Explore space careers beyond astronaut: mission control, spacecraft engineer, space biologist, and more.",
+    subjects: ["English (Scientific Writing)", "Pre-Algebra / Algebra Readiness", "Physical Science", "Geography (Earth from Space)"],
+    extracurriculars: [
+      {
+        name: "NASA Student Launch (Middle School Division)",
+        url: "https://www.nasa.gov/learning-resources/nasa-student-launch/",
+        description: "Design, build, and launch a high-power rocket with a scientific payload — NASA mentoring included.",
+      },
+      {
+        name: "FIRST LEGO League — Space Themes",
+        url: "https://www.firstlegoleague.org/",
+        description: "Robotics competitions with space-themed challenges — recent seasons included 'Into Orbit' and 'Mission Moon.'",
+      },
+    ],
+    supplemental: [
+      { name: "Crash Course: Physics", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV", type: "video" },
+      { name: "Packing for Mars by Mary Roach", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs99",
+    professionId: "p1",
+    gradeLevelId: "g10",
+    gradeName: "8th Grade",
+    gradeShortCode: "8",
+    description:
+      "Take the most advanced math available — algebra I is essential, geometry recommended. Start thinking about high school course sequencing: you'll need AP Calculus and AP Physics to be competitive. Join Civil Air Patrol for real flight experience and leadership development. Begin learning a second language — international cooperation is central to space exploration.",
+    subjects: ["English (Communication Skills)", "Algebra I", "Physical Science / Intro Chemistry", "Foreign Language (Russian, Chinese, or Japanese)", "Physical Education"],
+    extracurriculars: [
+      {
+        name: "Civil Air Patrol — Orientation Flights",
+        url: "https://www.gocivilairpatrol.com/",
+        description: "Fly a real airplane with a CAP instructor — five free flights for cadets. Builds aviation and navigation fundamentals.",
+      },
+      {
+        name: "Robotics Team (FIRST Tech Challenge)",
+        url: "https://www.firstinspires.org/robotics/ftc",
+        description: "Design, build, and program robots — engineering subsystems relevant to spacecraft design.",
+      },
+    ],
+    supplemental: [
+      { name: "NASA: Welcome to the International Space Station", url: "https://www.nasa.gov/international-space-station/", type: "article" },
+      { name: "Endurance by Scott Kelly (Young Readers Edition)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs100",
+    professionId: "p1",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description:
+      "High school begins — take Honors Biology and advanced math. This is when astronaut candidates start building their academic resume. Join Civil Air Patrol or start flight training. NASA astronauts come from STEM degrees — plan your four-year high school sequence to maximize AP science and math by senior year.",
+    subjects: ["Honors Biology", "Geometry / Algebra II", "Foreign Language", "English (Technical Writing)", "Physical Education / Sports"],
+    extracurriculars: [
+      {
+        name: "NASA High School Internship (OSTEM)",
+        url: "https://www.nasa.gov/learning-resources/internship-programs/",
+        description: "Paid internships at NASA centers for high school students — applications open each spring and fall.",
+      },
+      {
+        name: "Civil Air Patrol — Advanced Training",
+        url: "https://www.gocivilairpatrol.com/",
+        description: "Emergency services, radio communications, and advanced aerospace education through CAP cadet programs.",
+      },
+      {
+        name: "Science Olympiad — Astronomy & Engineering Events",
+        url: "https://www.soinc.org/",
+        description: "Compete in science Olympiad events like Astronomy, Reach for the Stars, and various engineering challenges.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: High School Biology", url: "https://www.khanacademy.org/science/high-school-biology", type: "course" },
+      { name: "Carrying the Fire by Michael Collins (Apollo 11)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs101",
+    professionId: "p1",
+    gradeLevelId: "g13",
+    gradeName: "11th Grade",
+    gradeShortCode: "11",
+    description:
+      "The most critical academic year. Take AP Physics 1 and AP Calculus AB. Begin SAT/ACT prep — aim for top percentiles. Pursue flight training if possible — a Private Pilot License is one of the most distinguishing assets on an astronaut application. Research NASA's Astronaut Candidate requirements in detail and plan college applications around them.",
+    subjects: ["AP Physics 1", "AP Calculus AB", "AP Chemistry", "English (College Essay Writing)", "Computer Science / Programming"],
+    extracurriculars: [
+      {
+        name: "NASA SEES (STEM Enhancement in Earth Science)",
+        url: "https://www.csr.utexas.edu/sees/",
+        description: "Summer internship program where high school students work with NASA scientists on Earth and space research.",
+      },
+      {
+        name: "Private Pilot Ground School",
+        url: "https://www.faa.gov/pilots/training/",
+        description: "Begin formal flight training — you can solo at 16. Look for local flight schools with high school programs.",
+      },
+      {
+        name: "FIRST Robotics Competition (FRC)",
+        url: "https://www.firstinspires.org/robotics/frc",
+        description: "Lead or join an FRC team — build industrial-scale robots with professional engineering mentors.",
+      },
+    ],
+    supplemental: [
+      { name: "NASA Astronaut Candidate Selection Guide", url: "https://www.nasa.gov/humans-in-space/astronauts/astronaut-candidate-program/", type: "article" },
+      { name: "MIT OpenCourseWare: Physics I", url: "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/", type: "course" },
+    ],
+  },
+  {
+    id: "rs102",
+    professionId: "p1",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description:
+      "Final high school year: take AP Physics C and AP Calculus BC for college credit. Apply to universities with strong aerospace engineering, physics, or related STEM programs. Complete your Private Pilot License if you started earlier. Begin working on the 'astronaut trifecta': STEM excellence, operational experience (flight, diving, expeditions), and demonstrated teamwork under pressure.",
+    subjects: ["AP Physics C: Mechanics", "AP Calculus BC", "AP Biology / Chemistry", "Aerospace Engineering Elective", "English (College Applications)"],
+    extracurriculars: [
+      {
+        name: "NASA High School Aerospace Scholars (HAS)",
+        url: "https://www.nasa.gov/learning-resources/high-school-aerospace-scholars/",
+        description: "Year-long program including online coursework and a week-long residential experience at NASA Johnson Space Center.",
+      },
+      {
+        name: "Private Pilot License (PPL) Completion",
+        url: "https://www.aopa.org/training-and-safety/learn-to-fly",
+        description: "Complete your FAA Private Pilot License — requires 40+ flight hours, knowledge test, and checkride.",
+      },
+    ],
+    supplemental: [
+      { name: "FAA Private Pilot Knowledge Test Prep", url: "https://www.faa.gov/training_testing/testing", type: "program" },
+      { name: "An Astronaut's Guide to Life on Earth — Chris Hadfield", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs103",
+    professionId: "p1",
+    gradeLevelId: "g17",
+    gradeName: "PhD / Doctoral",
+    gradeShortCode: "phd",
+    description:
+      "A Ph.D. in aerospace engineering, physics, planetary science, or a related field makes you a mission specialist candidate. NASA's basic requirements are a STEM master's + 2 years experience OR Ph.D. + 2 years. Focus your research on space-relevant topics: microgravity science, radiation biology, robotics, or planetary geology. Apply when NASA opens the astronaut candidate window (every ~4 years). Thousands apply; ~12 are selected.",
+    subjects: ["Aerospace Engineering / Physics Ph.D.", "Dissertation Research (Space-Relevant Topic)", "Advanced Orbital Mechanics", "Space Physiology & Medicine", "Research Publications & Conference Presentations"],
+    extracurriculars: [
+      {
+        name: "NASA Postdoctoral Program (NPP)",
+        url: "https://npp.orau.org/",
+        description: "Conduct research at a NASA center as a postdoctoral fellow — direct pathway into the NASA ecosystem.",
+      },
+      {
+        name: "SCUBA Dive Master / Rescue Diver Certification",
+        url: "https://www.padi.com/",
+        description: "Advanced diving certifications demonstrate operational experience in extreme environments — valued by NASA selection boards.",
+      },
+      {
+        name: "Private Pilot — Instrument Rating",
+        url: "https://www.faa.gov/pilots/training/",
+        description: "Add an instrument rating to your PPL — demonstrates mastery of complex systems and decision-making under pressure.",
+      },
+    ],
+    supplemental: [
+      { name: "ESA Astronaut Selection Handbook", url: "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts", type: "article" },
+      { name: "NASA HRP (Human Research Program) — Research Opportunities", url: "https://www.nasa.gov/hrp/", type: "program" },
+    ],
+  },
+
+  // ── Software Engineer — expanded grades ──────────────────────
+  {
+    id: "rs104",
+    professionId: "p2",
+    gradeLevelId: "g1",
+    gradeName: "Pre-K",
+    gradeShortCode: "prek",
+    description:
+      "Computational thinking starts with sorting, sequencing, and pattern recognition! At this age, puzzles, building blocks, and 'what comes next?' games build the logical reasoning that underlies all programming. Encourage curiosity about how things work — taking apart (safe) household items and putting them back together.",
+    subjects: ["Patterns & Sorting", "Counting & Number Recognition", "Following Multi-Step Instructions", "Building & Construction Play"],
+    extracurriculars: [
+      {
+        name: "Code.org — Pre-Reader Express",
+        url: "https://code.org/student/pre-reader-express",
+        description: "Free introductory coding puzzles for preschoolers — drag-and-drop logic with no reading required.",
+      },
+      {
+        name: "Local Library STEM Storytime",
+        url: "https://www.ala.org/",
+        description: "Many public libraries offer STEM-focused storytime sessions introducing early computational thinking concepts.",
+      },
+    ],
+    supplemental: [
+      { name: "Hello Ruby: Adventures in Coding by Linda Liukas", url: "", type: "book" },
+      { name: "PBS Kids: Odd Squad", url: "https://pbskids.org/oddsquad/", type: "video" },
+    ],
+  },
+  {
+    id: "rs105",
+    professionId: "p2",
+    gradeLevelId: "g3",
+    gradeName: "1st Grade",
+    gradeShortCode: "1",
+    description:
+      "Strengthen sequencing and step-by-step thinking through games and activities. 'If/then' logic can be introduced through real-world examples: 'If it's raining, then wear boots.' Board games teach rule-following, turn-taking, and strategic thinking — all foundational for programming.",
+    subjects: ["Reading (Following Written Instructions)", "Math (Addition & Subtraction)", "Science (Cause & Effect)", "Logic Games & Puzzles"],
+    extracurriculars: [
+      {
+        name: "ScratchJr (iPad/Android App)",
+        url: "https://www.scratchjr.org/",
+        description: "Create interactive stories and games by snapping together graphical programming blocks — designed for ages 5-7.",
+      },
+      {
+        name: "LEGO Building Challenges",
+        url: "https://www.lego.com/en-us/kids",
+        description: "Following LEGO instructions builds the precision and sequential thinking required in programming.",
+      },
+    ],
+    supplemental: [
+      { name: "How to Code a Sandcastle by Josh Funk", url: "", type: "book" },
+      { name: "Robot Turtles Board Game", url: "", type: "program" },
+    ],
+  },
+  {
+    id: "rs106",
+    professionId: "p2",
+    gradeLevelId: "g4",
+    gradeName: "2nd Grade",
+    gradeShortCode: "2",
+    description:
+      "Introduce block-based coding on a computer. Scratch is the gold standard — kids create animations and games by snapping code blocks together. The joy of making something interactive is the spark that ignites a lifelong passion for programming. Typing skills begin to matter — start with kid-friendly typing games.",
+    subjects: ["Reading Comprehension", "Math (Place Value & Measurement)", "Science (Logical Thinking)", "Computer Lab / Typing"],
+    extracurriculars: [
+      {
+        name: "Scratch (MIT)",
+        url: "https://scratch.mit.edu/",
+        description: "Free block-based programming platform — create games, animations, and interactive stories on desktop or tablet.",
+      },
+      {
+        name: "Code.org — Courses A & B",
+        url: "https://code.org/student/elementary",
+        description: "Self-paced coding courses using drag-and-drop blocks featuring characters kids love from Minecraft, Star Wars, and Frozen.",
+      },
+    ],
+    supplemental: [
+      { name: "DK Workbooks: Computer Coding", url: "", type: "book" },
+      { name: "Dance Mat Typing (BBC)", url: "https://www.bbc.co.uk/bitesize/topics/zf2f9j6/articles/z3c6tfr", type: "program" },
+    ],
+  },
+  {
+    id: "rs107",
+    professionId: "p2",
+    gradeLevelId: "g5",
+    gradeName: "3rd Grade",
+    gradeShortCode: "3",
+    description:
+      "Build comfort with computers and block-based programming. Create multi-scene Scratch projects with variables, loops, and conditionals. Learn basic typing — being able to type efficiently is a prerequisite for text-based coding. Problem decomposition ('break a big problem into small steps') is the most important skill.",
+    subjects: ["Reading (Chapter Books)", "Math (Multiplication & Division)", "Science (Scientific Method)", "Computer Skills & Typing"],
+    extracurriculars: [
+      {
+        name: "Scratch — Advanced Projects",
+        url: "https://scratch.mit.edu/",
+        description: "Move beyond basic games to interactive stories with multiple levels, scorekeeping, and custom art.",
+      },
+      {
+        name: "Tynker Coding for Kids",
+        url: "https://www.tynker.com/",
+        description: "Self-paced coding courses with game-based learning — progresses from block coding to Python and JavaScript.",
+      },
+    ],
+    supplemental: [
+      { name: "Coding Games in Scratch by Jon Woodcock", url: "", type: "book" },
+      { name: "CS First (Google)", url: "https://csfirst.withgoogle.com/", type: "course" },
+    ],
+  },
+  {
+    id: "rs108",
+    professionId: "p2",
+    gradeLevelId: "g6",
+    gradeName: "4th Grade",
+    gradeShortCode: "4",
+    description:
+      "Bridge from block-based to text-based coding. Start with kid-friendly Python environments or JavaScript in a browser console. Math becomes more abstract — fractions, decimals, and geometry — building the symbolic reasoning needed for programming. Encourage tinkering: the best engineers learn by breaking things and fixing them.",
+    subjects: ["English Language Arts", "Math (Fractions & Geometry)", "Science (Experimentation)", "Intro to Text Coding"],
+    extracurriculars: [
+      {
+        name: "Hour of Code — Text-Based Activities",
+        url: "https://hourofcode.com/",
+        description: "Try text-based Hour of Code activities in Python or JavaScript — a gentle transition from block coding.",
+      },
+      {
+        name: "Khan Academy: Computer Programming (JS)",
+        url: "https://www.khanacademy.org/computing/computer-programming",
+        description: "Learn JavaScript through interactive drawing and animation projects — see your code create visual output instantly.",
+      },
+    ],
+    supplemental: [
+      { name: "Python for Kids by Jason R. Briggs", url: "", type: "book" },
+      { name: "CodeCombat", url: "https://codecombat.com/", type: "program" },
+    ],
+  },
+  {
+    id: "rs109",
+    professionId: "p2",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Transition fully to text-based coding. Python is the ideal first language — readable, powerful, and used by professionals worldwide. Start with simple scripts: calculators, mad-libs generators, and number-guessing games. Math proficiency at this stage is a strong predictor of future programming success — master decimals, fractions, and pre-algebra.",
+    subjects: ["Math (Pre-Algebra)", "General Science", "Computer Programming (Python)", "Logic & Critical Thinking"],
+    extracurriculars: [
+      {
+        name: "Codecademy — Learn Python 3",
+        url: "https://www.codecademy.com/learn/learn-python-3",
+        description: "Free interactive Python course — write real code in the browser and see immediate results.",
+      },
+      {
+        name: "FIRST LEGO League",
+        url: "https://www.firstlegoleague.org/",
+        description: "Build and program LEGO robots using block or Python coding — hardware + software in one competition.",
+      },
+    ],
+    supplemental: [
+      { name: "Automate the Boring Stuff with Python (free online)", url: "https://automatetheboringstuff.com/", type: "book" },
+      { name: "Brilliant.org — Logic & Math", url: "https://brilliant.org/", type: "course" },
+    ],
+  },
+  {
+    id: "rs110",
+    professionId: "p2",
+    gradeLevelId: "g8",
+    gradeName: "6th Grade",
+    gradeShortCode: "6",
+    description:
+      "Write real Python programs with functions, lists, and file input/output. Build a personal project — a text adventure game, a quiz app, or a simple website scraper. Learn to read error messages and debug systematically. Join or start a school coding club; programming with peers accelerates learning dramatically.",
+    subjects: ["English (Technical Reading)", "Pre-Algebra", "Science (Data & Analysis)", "Computer Science (Python)"],
+    extracurriculars: [
+      {
+        name: "Replit — Online IDE for Collaboration",
+        url: "https://replit.com/",
+        description: "Code in Python (and 50+ other languages) from any browser — share projects, collaborate, and deploy web apps.",
+      },
+      {
+        name: "Hack Club (Middle School Programs)",
+        url: "https://hackclub.com/",
+        description: "Start or join a Hack Club — student-led coding clubs with workshops, hackathons, and a global community.",
+      },
+    ],
+    supplemental: [
+      { name: "Invent Your Own Computer Games with Python — Al Sweigart", url: "https://inventwithpython.com/", type: "book" },
+      { name: "CS50x — Harvard's Intro to CS (audit, no certificate needed)", url: "https://cs50.harvard.edu/x/", type: "course" },
+    ],
+  },
+  {
+    id: "rs111",
+    professionId: "p2",
+    gradeLevelId: "g9",
+    gradeName: "7th Grade",
+    gradeShortCode: "7",
+    description:
+      "Deepen Python skills — learn object-oriented programming basics, work with APIs, and build web applications with Flask or Django (lightweight). Start learning version control with Git and create a GitHub account to showcase your projects. Strong algebra skills directly translate to programming logic.",
+    subjects: ["English (Documentation Writing)", "Algebra Readiness / Pre-Algebra", "Science (Data Collection & Analysis)", "Computer Science (Python + Web)"],
+    extracurriculars: [
+      {
+        name: "GitHub Student Developer Pack",
+        url: "https://education.github.com/pack",
+        description: "Free access to professional developer tools, cloud credits, and learning resources for students with a GitHub account.",
+      },
+      {
+        name: "Codecademy — Web Development Path",
+        url: "https://www.codecademy.com/",
+        description: "Free courses in HTML, CSS, and JavaScript — the building blocks of every website and web app.",
+      },
+    ],
+    supplemental: [
+      { name: "Eloquent JavaScript (free online)", url: "https://eloquentjavascript.net/", type: "book" },
+      { name: "freeCodeCamp — Responsive Web Design", url: "https://www.freecodecamp.org/", type: "course" },
+    ],
+  },
+  {
+    id: "rs112",
+    professionId: "p2",
+    gradeLevelId: "g10",
+    gradeName: "8th Grade",
+    gradeShortCode: "8",
+    description:
+      "Build a portfolio of real projects. Create a personal website with HTML/CSS/JavaScript. Contribute to open-source projects — even fixing a typo in documentation is valuable. Learn algorithmic thinking: sorting, searching, and basic data structures. The difference between a hobbyist and an engineer is structured problem-solving.",
+    subjects: ["English (Communication)", "Algebra I", "Physical Science / STEM Elective", "Computer Science (Data Structures Intro)"],
+    extracurriculars: [
+      {
+        name: "Google Code Next",
+        url: "https://codenext.withgoogle.com/",
+        description: "Free computer science education program for high school students — in-person at Google labs or virtual, with mentorship.",
+      },
+      {
+        name: "FIRST Tech Challenge (FTC) — Programming Lead",
+        url: "https://www.firstinspires.org/robotics/ftc",
+        description: "Take the programming lead on a FIRST Tech Challenge team — code robots in Java and compete regionally.",
+      },
+    ],
+    supplemental: [
+      { name: "Grokking Algorithms — Aditya Bhargava", url: "", type: "book" },
+      { name: "Khan Academy: Algorithms", url: "https://www.khanacademy.org/computing/computer-science/algorithms", type: "course" },
+    ],
+  },
+  {
+    id: "rs113",
+    professionId: "p2",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description:
+      "Take AP Computer Science A (Java) or AP Computer Science Principles. Learn data structures and algorithms systematically. Start preparing for technical interviews (LeetCode easy problems). Build a significant project — a mobile app with React Native or a full-stack web app. Secure a summer coding internship or coding camp counselor position.",
+    subjects: ["AP Computer Science A", "Pre-Calculus / Algebra II", "AP Physics / Chemistry", "English (Technical Communication)", "Elective: Statistics or Data Science"],
+    extracurriculars: [
+      {
+        name: "Kode with Klossy (for young women & gender-expansive teens)",
+        url: "https://www.kodewithklossy.com/",
+        description: "Free two-week summer coding camps taught by industry professionals — web and mobile app development.",
+      },
+      {
+        name: "Congressional App Challenge",
+        url: "https://www.congressionalappchallenge.us/",
+        description: "Build and submit an original app — winners are recognized by their Congressional representative.",
+      },
+    ],
+    supplemental: [
+      { name: "Cracking the Coding Interview — Gayle Laakmann McDowell", url: "", type: "book" },
+      { name: "LeetCode (Easy Problems)", url: "https://leetcode.com/", type: "program" },
+    ],
+  },
+  {
+    id: "rs114",
+    professionId: "p2",
+    gradeLevelId: "g13",
+    gradeName: "11th Grade",
+    gradeShortCode: "11",
+    description:
+      "Take AP Computer Science A if you haven't already, plus AP Calculus AB/BC. Build a complex capstone project demonstrating full-stack skills — a web app with authentication, database, and API integration. Research CS degree programs at target universities. Competitive summer programs like MIT's RSI or CMU's SAMS can transform college applications.",
+    subjects: ["AP Computer Science A", "AP Calculus AB/BC", "AP Statistics", "English (Technical Writing)", "College Prep / SAT/ACT"],
+    extracurriculars: [
+      {
+        name: "Google Computer Science Summer Institute (CSSI)",
+        url: "https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute",
+        description: "Free four-week summer program for graduating high school seniors interested in CS — held at Google offices.",
+      },
+      {
+        name: "Open Source Contribution — Google Summer of Code (prep)",
+        url: "https://summerofcode.withgoogle.com/",
+        description: "Start contributing to open-source projects — build a track record of meaningful pull requests and community engagement.",
+      },
+    ],
+    supplemental: [
+      { name: "MIT OpenCourseWare: Introduction to Algorithms", url: "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", type: "course" },
+      { name: "The Pragmatic Programmer — Hunt & Thomas", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs115",
+    professionId: "p2",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description:
+      "Apply to top CS programs (Stanford, MIT, CMU, Berkeley, UIUC, Georgia Tech, and many excellent state schools). Continue building your project portfolio. Freelance or intern to get professional experience. Even if you don't attend a 'name brand' school, a strong GitHub portfolio and internship experience matter more than the school name for most software engineering roles.",
+    subjects: ["AP Calculus BC", "AP Physics C", "AP Computer Science (if not yet taken)", "English (College Essays)", "Economics / Business Elective"],
+    extracurriculars: [
+      {
+        name: "Major League Hacking (MLH) Hackathons",
+        url: "https://mlh.io/",
+        description: "Compete in weekend hackathons — build a working app with a team and present to judges. Great for networking and portfolio.",
+      },
+      {
+        name: "Freelance Web Development",
+        url: "",
+        description: "Build websites for local businesses, clubs, or nonprofits — real clients, real deadlines, real portfolio pieces.",
+      },
+    ],
+    supplemental: [
+      { name: "Designing Data-Intensive Applications — Martin Kleppmann (preview)", url: "", type: "book" },
+      { name: "fullstackopen.com — Modern Web Development", url: "https://fullstackopen.com/en/", type: "course" },
+    ],
+  },
+  {
+    id: "rs116",
+    professionId: "p2",
+    gradeLevelId: "g16",
+    gradeName: "Graduate",
+    gradeShortCode: "grad",
+    description:
+      "A Master's in Computer Science (MS) deepens expertise in specialized areas: AI/machine learning, cybersecurity, distributed systems, or computer graphics. Many top companies hire MS graduates at higher levels. Alternatively, some engineers skip graduate school and learn on the job — both paths are valid. A Ph.D. is generally only needed for research roles at companies like DeepMind, OpenAI, or academia.",
+    subjects: ["Advanced Algorithms", "Machine Learning / AI", "Distributed Systems", "Software Architecture", "Research Methods / Thesis"],
+    extracurriculars: [
+      {
+        name: "Google PhD Fellowship",
+        url: "https://research.google/outreach/phd-fellowship/",
+        description: "Fellowships for graduate students doing research in computer science and related fields globally.",
+      },
+      {
+        name: "NSF Graduate Research Fellowship",
+        url: "https://www.nsfgrfp.org/",
+        description: "Prestigious fellowship funding MS and Ph.D. research in STEM fields including computer science.",
+      },
+    ],
+    supplemental: [
+      { name: "Stanford CS229: Machine Learning (online notes)", url: "https://cs229.stanford.edu/", type: "course" },
+      { name: "System Design Interview — Alex Xu", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs117",
+    professionId: "p2",
+    gradeLevelId: "g17",
+    gradeName: "PhD / Doctoral",
+    gradeShortCode: "phd",
+    description:
+      "A Ph.D. in Computer Science prepares you for cutting-edge research at companies like Google Research, Microsoft Research, DeepMind, or OpenAI — or a career in academia. Focus areas include artificial intelligence, quantum computing, cryptography, programming languages, and human-computer interaction. A Ph.D. is a 5-6 year commitment to advancing the frontier of human knowledge in one specific area.",
+    subjects: ["Advanced Research Methods", "Doctoral Seminars (by specialization)", "Teaching Assistantship / Instruction", "Dissertation Research", "Conference Publishing (NeurIPS, ICML, SIGGRAPH, etc.)"],
+    extracurriculars: [
+      {
+        name: "Google Research Internship (Ph.D.)",
+        url: "https://research.google/careers/",
+        description: "Paid research internships at Google during Ph.D. — work alongside world-class researchers and publish papers.",
+      },
+      {
+        name: "ACM Doctoral Dissertation Award",
+        url: "https://awards.acm.org/doctoral-dissertation",
+        description: "Prestigious annual award for the best doctoral dissertations in computer science and engineering worldwide.",
+      },
+    ],
+    supplemental: [
+      { name: "The Ph.D. Grind by Philip Guo", url: "https://pg.ucsd.edu/phd-grind.htm", type: "book" },
+      { name: "arXiv.org — CS Research Papers", url: "https://arxiv.org/list/cs/recent", type: "article" },
+    ],
+  },
+
+  // ── Doctor — expanded grades ─────────────────────────────────
+  {
+    id: "rs118",
+    professionId: "p3",
+    gradeLevelId: "g1",
+    gradeName: "Pre-K",
+    gradeShortCode: "prek",
+    description:
+      "Great doctors start with empathy and curiosity about people. At this age, nurturing care for others — comforting a friend, caring for a pet, or playing 'doctor' with stuffed animals — plants the seeds of the physician's calling. Encourage questions about how bodies work and validate the natural curiosity children have about health and healing.",
+    subjects: ["Social-Emotional Learning (Empathy)", "Early Science (Body Parts)", "Counting & Measurement", "Imaginative Play (Doctor/Nurse)"],
+    extracurriculars: [
+      {
+        name: "Sesame Street: 'Going to the Doctor' Resources",
+        url: "https://sesamestreetincommunities.org/topics/doctor-visits/",
+        description: "Videos, activities, and printable resources to make doctor visits positive, educational experiences for young children.",
+      },
+      {
+        name: "Children's Museum Health Exhibits",
+        url: "https://www.childrensmuseums.org/",
+        description: "Interactive body and health exhibits at children's museums — many have kid-sized hospital and clinic role-play areas.",
+      },
+    ],
+    supplemental: [
+      { name: "The Berenstain Bears Go to the Doctor", url: "", type: "book" },
+      { name: "Daniel Tiger's Neighborhood: Daniel Visits the Doctor (PBS Kids)", url: "https://pbskids.org/", type: "video" },
+    ],
+  },
+  {
+    id: "rs119",
+    professionId: "p3",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description:
+      "Build healthy habits and body awareness. Learn about nutrition, exercise, sleep, and hygiene — the foundations of preventive medicine. Doctors spend their careers helping people stay healthy, not just treating illness. Encourage the child to notice when others aren't feeling well and think about how to help.",
+    subjects: ["Health & Hygiene", "Counting & Measuring (Height/Weight)", "Science (Body Basics)", "Social-Emotional Learning"],
+    extracurriculars: [
+      {
+        name: "American Red Cross — Prepare with Pedro",
+        url: "https://www.redcross.org/get-help/disaster-relief-and-recovery-services/pillowcase-project.html",
+        description: "Free youth preparedness education program teaching emergency readiness and coping skills for ages 5-8.",
+      },
+      {
+        name: "Local Hospital 'Teddy Bear Clinic' Events",
+        url: "",
+        description: "Many hospitals host events where children bring stuffed animals for 'checkups' — a fun, non-scary introduction to medical settings.",
+      },
+    ],
+    supplemental: [
+      { name: "Inside Your Outside: All About the Human Body (Cat in the Hat)", url: "", type: "book" },
+      { name: "Sid the Science Kid: Health Episodes (PBS Kids)", url: "https://pbskids.org/sid/health", type: "video" },
+    ],
+  },
+  {
+    id: "rs120",
+    professionId: "p3",
+    gradeLevelId: "g3",
+    gradeName: "1st Grade",
+    gradeShortCode: "1",
+    description:
+      "Learn the basic body systems: skeleton, muscles, heart, lungs, and brain. Understanding how the body works is the first step toward understanding how to heal it. Practice explaining health concepts to family members — doctors are teachers as much as they are scientists. Keep a 'body discoveries' journal of interesting health facts.",
+    subjects: ["Reading (Health & Science Books)", "Math (Counting & Graphs)", "Science (Human Body Systems)", "Art (Body Diagrams & Models)"],
+    extracurriculars: [
+      {
+        name: "KidsHealth.org",
+        url: "https://kidshealth.org/",
+        description: "Doctor-reviewed articles, videos, and games about how the body works, staying healthy, and dealing with illness.",
+      },
+      {
+        name: "Local Science Museum — Body Worlds or Anatomy Exhibits",
+        url: "https://www.astc.org/",
+        description: "Find museums with human body exhibits — many have plastinated specimens and interactive anatomy displays.",
+      },
+    ],
+    supplemental: [
+      { name: "The Magic School Bus: Inside the Human Body", url: "", type: "book" },
+      { name: "Operation Ouch! (BBC / YouTube)", url: "https://www.youtube.com/", type: "video" },
+    ],
+  },
+  {
+    id: "rs121",
+    professionId: "p3",
+    gradeLevelId: "g4",
+    gradeName: "2nd Grade",
+    gradeShortCode: "2",
+    description:
+      "Explore how doctors help people — from pediatricians and surgeons to eye doctors and dentists. The breadth of medicine is vast. Practice careful observation skills: noticing changes, recording data, and asking questions. These are the same habits doctors use when diagnosing patients. Start learning first aid basics appropriate for children.",
+    subjects: ["Reading Comprehension", "Math (Measurement & Data)", "Science (Living Things & Health)", "Art (Medical Illustration Basics)"],
+    extracurriculars: [
+      {
+        name: "American Red Cross — Basic First Aid for Kids",
+        url: "https://www.redcross.org/",
+        description: "Age-appropriate first aid education — learn about calling 911, treating minor cuts, and helping in emergencies.",
+      },
+      {
+        name: "Community Health Fair Attendance",
+        url: "",
+        description: "Attend community health fairs — interact with healthcare professionals, see medical equipment, and learn about different specialties.",
+      },
+    ],
+    supplemental: [
+      { name: "A Day in the Life of a Doctor (DK Readers)", url: "", type: "book" },
+      { name: "Mystery Science: Human Body Unit", url: "https://mysteryscience.com/", type: "course" },
+    ],
+  },
+  {
+    id: "rs122",
+    professionId: "p3",
+    gradeLevelId: "g5",
+    gradeName: "3rd Grade",
+    gradeShortCode: "3",
+    description:
+      "Develop deeper scientific curiosity about the human body. Do a science fair project on biology or health — test hand-washing effectiveness with glow gel, compare heart rates before/after exercise, or explore how lungs work with a balloon model. This is the age when many future doctors first fall in love with science.",
+    subjects: ["Reading (Nonfiction)", "Math (Multiplication & Division)", "Science (Scientific Method & Biology)", "Writing (Research Reports)"],
+    extracurriculars: [
+      {
+        name: "Science Fair — Health & Biology Project",
+        url: "",
+        description: "Design and complete a science fair project on human biology or health — develop the research and presentation skills essential in medicine.",
+      },
+      {
+        name: "4-H Healthy Living Programs",
+        url: "https://4-h.org/programs/healthy-living/",
+        description: "Youth programs teaching health, nutrition, first aid, and wellness — hands-on learning about caring for yourself and others.",
+      },
+    ],
+    supplemental: [
+      { name: "The Way We Work by David Macaulay", url: "", type: "book" },
+      { name: "National Geographic Kids: Human Body", url: "https://kids.nationalgeographic.com/science/article/human-body-101", type: "article" },
+    ],
+  },
+  {
+    id: "rs123",
+    professionId: "p3",
+    gradeLevelId: "g6",
+    gradeName: "4th Grade",
+    gradeShortCode: "4",
+    description:
+      "Study the human body's major systems in more detail: circulatory, respiratory, digestive, and nervous systems. Learn about germs, the immune system, and how vaccines work. Doctors are detectives — solving medical mysteries by gathering evidence, forming hypotheses, and testing them. Practice this mindset in all subjects.",
+    subjects: ["English Language Arts", "Math (Fractions & Measurement)", "Science (Body Systems & Disease)", "Health & PE"],
+    extracurriculars: [
+      {
+        name: "YouTube — 'Meet the Helpers' Series",
+        url: "https://www.youtube.com/",
+        description: "Educational series introducing children to community helpers including doctors, nurses, and EMTs — learn what they do and why.",
+      },
+      {
+        name: "Junior First Aid / Babysitting Course",
+        url: "https://www.redcross.org/take-a-class/babysitting",
+        description: "Ages 11+ can take the Red Cross babysitting course — includes basic first aid and CPR introduction.",
+      },
+    ],
+    supplemental: [
+      { name: "GUTS by Raina Telgemeier (graphic novel)", url: "", type: "book" },
+      { name: "Crash Course: Biology", url: "https://www.youtube.com/playlist?list=PL3EED4C1D684D3ADF", type: "video" },
+    ],
+  },
+  {
+    id: "rs124",
+    professionId: "p3",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Deepen scientific foundations — focus on biology and health science. Start learning medical terminology basics. Explore medical history: the discovery of germs, the invention of vaccines, the development of antibiotics. Understanding how medicine advanced reveals the scientific method in action and the persistence required of medical pioneers.",
+    subjects: ["Math (Pre-Algebra & Data)", "General Science (Biology Focus)", "Health Education", "Reading & Research Skills"],
+    extracurriculars: [
+      {
+        name: "HOSA — Middle School Division",
+        url: "https://hosa.org/",
+        description: "Middle school HOSA chapters introduce health science career exploration with age-appropriate activities and competitions.",
+      },
+      {
+        name: "Khan Academy: Health & Medicine",
+        url: "https://www.khanacademy.org/science/health-and-medicine",
+        description: "Free courses on human anatomy, physiology, and disease — start with the circulatory and respiratory systems.",
+      },
+    ],
+    supplemental: [
+      { name: "The Boy Who Harnessed the Wind (Young Readers Edition)", url: "", type: "book" },
+      { name: "Khan Academy: Biology", url: "https://www.khanacademy.org/science/biology", type: "course" },
+    ],
+  },
+  {
+    id: "rs125",
+    professionId: "p3",
+    gradeLevelId: "g8",
+    gradeName: "6th Grade",
+    gradeShortCode: "6",
+    description:
+      "Middle school science deepens — cell biology, genetics, and microbiology become central topics. Learn about DNA and heredity. Shadow a doctor if possible — many family physicians welcome curious middle school students for a half-day observation. The first real clinical exposure is often the moment that cements the decision to pursue medicine.",
+    subjects: ["English (Scientific Reading)", "Pre-Algebra", "Life Science (Cells & Genetics)", "Health Science Elective"],
+    extracurriculars: [
+      {
+        name: "Doctor Shadowing (Introductory)",
+        url: "",
+        description: "Ask your family doctor or pediatrician about a brief job shadow — most are happy to encourage future physicians.",
+      },
+      {
+        name: "Science Olympiad — Anatomy & Disease Events",
+        url: "https://www.soinc.org/",
+        description: "Compete in middle school Science Olympiad events: Anatomy & Physiology, Disease Detectives, and Microbe Mission.",
+      },
+    ],
+    supplemental: [
+      { name: "National Institutes of Health (NIH) — Kids' Pages", url: "https://kids.niehs.nih.gov/", type: "article" },
+      { name: "The Emperor of All Maladies (Young Readers Edition)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs126",
+    professionId: "p3",
+    gradeLevelId: "g9",
+    gradeName: "7th Grade",
+    gradeShortCode: "7",
+    description:
+      "Biology becomes more rigorous — understand cells, tissues, organs, and systems in detail. The human body is a complex machine; doctors are the mechanics. Begin learning about medical ethics: what should doctors do when difficult choices arise? Strong writing skills are essential — doctors write patient notes, research papers, and grant proposals.",
+    subjects: ["English (Essay Writing)", "Pre-Algebra / Algebra", "Life Science (Advanced Biology)", "Civics / Health Policy Intro"],
+    extracurriculars: [
+      {
+        name: "HOSA — Middle School Health Science Events",
+        url: "https://hosa.org/",
+        description: "Participate in health science competitions including medical terminology, health career display, and prepared speaking.",
+      },
+      {
+        name: "Red Cross Youth Volunteer Programs",
+        url: "https://www.redcross.org/volunteer/become-a-volunteer/youth-volunteer-opportunities.html",
+        description: "Volunteer with the American Red Cross — blood drives, disaster preparedness, and community health education.",
+      },
+    ],
+    supplemental: [
+      { name: "Crash Course: Anatomy & Physiology", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOAKed_MxxWBNaPno5h3Zs8", type: "video" },
+      { name: "The Man Who Mistook His Wife for a Hat — Oliver Sacks", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs127",
+    professionId: "p3",
+    gradeLevelId: "g10",
+    gradeName: "8th Grade",
+    gradeShortCode: "8",
+    description:
+      "Take Algebra I and the most advanced science available. The pathway to medical school is academically demanding — start building the study habits to handle heavy science loads. Begin learning medical terminology: prefixes, suffixes, and root words. Continue shadowing doctors and consider volunteering at a hospital, nursing home, or clinic.",
+    subjects: ["English (Communication & Empathy)", "Algebra I", "Physical Science / Intro Chemistry", "Health & Medical Terminology"],
+    extracurriculars: [
+      {
+        name: "Hospital Junior Volunteer Program (if age eligible)",
+        url: "",
+        description: "Many hospitals offer junior volunteer programs starting at 14 or 15 — apply early as spots fill quickly.",
+      },
+      {
+        name: "CPR / AED Certification",
+        url: "https://www.redcross.org/take-a-class/cpr",
+        description: "Get certified in CPR and AED use — a foundational skill every future doctor should master early.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: MCAT Prep Preview", url: "https://www.khanacademy.org/", type: "course" },
+      { name: "When Breath Becomes Air — Paul Kalanithi", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs128",
+    professionId: "p3",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description:
+      "Take AP Biology and/or AP Chemistry. These rigorous courses demonstrate your ability to handle college-level science. Continue volunteering at a hospital or clinic — consistent commitment over years matters more than a one-time event. Consider a summer medical program at a university to get early exposure to medical education.",
+    subjects: ["AP Biology", "Honors Chemistry", "Algebra II / Pre-Calculus", "English (Scientific Writing)", "Foreign Language"],
+    extracurriculars: [
+      {
+        name: "Summer Medical Programs for High School Students",
+        url: "https://students-residents.aamc.org/",
+        description: "Programs like Stanford SIMR, NIH High School SIP, and NSLC on Medicine offer immersive pre-med experiences.",
+      },
+      {
+        name: "Medical Explorers Post",
+        url: "https://www.exploring.org/medical/",
+        description: "Hands-on career exploration program with hospital rotations, mentorship from physicians, and clinical observation.",
+      },
+    ],
+    supplemental: [
+      { name: "AAMC — Aspiring Docs Resources", url: "https://students-residents.aamc.org/aspiring-docs-fact-sheets-get-experience", type: "article" },
+      { name: "Being Mortal — Atul Gawande", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs129",
+    professionId: "p3",
+    gradeLevelId: "g13",
+    gradeName: "11th Grade",
+    gradeShortCode: "11",
+    description:
+      "The most critical academic year for pre-med preparation. Take AP Biology, AP Chemistry, and AP Calculus. Begin SAT/ACT prep. Research BS/MD programs (accelerated 7-8 year combined programs). Continue clinical volunteering — aim for 100+ hours by graduation. Build relationships with science teachers for future recommendation letters.",
+    subjects: ["AP Biology", "AP Chemistry", "AP Calculus AB", "AP English Language", "AP Psychology (if available)"],
+    extracurriculars: [
+      {
+        name: "Research Internship — University Lab or Hospital",
+        url: "",
+        description: "Seek a research internship at a local university or medical center — biomedical research experience is highly valued on medical school applications.",
+      },
+      {
+        name: "HOSA — Competitive Events (Clinical Specialty)",
+        url: "https://hosa.org/",
+        description: "Compete in HOSA clinical events: Clinical Nursing, Dental Science, Medical Assisting, and more at state and national levels.",
+      },
+    ],
+    supplemental: [
+      { name: "AAMC MCAT Preview Guide", url: "https://students-residents.aamc.org/", type: "article" },
+      { name: "Khan Academy: MCAT Prep (free)", url: "https://www.khanacademy.org/test-prep/mcat", type: "course" },
+    ],
+  },
+  {
+    id: "rs130",
+    professionId: "p3",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description:
+      "Apply to colleges with strong pre-med programs. Top choices include research universities with affiliated medical centers. Strong applications include: excellent GPA (3.7+), AP science credits, sustained clinical volunteering, research experience, and compelling essays about why you want to become a physician. The BS/MD combined programs are extremely competitive but worth pursuing.",
+    subjects: ["AP Biology (if not taken)", "AP Chemistry (if not taken)", "AP Calculus BC", "Anatomy & Physiology", "English (College & Scholarship Essays)"],
+    extracurriculars: [
+      {
+        name: "Certified Nursing Assistant (CNA) Program",
+        url: "",
+        description: "Complete CNA certification during senior year — work part-time in healthcare during college summers for clinical hours and income.",
+      },
+      {
+        name: "Senior Capstone: Health-Related Research Project",
+        url: "",
+        description: "Design and complete an independent research project on a health topic — demonstrate initiative and intellectual curiosity.",
+      },
+    ],
+    supplemental: [
+      { name: "AAMC — Medical School Admission Requirements (MSAR)", url: "https://students-residents.aamc.org/medical-school-admission-requirements/", type: "article" },
+      { name: "The White Coat Investor (preview)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs131",
+    professionId: "p3",
+    gradeLevelId: "g17",
+    gradeName: "PhD / Doctoral",
+    gradeShortCode: "phd",
+    description:
+      "After earning an M.D. (or D.O.), physicians complete residency (3-7 years depending on specialty) followed by optional fellowship for sub-specialization (1-3 years). An M.D./Ph.D. dual degree prepares physician-scientists who split time between research and patient care. Board certification in your specialty requires passing rigorous exams and maintaining continuing education throughout your career.",
+    subjects: ["Residency: Chosen Specialty Training", "Board Certification Exam Preparation", "Fellowship Sub-Specialization (optional)", "Clinical Research & Publications", "Teaching & Supervising Medical Students"],
+    extracurriculars: [
+      {
+        name: "ACGME — Residency Programs Directory",
+        url: "https://www.acgme.org/",
+        description: "Accreditation Council for Graduate Medical Education — search residency and fellowship programs nationwide.",
+      },
+      {
+        name: "M.D./Ph.D. Programs — NIH Medical Scientist Training Program",
+        url: "https://www.nigms.nih.gov/training/MSTP/",
+        description: "Fully funded M.D./Ph.D. programs at 50+ U.S. medical schools for aspiring physician-scientists.",
+      },
+    ],
+    supplemental: [
+      { name: "NEJM (New England Journal of Medicine) — Free Student Access", url: "https://www.nejm.org/", type: "article" },
+      { name: "Evidence-Based Medicine — How to Practice and Teach EBM", url: "", type: "book" },
+    ],
+  },
 ];
 
 const professionals: Professional[] = [
