@@ -88,8 +88,9 @@ function HeroSection({ professions }: { professions: Profession[] }) {
               {results.map((p) => (
                 <Link
                   key={p.id}
-                  to="/professions/$slug"
+                  to="/professions/$slug/roadmap"
                   params={{ slug: p.slug }}
+                  search={{ grade: 'k' }}
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
                 >
                   <span className="text-2xl">{p.iconEmoji}</span>
@@ -114,8 +115,9 @@ function HeroSection({ professions }: { professions: Profession[] }) {
           {professions.slice(0, 5).map((p) => (
             <Link
               key={p.id}
-              to="/professions/$slug"
+              to="/professions/$slug/roadmap"
               params={{ slug: p.slug }}
+              search={{ grade: 'k' }}
               className="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-indigo-300 hover:text-indigo-600 hover:shadow-md"
             >
               {p.iconEmoji} {p.name}
