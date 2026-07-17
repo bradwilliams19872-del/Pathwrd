@@ -147,6 +147,33 @@ const professions: Profession[] = [
     category: "Trades/Transportation",
     iconEmoji: "✈️",
   },
+  {
+    id: "p9",
+    slug: "veterinarian",
+    name: "Veterinarian",
+    description:
+      "Care for animals of all kinds — from family pets to livestock and wildlife. Veterinarians diagnose and treat illnesses, perform surgeries, and promote animal health and welfare. A career combining medical science with compassion for animals.",
+    category: "Healthcare",
+    iconEmoji: "🐾",
+  },
+  {
+    id: "p10",
+    slug: "graphic-designer",
+    name: "Graphic Designer",
+    description:
+      "Communicate ideas through visual storytelling — typography, imagery, color, and layout. Graphic designers create logos, branding, publications, websites, packaging, and more. A career at the intersection of art, psychology, and technology.",
+    category: "Creative",
+    iconEmoji: "🎨",
+  },
+  {
+    id: "p11",
+    slug: "data-scientist",
+    name: "Data Scientist",
+    description:
+      "Extract insights from data to solve real-world problems. Data scientists use statistics, machine learning, and programming to find patterns, make predictions, and drive decisions — one of the fastest-growing and highest-impact careers of the 21st century.",
+    category: "STEM",
+    iconEmoji: "📊",
+  },
 ];
 
 const gradeLevels: GradeLevel[] = [
@@ -934,6 +961,402 @@ const roadmapSteps: RoadmapStep[] = [
       { name: "Sheppard Air Test Prep", url: "https://www.sheppardair.com/", type: "program" },
     ],
   },
+
+  // ── Veterinarian ──────────────────────────────────────────────
+  {
+    id: "rs31",
+    professionId: "p9",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description:
+      "Build a love for animals! Young children naturally connect with animals — encourage this through pet care responsibilities (feeding, gentle handling), animal-themed books, and visits to zoos, farms, and aquariums. Learning empathy for living creatures is the first step toward becoming a veterinarian.",
+    subjects: ["Early Science (Animals & Nature)", "Counting & Sorting", "Social-Emotional Learning"],
+    extracurriculars: [
+      {
+        name: "National Geographic Kids — Animals",
+        url: "https://kids.nationalgeographic.com/animals/",
+        description: "Free online animal facts, videos, and games for young animal lovers.",
+      },
+      {
+        name: "Local Zoo / Aquarium Youth Programs",
+        url: "https://www.aza.org/",
+        description: "Find AZA-accredited zoos and aquariums with children's programs and animal encounters.",
+      },
+    ],
+    supplemental: [
+      { name: "The Berenstain Bears: Go to the Vet", url: "", type: "book" },
+      { name: "Wild Kratts (PBS Kids)", url: "https://pbskids.org/wildkratts/", type: "video" },
+    ],
+  },
+  {
+    id: "rs32",
+    professionId: "p9",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Deepen understanding of animal biology and care. Join a 4-H club to get hands-on experience with animals. Learn the basics of animal anatomy, nutrition, and responsible pet ownership. Start a science journal to record observations about animals in your community.",
+    subjects: ["Life Science", "Math (Pre-Algebra)", "Reading & Research Skills", "Health & Nutrition"],
+    extracurriculars: [
+      {
+        name: "4-H Youth Animal Science Programs",
+        url: "https://4-h.org/programs/animal-science/",
+        description: "Hands-on programs with livestock, companion animals, and veterinary science projects nationwide.",
+      },
+      {
+        name: "ASPCA Kids",
+        url: "https://www.aspca.org/",
+        description: "Learn about animal welfare, pet care, and advocacy through America's oldest humane organization.",
+      },
+    ],
+    supplemental: [
+      { name: "Smithsonian: Animal Anatomy & Adaptations", url: "https://naturalhistory.si.edu/education", type: "article" },
+      { name: "National Geographic Kids: Dog Breed Guide", url: "https://kids.nationalgeographic.com/animals/mammals/", type: "article" },
+    ],
+  },
+  {
+    id: "rs33",
+    professionId: "p9",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description:
+      "Start building a strong science foundation — biology and chemistry are essential for veterinary school. Volunteer at an animal shelter or clinic to gain real-world exposure. Veterinary medicine is competitive; strong grades now set the stage for pre-vet college admission.",
+    subjects: ["Honors Biology", "Algebra I/II", "Chemistry", "English (Communication Skills)"],
+    extracurriculars: [
+      {
+        name: "Animal Shelter Volunteer Programs",
+        url: "https://www.humanesociety.org/",
+        description: "Volunteer at a local humane society or animal rescue — essential experience for aspiring vets.",
+      },
+      {
+        name: "Veterinary Science Competitions (FFA/CDE)",
+        url: "https://www.ffa.org/participate/cdes/",
+        description: "Compete in veterinary science Career Development Events through FFA.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Biology", url: "https://www.khanacademy.org/science/biology", type: "course" },
+      { name: "All Creatures Great and Small — James Herriot", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs34",
+    professionId: "p9",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description:
+      "Take advanced sciences — AP Biology and AP Chemistry are particularly valuable. Shadow a veterinarian to confirm your career path and gain clinical observation hours (required for vet school applications). Research pre-vet undergraduate programs and vet school prerequisites.",
+    subjects: ["AP Biology", "AP Chemistry", "AP Calculus", "AP English", "Anatomy & Physiology (if available)"],
+    extracurriculars: [
+      {
+        name: "Veterinary Shadowing & Clinical Observation",
+        url: "https://www.avma.org/resources/pet-owners/yourvet",
+        description: "Shadow practicing veterinarians — most vet schools require documented clinical observation hours.",
+      },
+      {
+        name: "Purdue University Vet Camp",
+        url: "https://vet.purdue.edu/engagement/vet-camp.php",
+        description: "Summer residential camp exploring the veterinary profession through hands-on activities and labs.",
+      },
+    ],
+    supplemental: [
+      { name: "AVMA — Becoming a Veterinarian", url: "https://www.avma.org/resources/pet-owners/yourvet/veterinarians-becoming-veterinarian", type: "article" },
+      { name: "Merck Veterinary Manual (Free Online)", url: "https://www.merckvetmanual.com/", type: "book" },
+    ],
+  },
+  {
+    id: "rs35",
+    professionId: "p9",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description:
+      "Pursue a B.S. in Animal Science, Biology, or Zoology on a pre-veterinary track. Complete all vet school prerequisites (biology, chemistry, organic chemistry, biochemistry, physics, math). Gain 500+ hours of veterinary clinical experience. Prepare for the GRE and start vet school applications through VMCAS.",
+    subjects: ["Animal Science / Biology Major", "Organic Chemistry", "Biochemistry", "Microbiology", "Genetics"],
+    extracurriculars: [
+      {
+        name: "Pre-Veterinary Club / APVMA",
+        url: "https://www.avma.org/",
+        description: "Join your university's pre-vet club — networking, vet school prep, and animal experience opportunities.",
+      },
+      {
+        name: "Veterinary Clinic Employment / Internship",
+        url: "",
+        description: "Work as a veterinary assistant or kennel tech during summers — hands-on clinical hours are essential.",
+      },
+    ],
+    supplemental: [
+      { name: "VMCAS — Vet School Application Service", url: "https://www.aavmc.org/students-applicants-and-advisors/vmcas/", type: "program" },
+      { name: "GRE Prep — ETS Official Materials", url: "https://www.ets.org/gre/", type: "program" },
+    ],
+  },
+
+  // ── Graphic Designer ──────────────────────────────────────────
+  {
+    id: "rs36",
+    professionId: "p10",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description:
+      "Design begins with creative play! Encourage drawing, coloring, and crafting with a wide variety of materials. Point out letters, shapes, and colors in the world around you — on signs, packaging, books, and screens. Every child is a natural visual thinker at this age.",
+    subjects: ["Drawing & Coloring", "Shapes & Patterns", "Storytelling Through Pictures"],
+    extracurriculars: [
+      {
+        name: "PBS Kids — Creative Games",
+        url: "https://pbskids.org/games/arts/",
+        description: "Free creative arts and drawing games for young children to explore color and design.",
+      },
+      {
+        name: "Children's Art Museums & Maker Spaces",
+        url: "https://www.childrensmuseums.org/",
+        description: "Find local children's museums with hands-on art and design studios for creative exploration.",
+      },
+    ],
+    supplemental: [
+      { name: "The Dot by Peter H. Reynolds", url: "", type: "book" },
+      { name: "Harold and the Purple Crayon", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs37",
+    professionId: "p10",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Expand creative skills with structured art projects. Learn color theory basics, practice lettering and typography, and experiment with composition. Digital tools are accessible now — try kid-friendly design software and start keeping a sketchbook of ideas.",
+    subjects: ["Art & Design", "Math (Geometry & Proportions)", "Language Arts (Visual Storytelling)", "Computer Skills"],
+    extracurriculars: [
+      {
+        name: "Canva for Education",
+        url: "https://www.canva.com/education/",
+        description: "Free design platform for students — create posters, presentations, and social media graphics.",
+      },
+      {
+        name: "Local Art Classes & Summer Camps",
+        url: "https://www.arteducators.org/",
+        description: "Find community art programs and camps through the National Art Education Association directory.",
+      },
+    ],
+    supplemental: [
+      { name: "TinkerLab — Creative Projects for Kids", url: "https://tinkerlab.com/", type: "article" },
+      { name: "Art for Kids Hub (YouTube)", url: "https://www.youtube.com/user/ArtforKidsHub", type: "video" },
+    ],
+  },
+  {
+    id: "rs38",
+    professionId: "p10",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description:
+      "Take art and digital design courses seriously. Learn the fundamentals: typography, layout, color theory, and composition. Start using professional tools like Adobe Photoshop and Illustrator. Redesign a local business's logo or menu as a portfolio project.",
+    subjects: ["Art & Design I/II", "Computer Graphics", "English (Visual Communication)", "Psychology (User Perception)"],
+    extracurriculars: [
+      {
+        name: "Adobe Creative Cloud (Student Discount)",
+        url: "https://www.adobe.com/creativecloud/buy/students.html",
+        description: "Professional design tools — Photoshop, Illustrator, InDesign — at a deep student discount.",
+      },
+      {
+        name: "Skillshare — Graphic Design Fundamentals",
+        url: "https://www.skillshare.com/",
+        description: "Online classes in design thinking, typography, and digital illustration for teens.",
+      },
+    ],
+    supplemental: [
+      { name: "The Non-Designer's Design Book — Robin Williams", url: "", type: "book" },
+      { name: "Figma (Free Design Tool)", url: "https://www.figma.com/education/", type: "program" },
+    ],
+  },
+  {
+    id: "rs39",
+    professionId: "p10",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description:
+      "Build a strong portfolio of 10-15 pieces showcasing your range — logos, posters, web designs, packaging, and typography projects. Take AP Studio Art if available. Research BFA programs and art schools. Freelance for small clients to get real-world experience.",
+    subjects: ["AP Studio Art (2-D Design)", "AP Art History", "Digital Media / Graphic Design Elective", "English (Writing Artist Statements)", "Business / Marketing Elective"],
+    extracurriculars: [
+      {
+        name: "Behance Portfolio Platform",
+        url: "https://www.behance.net/",
+        description: "Create a professional online portfolio — the industry standard for showcasing design work.",
+      },
+      {
+        name: "AIGA Design Resources for Students",
+        url: "https://www.aiga.org/",
+        description: "Professional association for design — student memberships, competitions, and mentorship.",
+      },
+    ],
+    supplemental: [
+      { name: "National Portfolio Day", url: "https://nationalportfolioday.org/", type: "program" },
+      { name: "Thinking with Type — Ellen Lupton", url: "https://www.thinkingwithtype.com/", type: "book" },
+    ],
+  },
+  {
+    id: "rs40",
+    professionId: "p10",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description:
+      "Pursue a BFA in Graphic Design, Visual Communication, or Communication Design. Build a professional portfolio through studio courses. Pursue internships at design firms, ad agencies, or in-house design departments. Join AIGA and attend design conferences.",
+    subjects: ["Typography", "Interaction Design", "Branding & Identity", "Motion Graphics", "Design History & Theory"],
+    extracurriculars: [
+      {
+        name: "AIGA Student Chapters",
+        url: "https://www.aiga.org/membership-community/student-groups",
+        description: "Join your campus AIGA chapter — portfolio reviews, job fairs, and mentorship from working designers.",
+      },
+      {
+        name: "Design Internships (Summer & Co-op)",
+        url: "",
+        description: "Intern at design studios, ad agencies, or tech company design teams — critical for landing a first job.",
+      },
+    ],
+    supplemental: [
+      { name: "Dribbble — Design Portfolio Community", url: "https://dribbble.com/", type: "program" },
+      { name: "The Design of Everyday Things — Don Norman", url: "", type: "book" },
+    ],
+  },
+
+  // ── Data Scientist ────────────────────────────────────────────
+  {
+    id: "rs41",
+    professionId: "p11",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description:
+      "Data science starts with curiosity and patterns! Encourage sorting, counting, and asking questions about the world. Simple data activities — like charting the weather or counting favorite colors — build the foundation for analytical thinking. Puzzles and logic games develop problem-solving skills.",
+    subjects: ["Counting & Sorting", "Pattern Recognition", "Asking Questions About the World"],
+    extracurriculars: [
+      {
+        name: "PBS Kids — Math Games",
+        url: "https://pbskids.org/games/math/",
+        description: "Free math and logic games that build early analytical thinking and pattern recognition.",
+      },
+      {
+        name: "Local Library STEM Storytimes",
+        url: "https://www.ala.org/",
+        description: "Many public libraries offer STEM-focused storytime and activity programs for young children.",
+      },
+    ],
+    supplemental: [
+      { name: "Rosie Revere, Engineer by Andrea Beaty", url: "", type: "book" },
+      { name: "Math Curse by Jon Scieszka", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs42",
+    professionId: "p11",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Strengthen math fundamentals and start thinking about data. Collect and graph real data — sports stats, weather patterns, or class survey results. Learn to use spreadsheets for simple calculations. Logic puzzles and brain teasers build the problem-solving mindset of a data scientist.",
+    subjects: ["Math (Pre-Algebra & Data)", "General Science", "Computer Literacy", "Logic & Problem Solving"],
+    extracurriculars: [
+      {
+        name: "Code.org — Elementary Courses",
+        url: "https://code.org/student/elementary",
+        description: "Free coding courses introducing computational thinking — the foundation of data science programming.",
+      },
+      {
+        name: "Math Olympiad / MathCounts",
+        url: "https://www.mathcounts.org/",
+        description: "Competitive math programs that build advanced problem-solving and analytical reasoning.",
+      },
+    ],
+    supplemental: [
+      { name: "Scratch (MIT)", url: "https://scratch.mit.edu/", type: "program" },
+      { name: "How to Be a Math Genius (DK)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs43",
+    professionId: "p11",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description:
+      "Start coding in Python — the language of data science. Take statistics and probability seriously. Explore real-world datasets: analyze sports performance, social media trends, or local environmental data. Join a data or coding club to work on projects with peers.",
+    subjects: ["Algebra I/II", "Statistics & Probability", "Intro to Computer Science (Python)", "English (Technical Communication)"],
+    extracurriculars: [
+      {
+        name: "Kaggle — Intro to Data Science",
+        url: "https://www.kaggle.com/learn",
+        description: "Free hands-on data science tutorials and competitions — start with the beginner micro-courses.",
+      },
+      {
+        name: "DataCamp for Students",
+        url: "https://www.datacamp.com/",
+        description: "Interactive courses in Python, R, SQL, and statistics — learn by doing with real datasets.",
+      },
+    ],
+    supplemental: [
+      { name: "CS50x — Harvard's Intro to CS", url: "https://cs50.harvard.edu/x/", type: "course" },
+      { name: "Naked Statistics — Charles Wheelan", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs44",
+    professionId: "p11",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description:
+      "Take AP Statistics and AP Computer Science — these are the two pillars of data science. Build a data analysis project portfolio: analyze a topic you care about (sports, climate, economics) and publish your findings with visualizations. Apply to data science, statistics, or CS programs.",
+    subjects: ["AP Statistics", "AP Computer Science A", "AP Calculus AB/BC", "AP Economics or AP Environmental Science", "Data Analysis Elective"],
+    extracurriculars: [
+      {
+        name: "Data Science for Social Good (High School)",
+        url: "https://www.datascienceforsocialgood.org/",
+        description: "Apply data science to community problems — build projects with real social impact.",
+      },
+      {
+        name: "American Statistical Association — Student Competitions",
+        url: "https://www.amstat.org/",
+        description: "ASA competitions and resources for students exploring statistics and data analysis careers.",
+      },
+    ],
+    supplemental: [
+      { name: "Python for Everybody (Coursera — University of Michigan)", url: "https://www.coursera.org/specializations/python", type: "course" },
+      { name: "Data Science from Scratch — Joel Grus", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs45",
+    professionId: "p11",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description:
+      "Major in Data Science, Statistics, Computer Science, or a quantitative field (math, physics, economics). Master Python/R, SQL, machine learning, and data visualization. Pursue data science internships every summer. Build a GitHub portfolio of independent analysis projects.",
+    subjects: ["Data Science / Statistics Major", "Machine Learning", "Database Systems (SQL)", "Linear Algebra", "Data Visualization"],
+    extracurriculars: [
+      {
+        name: "Kaggle Competitions",
+        url: "https://www.kaggle.com/competitions",
+        description: "Compete in real-world data science challenges — build your skills and your public profile.",
+      },
+      {
+        name: "Data Science Club / Hackathons",
+        url: "",
+        description: "Join or start a data science club — hackathons and data jams are great for networking and building a portfolio.",
+      },
+    ],
+    supplemental: [
+      { name: "Andrew Ng — Machine Learning Specialization (Coursera)", url: "https://www.coursera.org/specializations/machine-learning-introduction", type: "course" },
+      { name: "Google Data Analytics Certificate", url: "https://www.coursera.org/professional-certificates/google-data-analytics", type: "program" },
+    ],
+  },
 ];
 
 const professionals: Professional[] = [
@@ -1017,6 +1440,36 @@ const professionals: Professional[] = [
     pathBackground: "Took her first airplane ride in 1920 at age 23 and immediately knew she wanted to fly. Worked multiple jobs to pay for flight lessons with pioneer aviator Neta Snook. Bought her first plane — a bright yellow Kinner Airster — in 1921. Set her first record flying to 14,000 feet in 1922. Became the 16th woman to earn a pilot's license from the FAI. Gained fame as the first woman to fly across the Atlantic as a passenger in 1928, then solo in 1932 — exactly five years after Lindbergh. Disappeared in 1937 while attempting to circumnavigate the globe. Her legacy continues to inspire aviators worldwide.",
     photoUrl: "",
   },
+  {
+    id: "pro9",
+    name: "Dr. James Herriot (Alf Wight)",
+    title: "Veterinarian & Bestselling Author",
+    professionId: "p9",
+    professionName: "Veterinarian",
+    bio: "Real-life country veterinarian whose beloved books — including All Creatures Great and Small — have sold over 60 million copies worldwide. His warm, humorous stories about caring for animals in the Yorkshire Dales inspired multiple TV series and films, and introduced millions to the veterinary profession.",
+    pathBackground: "Born Alf Wight in Sunderland, England (1916). Graduated from Glasgow Veterinary College in 1939. Moved to Thirsk, Yorkshire to work in a rural veterinary practice where he spent his entire 50-year career. Began writing under the pen name James Herriot at age 50, drawing on his daily experiences treating farm animals and family pets. Published eight books between 1970 and 1992. His son Jim Wight also became a veterinarian, continuing the family tradition.",
+    photoUrl: "",
+  },
+  {
+    id: "pro10",
+    name: "Paula Scher",
+    title: "Graphic Designer & Partner at Pentagram",
+    professionId: "p10",
+    professionName: "Graphic Designer",
+    bio: "One of the most influential graphic designers in the world. A partner at Pentagram's New York office since 1991, Scher has created iconic brand identities for Citibank, Microsoft Windows, the Public Theater, and the Museum of Modern Art. Her bold typographic style defined an era of American design.",
+    pathBackground: "BFA from the Tyler School of Art, Temple University (1970). Began her career as a layout artist at Random House children's book division. Art director at CBS Records (1970s) designing over 150 album covers per year. Founded her own studio with Terry Koppel (1984). Joined Pentagram as its first female principal (1991). Recipient of the AIGA Medal, National Design Award, and works in permanent collections at MoMA, the Cooper Hewitt, and the V&A.",
+    photoUrl: "",
+  },
+  {
+    id: "pro11",
+    name: "Dr. DJ Patil",
+    title: "Data Scientist & First U.S. Chief Data Scientist",
+    professionId: "p11",
+    professionName: "Data Scientist",
+    bio: "Appointed by President Obama as the first-ever U.S. Chief Data Scientist (2015-2017), Dr. Patil helped coin the term 'data scientist.' He's held leadership roles at LinkedIn, eBay, and RelateIQ, and was a founding board member of the groundbreaking data science team at LinkedIn.",
+    pathBackground: "B.A. in Mathematics from UC San Diego. Ph.D. in Applied Mathematics from the University of Maryland. Worked as a research scientist at the Department of Defense and Institute for Defense Analyses. Joined eBay as Chief Scientist of Security and Fraud. Head of Data Products and Chief Scientist at LinkedIn, where he built the 'People You May Know' feature. Served as U.S. Chief Data Scientist in the Obama White House, establishing data-driven governance practices. Currently a senior fellow at Harvard and venture capitalist.",
+    photoUrl: "",
+  },
 ];
 
 const schools: School[] = [
@@ -1075,6 +1528,21 @@ const schools: School[] = [
     description: "The world's premier aviation and aerospace university. Offers professional flight degrees with FAA Part 141 flight training, aeronautical science, and air traffic management. Daytona Beach campus features a fleet of 100+ aircraft.",
     rankingInfo: "#1 in Aerospace / Aeronautical Engineering (U.S. News, non-doctoral)", websiteUrl: "https://daytonabeach.erau.edu/",
   },
+  {
+    id: "s12", name: "Cornell University", state: "NY", type: "private",
+    description: "Ivy League university with one of the world's finest veterinary medicine programs through the Cornell College of Veterinary Medicine. Also exceptional in animal science, biology, and agricultural sciences. Consistently ranked as a top veterinary school globally.",
+    rankingInfo: "#11 National University, #1 Veterinary Medicine (U.S. News)", websiteUrl: "https://www.cornell.edu/",
+  },
+  {
+    id: "s13", name: "Rhode Island School of Design", state: "RI", type: "private",
+    description: "America's premier art and design school. RISD's Graphic Design BFA program is consistently ranked #1 in the country. The curriculum blends conceptual thinking with hands-on making across print, digital, and experiential design. Alumni shape the visual culture of major brands, museums, and media.",
+    rankingInfo: "#1 Graphic Design (U.S. News), #4 Fine Arts", websiteUrl: "https://www.risd.edu/",
+  },
+  {
+    id: "s14", name: "Carnegie Mellon University", state: "PA", type: "private",
+    description: "World-class research university and a pioneer in computer science and data science. CMU's School of Computer Science offers a dedicated undergraduate major in Statistics & Machine Learning, and its Heinz College was one of the first to launch a data science-focused degree. Home to groundbreaking AI and machine learning research.",
+    rankingInfo: "#1 Computer Science, #2 Data Science / Analytics (U.S. News)", websiteUrl: "https://www.cmu.edu/",
+  },
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -1106,6 +1574,15 @@ const professionSchools: ProfessionSchool[] = [
   // Pilot schools
   { professionId: "p8", schoolId: "s11", programName: "Aeronautical Science / Professional Flight (B.S.)" },
   { professionId: "p8", schoolId: "s10", programName: "Professional Flight Technology (B.S.)" },
+  // Veterinarian schools
+  { professionId: "p9", schoolId: "s12", programName: "Veterinary Medicine (D.V.M.) / Animal Science (B.S.)" },
+  { professionId: "p9", schoolId: "s3", programName: "Animal Science on Pre-Vet Track (B.S.)" },
+  // Graphic Designer schools
+  { professionId: "p10", schoolId: "s13", programName: "Graphic Design (B.F.A.)" },
+  { professionId: "p10", schoolId: "s14", programName: "Design / Communication Design (B.F.A.)" },
+  // Data Scientist schools
+  { professionId: "p11", schoolId: "s14", programName: "Statistics & Machine Learning (B.S.)" },
+  { professionId: "p11", schoolId: "s1", programName: "Data Science / Computer Science (B.S.)" },
 ];
 
 // ── Data access functions (mock → swap for sql() later) ────────────────────
