@@ -137,21 +137,25 @@ function HowItWorks() {
       icon: "🔍",
       title: "Choose a profession",
       desc: "Browse our growing library of careers — from astronaut to zoologist — and see what the path really looks like.",
+      to: "/professions",
     },
     {
       icon: "📋",
       title: "Follow the roadmap",
       desc: "Grade-by-grade guidance: which subjects to take, which extracurriculars to pursue, and which programs to join — with direct links.",
+      to: "/professions",
     },
     {
       icon: "🏫",
       title: "Find the right schools",
       desc: "Discover the schools and programs that produce the best outcomes for each career path.",
+      to: "/schools",
     },
     {
       icon: "🌟",
       title: "Learn from real pros",
       desc: "Spotlight interviews with professionals who've walked the path — see the actual steps they took to succeed.",
+      to: "/spotlights",
     },
   ];
 
@@ -166,8 +170,9 @@ function HowItWorks() {
         </p>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
-            <div
+            <Link
               key={i}
+              to={s.to}
               className="group rounded-2xl border border-gray-100 bg-gray-50/50 p-6 text-center transition-all hover:border-indigo-200 hover:bg-white hover:shadow-lg"
             >
               <span className="text-4xl">{s.icon}</span>
@@ -177,7 +182,7 @@ function HowItWorks() {
               <p className="mt-2 text-sm leading-relaxed text-gray-500">
                 {s.desc}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
