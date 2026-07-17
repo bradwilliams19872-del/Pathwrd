@@ -47,11 +47,13 @@ for (const p of professions) {
 }
 console.log(`✓ ${count} roadmap steps`);
 
-// Seed professionals
+// Seed professionals — map mock professionId to slug
 const professionals = getAllProfessionals();
 count = 0;
 for (const pro of professionals) {
-  const profId = slugToId[pro.professionId === "p1" ? "astronaut" : pro.professionId === "p2" ? "software-engineer" : pro.professionId === "p3" ? "doctor" : pro.professionId === "p4" ? "architect" : pro.professionId === "p5" ? "lawyer" : ""];
+  const profession = professions.find(p => p.id === pro.professionId);
+  const profId = profession ? slugToId[profession.slug] : null;
+  if (!profId) { console.log(`  ⚠ skipping ${pro.name}: profession not found`); continue; }
   await q.query(
     "INSERT INTO professionals (name, title, profession_id, bio, path_background, photo_url) VALUES ($1, $2, $3, $4, $5, $6)",
     [pro.name, pro.title, profId, pro.bio, pro.pathBackground, pro.photoUrl]
