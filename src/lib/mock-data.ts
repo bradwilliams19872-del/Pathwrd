@@ -1893,7 +1893,1266 @@ const roadmapSteps: RoadmapStep[] = [
       { name: "Journal of the American Dental Association (JADA)", url: "https://jada.ada.org/", type: "article" },
     ],
   },
-];
+,
+
+  // ── Civil Engineer ────────────────────────────────────────────
+  {
+    id: "rs92",
+    professionId: "p14",
+    gradeLevelId: "g1",
+    gradeName: "Pre-K",
+    gradeShortCode: "prek",
+    description: "Civil engineering starts with building! Encourage block play, sandbox construction, and simple bridge-building with household items. Children naturally experiment with structures — towers, tunnels, and roads — developing spatial reasoning and problem-solving instincts.",
+    subjects: ["Building & Construction Play", "Counting & Shapes", "Sand & Water Play", "Drawing Structures"],
+    extracurriculars: [
+      {
+        name: "LEGO Duplo Building",
+        url: "https://www.lego.com/en-us/kids",
+        description: "Start with Duplo blocks to build towers, bridges, and simple structures — early engineering foundations.",
+      },
+      {
+        name: "Children's Science Museum Construction Zones",
+        url: "https://www.astc.org/",
+        description: "Find local museums with hands-on building exhibits and construction-themed play areas.",
+      },
+    ],
+    supplemental: [
+      { name: "Iggy Peck, Architect by Andrea Beaty", url: "", type: "book" },
+      { name: "Goodnight, Goodnight, Construction Site", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs93",
+    professionId: "p14",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description: "Nurture curiosity about bridges, roads, and buildings. Take walks to observe construction sites and discuss how structures stand up. Simple experiments with paper bridges and block towers introduce basic engineering concepts through play.",
+    subjects: ["Counting & Measurement", "Early Science (Forces & Materials)", "Drawing & Design", "Social Studies (Community Helpers)"],
+    extracurriculars: [
+      {
+        name: "PBS Kids — Design Squad Global",
+        url: "https://pbskids.org/designsquad/",
+        description: "Free engineering challenges and videos that introduce young children to the design process.",
+      },
+      {
+        name: "Local Construction Site Tours (from a safe distance)",
+        url: "",
+        description: "Observe real construction — cranes, excavators, and workers building the world around us.",
+      },
+    ],
+    supplemental: [
+      { name: "Rosie Revere, Engineer by Andrea Beaty", url: "", type: "book" },
+      { name: "How a House Is Built by Gail Gibbons", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs94",
+    professionId: "p14",
+    gradeLevelId: "g3",
+    gradeName: "1st Grade",
+    gradeShortCode: "1",
+    description: "Introduce the idea that engineers solve problems. Build bridges with popsicle sticks and test their strength. Draw maps of your neighborhood and notice how roads, sidewalks, and buildings connect. Engineering is everywhere — start noticing!",
+    subjects: ["Reading & Writing", "Math (Addition & Measurement)", "Science (Materials & Forces)", "Art (Drawing Maps & Structures)"],
+    extracurriculars: [
+      {
+        name: "Engineering is Elementary (EiE)",
+        url: "https://www.eie.org/",
+        description: "Hands-on engineering curriculum for elementary students — storybooks + design challenges.",
+      },
+      {
+        name: "Home Depot Kids Workshops",
+        url: "https://www.homedepot.com/c/kids",
+        description: "Free in-store building workshops for kids — hammer, build, and create real projects.",
+      },
+    ],
+    supplemental: [
+      { name: "The Most Magnificent Thing by Ashley Spires", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs95",
+    professionId: "p14",
+    gradeLevelId: "g4",
+    gradeName: "2nd Grade",
+    gradeShortCode: "2",
+    description: "Explore forces and materials more deeply. Build and test different types of bridges (beam, arch, suspension) using craft materials. Learn about famous structures — the Golden Gate Bridge, Hoover Dam, Empire State Building. Start a 'structures journal' to sketch and describe buildings you visit.",
+    subjects: ["Reading Comprehension", "Math (Measurement & Geometry)", "Science (Forces & Motion)", "Social Studies (Famous Structures)"],
+    extracurriculars: [
+      {
+        name: "ASCEville (American Society of Civil Engineers)",
+        url: "https://www.asce.org/",
+        description: "Interactive website exploring civil engineering through games, videos, and virtual tours of famous projects.",
+      },
+      {
+        name: "Local Architecture Walking Tours",
+        url: "",
+        description: "Explore bridges, buildings, and infrastructure in your city — sketch and photograph what you find.",
+      },
+    ],
+    supplemental: [
+      { name: "Bridges: Amazing Structures to Design, Build & Test", url: "", type: "book" },
+      { name: "National Geographic Kids — Engineering", url: "https://kids.nationalgeographic.com/science/article/engineering", type: "article" },
+    ],
+  },
+  {
+    id: "rs96",
+    professionId: "p14",
+    gradeLevelId: "g5",
+    gradeName: "3rd Grade",
+    gradeShortCode: "3",
+    description: "Understand that civil engineering includes transportation, water, environmental, and structural engineering. Build a model water filtration system. Learn about how cities get clean water and manage waste. Design a paper skyscraper that can withstand a 'windstorm' (fan test).",
+    subjects: ["Reading (Nonfiction)", "Math (Multiplication & Measurement)", "Science (Earth Science & Environment)", "Art (Model Building)"],
+    extracurriculars: [
+      {
+        name: "Future City Competition (Elementary)",
+        url: "https://futurecity.org/",
+        description: "Design a city of the future — introduces urban planning and civil infrastructure concepts.",
+      },
+      {
+        name: "Science Fair — Civil Engineering Project",
+        url: "",
+        description: "Enter a science fair with a project testing bridge strength, water filtration, or soil stability.",
+      },
+    ],
+    supplemental: [
+      { name: "Minecraft: Education Edition — City Building", url: "https://education.minecraft.net/", type: "program" },
+      { name: "Crash Course Kids: Engineering", url: "https://www.youtube.com/playlist?list=PLhz12vamHOnZ4ZDC0dS6C9HRN5Qrm0jHO", type: "video" },
+    ],
+  },
+  {
+    id: "rs97",
+    professionId: "p14",
+    gradeLevelId: "g6",
+    gradeName: "4th Grade",
+    gradeShortCode: "4",
+    description: "Dive into infrastructure systems. Learn about water treatment, electricity distribution, and transportation networks. Build a simple circuit and understand how dams generate power. Civil engineering connects all these systems — be the one who understands the big picture.",
+    subjects: ["English Language Arts", "Math (Fractions & Geometry)", "Science (Physical & Earth Science)", "Geography"],
+    extracurriculars: [
+      {
+        name: "City Planning SimCity / Cities: Skylines",
+        url: "https://www.citiesskylines.com/",
+        description: "City-building simulation games teach infrastructure planning, zoning, and resource management.",
+      },
+      {
+        name: "Water Treatment Plant Tour",
+        url: "",
+        description: "Many cities offer tours of water treatment facilities — see how engineers deliver clean water to your faucet.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Physics", url: "https://www.khanacademy.org/science/physics", type: "course" },
+    ],
+  },
+  {
+    id: "rs98",
+    professionId: "p14",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description: "Strengthen math fundamentals — algebra and geometry are the languages of engineering. Build a spaghetti bridge and test it to destruction. Learn about structural loads (tension, compression, torsion). Join a STEM or engineering club to work on team projects.",
+    subjects: ["Math (Pre-Algebra & Geometry)", "General Science", "Engineering & Design Thinking", "Technology (CAD Intro)"],
+    extracurriculars: [
+      {
+        name: "FIRST LEGO League",
+        url: "https://www.firstlegoleague.org/",
+        description: "Build and program LEGO robots — develops engineering design process and teamwork.",
+      },
+      {
+        name: "Engineering for Kids",
+        url: "https://engineeringforkids.com/",
+        description: "After-school programs with hands-on civil, mechanical, and structural engineering projects.",
+      },
+    ],
+    supplemental: [
+      { name: "Tinkercad (Free 3D Design)", url: "https://www.tinkercad.com/", type: "program" },
+      { name: "The Way Things Work Now by David Macaulay", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs99",
+    professionId: "p14",
+    gradeLevelId: "g8",
+    gradeName: "6th Grade",
+    gradeShortCode: "6",
+    description: "Middle school science deepens — focus on earth science, physics, and environmental systems. Start learning to read blueprints and technical drawings. Practice precise measurement and scale drawing. Visit a civil engineering firm or attend an engineering career day.",
+    subjects: ["English (Technical Reading)", "Pre-Algebra", "Earth Science", "Design & Technology"],
+    extracurriculars: [
+      {
+        name: "ACE Mentor Program (Intro)",
+        url: "https://www.acementor.org/",
+        description: "After-school program connecting students with architects, construction managers, and engineers for real-world projects.",
+      },
+      {
+        name: "Bridge Building Competition",
+        url: "https://www.ibcbridge.org/",
+        description: "Annual International Bridge Building Contest — design and build a model bridge to maximum efficiency standards.",
+      },
+    ],
+    supplemental: [
+      { name: "ASCE — Civil Engineering Resources for Students", url: "https://www.asce.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs100",
+    professionId: "p14",
+    gradeLevelId: "g9",
+    gradeName: "7th Grade",
+    gradeShortCode: "7",
+    description: "Take algebra and science seriously — these are prerequisites for high school physics. Start learning about surveying, soil mechanics, and materials science. Civil engineers must understand the ground beneath structures and the forces acting upon them. Join a STEM competition team.",
+    subjects: ["Algebra I", "Life/Earth Science", "English (Technical Writing)", "Technology / CAD"],
+    extracurriculars: [
+      {
+        name: "Science Olympiad — Build Events",
+        url: "https://www.soinc.org/",
+        description: "Competitions in bridge building, towers, boomilever, and other structural engineering events.",
+      },
+      {
+        name: "MathCounts",
+        url: "https://www.mathcounts.org/",
+        description: "Competitive math program that builds the quantitative skills essential for engineering.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Algebra I", url: "https://www.khanacademy.org/math/algebra", type: "course" },
+      { name: "Structures: Or Why Things Don't Fall Down — J.E. Gordon", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs101",
+    professionId: "p14",
+    gradeLevelId: "g10",
+    gradeName: "8th Grade",
+    gradeShortCode: "8",
+    description: "Prepare for high school by strengthening algebra and beginning geometry. Learn about sustainable design, green building, and climate-resilient infrastructure — these are the frontiers of modern civil engineering. Start a portfolio documenting your projects, sketches, and design ideas.",
+    subjects: ["Algebra I / Geometry", "Physical Science", "English (Research & Communication)", "Environmental Science"],
+    extracurriculars: [
+      {
+        name: "ACE Mentor Program (Full Program)",
+        url: "https://www.acementor.org/",
+        description: "Year-long after-school program — work on real design projects with professional engineers and architects.",
+      },
+      {
+        name: "Civil Air Patrol — Aerospace Education",
+        url: "https://www.gocivilairpatrol.com/",
+        description: "Learn about infrastructure from an aerospace perspective — runways, hangars, and airfield design.",
+      },
+    ],
+    supplemental: [
+      { name: "Autodesk Fusion 360 (Free for Students)", url: "https://www.autodesk.com/education/edu-software/fusion", type: "program" },
+    ],
+  },
+  {
+    id: "rs102",
+    professionId: "p14",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description: "High school is where civil engineering aspirants build their academic foundation. Take physics and advanced math. Join a STEM or engineering club. Start learning CAD (computer-aided design) software. Visit a civil engineering school's open house to see labs and talk to students.",
+    subjects: ["Algebra II", "Physics (Honors)", "English (Technical Writing)", "Computer-Aided Design (CAD)", "Environmental Science"],
+    extracurriculars: [
+      {
+        name: "SkillsUSA — Engineering Technology",
+        url: "https://www.skillsusa.org/",
+        description: "Competitions in engineering design, 3D modeling, and construction-related technical skills.",
+      },
+      {
+        name: "American Society of Civil Engineers (ASCE) — Student Resources",
+        url: "https://www.asce.org/",
+        description: "Explore career paths, watch webinars, and connect with the civil engineering community.",
+      },
+    ],
+    supplemental: [
+      { name: "MIT OpenCourseWare: Physics I", url: "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/", type: "course" },
+      { name: "Civil Engineering: A Very Short Introduction — David Muir Wood", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs103",
+    professionId: "p14",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description: "Take AP Physics and advanced math seriously. Consider summer programs like engineering camps at universities. Start researching ABET-accredited civil engineering programs. Strong grades in math, physics, and chemistry are essential for competitive engineering school admission.",
+    subjects: ["AP Physics 1", "Pre-Calculus", "Chemistry", "English (Technical Communication)", "CAD / Drafting"],
+    extracurriculars: [
+      {
+        name: "Summer Engineering Camp (University-Based)",
+        url: "https://www.engineeringcamps.com/",
+        description: "Many universities offer summer engineering experiences — hands-on labs, design challenges, and campus life exposure.",
+      },
+      {
+        name: "Construction / Engineering Internship (Intro)",
+        url: "",
+        description: "Seek a summer job or volunteer position with a local construction company or civil engineering firm.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Calculus", url: "https://www.khanacademy.org/math/calculus-1", type: "course" },
+    ],
+  },
+  {
+    id: "rs104",
+    professionId: "p14",
+    gradeLevelId: "g13",
+    gradeName: "11th Grade",
+    gradeShortCode: "11",
+    description: "Take AP Physics C (calculus-based) and AP Calculus — direct prerequisites for engineering programs. Take the SAT/ACT. Research civil engineering specialties: structural, geotechnical, transportation, environmental, water resources. Shadow a civil engineer for a day to see the profession firsthand.",
+    subjects: ["AP Physics C: Mechanics", "AP Calculus AB", "AP Environmental Science", "English (College Essays)", "Statistics"],
+    extracurriculars: [
+      {
+        name: "ACE Mentor Program — Advanced Projects",
+        url: "https://www.acementor.org/",
+        description: "Take on leadership roles in ACE projects — design presentations, client meetings, and competition entries.",
+      },
+      {
+        name: "Civil Engineering Shadow Day",
+        url: "",
+        description: "Contact local civil engineering firms to arrange a shadow day observing structural, transportation, or water resource engineers.",
+      },
+    ],
+    supplemental: [
+      { name: "ABET — Find Accredited Programs", url: "https://www.abet.org/", type: "article" },
+      { name: "NCEES — Fundamentals of Engineering (FE) Exam Preview", url: "https://ncees.org/engineering/fe/", type: "article" },
+    ],
+  },
+  {
+    id: "rs105",
+    professionId: "p14",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description: "Apply to ABET-accredited civil engineering programs. Take AP exams to earn college credit. Complete a senior project related to engineering design. Many programs offer co-op tracks where you alternate semesters of study with paid work at engineering firms — research these when choosing schools.",
+    subjects: ["AP Calculus BC", "AP Physics C: Electricity & Magnetism", "AP Chemistry", "Engineering Design Capstone", "Economics / Public Policy"],
+    extracurriculars: [
+      {
+        name: "Engineering Internship / Co-op Introduction",
+        url: "",
+        description: "Some high school seniors can intern at engineering firms — ask about drafting, field work, or lab assistant positions.",
+      },
+      {
+        name: "National Engineering Scholars Programs",
+        url: "",
+        description: "Apply for scholarships from ASCE, NSPE, and other engineering organizations.",
+      },
+    ],
+    supplemental: [
+      { name: "Coursera: Introduction to Engineering Mechanics (Georgia Tech)", url: "https://www.coursera.org/learn/engineering-mechanics-statics", type: "course" },
+    ],
+  },
+  {
+    id: "rs106",
+    professionId: "p14",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description: "Pursue a B.S. in Civil Engineering from an ABET-accredited program. Core coursework: statics, dynamics, mechanics of materials, structural analysis, fluid mechanics, geotechnical engineering, transportation, and environmental engineering. Pass the FE (Fundamentals of Engineering) exam — typically senior year. Pursue summer internships at engineering firms or government agencies (DOT, Army Corps of Engineers).",
+    subjects: ["Structural Analysis & Design", "Geotechnical Engineering", "Transportation Engineering", "Fluid Mechanics & Hydraulics", "Environmental Engineering"],
+    extracurriculars: [
+      {
+        name: "ASCE Student Chapter",
+        url: "https://www.asce.org/",
+        description: "Join your campus ASCE chapter — concrete canoe competition, steel bridge competition, networking, and career fairs.",
+      },
+      {
+        name: "Engineers Without Borders (EWB)",
+        url: "https://www.ewb-usa.org/",
+        description: "Apply engineering skills to real community projects — water systems, bridges, schools — in developing communities.",
+      },
+    ],
+    supplemental: [
+      { name: "FE Civil Exam Prep (NCEES)", url: "https://ncees.org/engineering/fe/", type: "program" },
+      { name: "AutoCAD Civil 3D / Revit (Student License)", url: "https://www.autodesk.com/education", type: "program" },
+    ],
+  },
+  {
+    id: "rs107",
+    professionId: "p14",
+    gradeLevelId: "g16",
+    gradeName: "Graduate",
+    gradeShortCode: "grad",
+    description: "A Master's in Civil Engineering (M.S. or M.Eng.) allows specialization — structural, geotechnical, transportation, environmental, construction management. Many engineers complete a coursework-only M.Eng. in 1 year, or a research-based M.S. in 2 years. Gain 4 years of professional experience under a licensed PE to qualify for the PE exam.",
+    subjects: ["Advanced Structural / Geotechnical / Transportation (specialization)", "Finite Element Analysis", "Construction Project Management", "Sustainability & Resilient Design", "Research / Thesis (for M.S.)"],
+    extracurriculars: [
+      {
+        name: "ASCE — Younger Member Groups",
+        url: "https://www.asce.org/",
+        description: "Transition from student to professional with ASCE's Younger Member forums, leadership opportunities, and PE exam study groups.",
+      },
+      {
+        name: "Structural Engineering Institute (SEI)",
+        url: "https://www.asce.org/structural-engineering",
+        description: "Specialized community for structural engineers — webinars, publications, and technical committees.",
+      },
+    ],
+    supplemental: [
+      { name: "PE Civil Exam — Specifications & Prep", url: "https://ncees.org/engineering/pe/civil/", type: "program" },
+      { name: "Engineering News-Record (ENR)", url: "https://www.enr.com/", type: "article" },
+    ],
+  },
+  {
+    id: "rs108",
+    professionId: "p14",
+    gradeLevelId: "g17",
+    gradeName: "PhD / Doctoral",
+    gradeShortCode: "phd",
+    description: "A Ph.D. in Civil Engineering prepares for academic careers, advanced research positions, and specialized consulting. Research areas: earthquake engineering, sustainable materials, smart infrastructure, climate adaptation. Most faculty positions require a Ph.D. and a strong publication record. PE license (with structural engineering depth) and S.E. license for structural engineers in high-seismic regions.",
+    subjects: ["Advanced Research Methods", "Dissertation Research (Specialized Area)", "Grant Writing & Academic Publishing", "Teaching / Mentoring", "Advanced Computational Methods"],
+    extracurriculars: [
+      {
+        name: "Transportation Research Board (TRB)",
+        url: "https://www.trb.org/",
+        description: "Premier forum for transportation research — attend the annual meeting (13,000+ transportation professionals).",
+      },
+      {
+        name: "ACI (American Concrete Institute) — Technical Committees",
+        url: "https://www.concrete.org/",
+        description: "Join technical committees shaping concrete design codes and standards worldwide.",
+      },
+    ],
+    supplemental: [
+      { name: "ASCE Journal of Structural Engineering", url: "https://ascelibrary.org/journal/jsendh", type: "article" },
+    ],
+  },
+
+  // ── Psychologist ──────────────────────────────────────────────
+  {
+    id: "rs109",
+    professionId: "p15",
+    gradeLevelId: "g1",
+    gradeName: "Pre-K",
+    gradeShortCode: "prek",
+    description: "Psychology starts with understanding feelings and relationships. Encourage emotional vocabulary — naming feelings, talking about what makes us happy or sad. Practice empathy with friends and family. The earliest roots of psychology are in understanding ourselves and others.",
+    subjects: ["Emotional Learning", "Sharing & Cooperation", "Storytelling (Understanding Characters)", "Art & Expression"],
+    extracurriculars: [
+      {
+        name: "Sesame Street — Emotional Well-Being",
+        url: "https://sesamestreetincommunities.org/",
+        description: "Free resources helping young children understand and manage emotions through beloved characters.",
+      },
+      {
+        name: "Local Library Storytimes (Social-Emotional Books)",
+        url: "https://www.ala.org/",
+        description: "Library programs featuring books about feelings, friendship, and understanding others.",
+      },
+    ],
+    supplemental: [
+      { name: "The Color Monster by Anna Llenas", url: "", type: "book" },
+      { name: "In My Heart: A Book of Feelings by Jo Witek", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs110",
+    professionId: "p15",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description: "Build emotional intelligence and observation skills. Practice noticing how friends feel by reading facial expressions and body language. Ask 'why do you think they did that?' questions about storybook characters. Curiosity about what makes people tick is the psychologist's superpower.",
+    subjects: ["Reading & Listening", "Counting & Sorting (Observation)", "Social-Emotional Learning", "Creative Play (Role-Playing)"],
+    extracurriculars: [
+      {
+        name: "Second Step — Social-Emotional Learning",
+        url: "https://www.secondstep.org/",
+        description: "Classroom-based program teaching empathy, emotion management, and problem-solving to young children.",
+      },
+      {
+        name: "PBS Kids — Daniel Tiger's Neighborhood",
+        url: "https://pbskids.org/daniel/",
+        description: "Show and games teaching emotional literacy, friendship, and coping strategies through song and story.",
+      },
+    ],
+    supplemental: [
+      { name: "The Way I Feel by Janan Cain", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs111",
+    professionId: "p15",
+    gradeLevelId: "g3",
+    gradeName: "1st Grade",
+    gradeShortCode: "1",
+    description: "Develop active listening skills — a core competency for psychologists. Practice interviewing family members: ask open-ended questions and listen carefully to their answers. Keep a 'feelings journal' with drawings and words about your emotions and observations of others.",
+    subjects: ["Reading & Writing", "Math (Patterns & Logic)", "Science (Observation Skills)", "Art (Emotional Expression)"],
+    extracurriculars: [
+      {
+        name: "Mindfulness for Kids (Smiling Mind)",
+        url: "https://www.smilingmind.com.au/",
+        description: "Free mindfulness app and program teaching children attention, awareness, and emotional regulation.",
+      },
+      {
+        name: "Junior Great Books",
+        url: "https://www.greatbooks.org/",
+        description: "Shared inquiry discussion program — practice asking questions, listening to others, and building on ideas.",
+      },
+    ],
+    supplemental: [
+      { name: "What Do You Do With a Problem? by Kobi Yamada", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs112",
+    professionId: "p15",
+    gradeLevelId: "g4",
+    gradeName: "2nd Grade",
+    gradeShortCode: "2",
+    description: "Start learning about the brain — the most fascinating organ! Simple lessons about neurons, the five senses, and how we learn and remember. Observe animal behavior at the zoo or with pets: what can we learn about minds by watching how creatures act?",
+    subjects: ["Reading Comprehension", "Math (Data & Graphing)", "Science (Body & Brain Basics)", "Writing (Observation Journals)"],
+    extracurriculars: [
+      {
+        name: "BrainPOP Jr. — Health & SEL",
+        url: "https://jr.brainpop.com/health/",
+        description: "Animated videos explaining how the brain works, emotions, and the senses — accessible for young learners.",
+      },
+      {
+        name: "Zoo / Aquarium Animal Behavior Observation",
+        url: "https://www.aza.org/",
+        description: "Observe animals at the zoo and record their behavior — an introduction to behavioral science and ethology.",
+      },
+    ],
+    supplemental: [
+      { name: "Your Fantastic Elastic Brain by JoAnn Deak", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs113",
+    professionId: "p15",
+    gradeLevelId: "g5",
+    gradeName: "3rd Grade",
+    gradeShortCode: "3",
+    description: "Explore why people think and act differently. Learn about personality, perspectives, and cognitive biases at an age-appropriate level. Conduct simple surveys: ask classmates about favorite foods or hobbies and graph the results — this is social science in action.",
+    subjects: ["Reading (Nonfiction)", "Math (Data Analysis & Graphing)", "Science (Scientific Method)", "Social Studies (Culture & Society)"],
+    extracurriculars: [
+      {
+        name: "4-H Youth Development — Healthy Living",
+        url: "https://4-h.org/programs/healthy-living/",
+        description: "Programs exploring mental wellness, stress management, and social connections among youth.",
+      },
+      {
+        name: "Kid Citizen — Psychology for Kids",
+        url: "https://www.kidcitizen.net/",
+        description: "Interactive episodes where kids explore historical photographs and discuss human experiences.",
+      },
+    ],
+    supplemental: [
+      { name: "Psychology for Kids: 40 Fun Tests — Jonni Kincher", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs114",
+    professionId: "p15",
+    gradeLevelId: "g6",
+    gradeName: "4th Grade",
+    gradeShortCode: "4",
+    description: "Learn about famous psychology experiments and what they revealed about human nature. Study memory, learning, and motivation — why do we remember some things and forget others? Practice designing your own simple experiments with family as subjects.",
+    subjects: ["English Language Arts", "Math (Statistics Intro)", "Science (Human Biology)", "Social Studies (Human Behavior)"],
+    extracurriculars: [
+      {
+        name: "National History Day — Psychology Topics",
+        url: "https://www.nhd.org/",
+        description: "Research and present on historical figures in psychology — Freud, Piaget, Pavlov — competing at regional and national levels.",
+      },
+      {
+        name: "Odyssey of the Mind",
+        url: "https://www.odysseyofthemind.com/",
+        description: "Creative problem-solving that develops teamwork, divergent thinking, and understanding group dynamics.",
+      },
+    ],
+    supplemental: [
+      { name: "Thinking, Fast and Slow (Simplified concepts for kids)", url: "", type: "article" },
+    ],
+  },
+  {
+    id: "rs115",
+    professionId: "p15",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description: "Dive deeper into brain science — neurons, synapses, and how learning physically changes the brain (neuroplasticity). Study human development: how do babies, children, teens, and adults differ in thinking and behavior? Start a 'human behavior observation notebook.'",
+    subjects: ["Math (Data & Statistics)", "Science (Neuroscience Basics)", "English (Reading & Analysis)", "Health Education"],
+    extracurriculars: [
+      {
+        name: "Science Olympiad — Anatomy & Physiology / Experimental Design",
+        url: "https://www.soinc.org/",
+        description: "Compete in events covering nervous system, sense organs, and the scientific method.",
+      },
+      {
+        name: "National Geographic Kids — Brain Games",
+        url: "https://kids.nationalgeographic.com/games/",
+        description: "undefined",
+      },
+    ],
+    supplemental: [
+      { name: "The Brain: All About Our Nervous System — Seymour Simon", url: "", type: "book" },
+      { name: "Khan Academy: MCAT Psychology/Sociology Preview", url: "https://www.khanacademy.org/test-prep/mcat", type: "course" },
+    ],
+  },
+  {
+    id: "rs116",
+    professionId: "p15",
+    gradeLevelId: "g8",
+    gradeName: "6th Grade",
+    gradeShortCode: "6",
+    description: "Middle school is a living psychology laboratory — friendships, social dynamics, identity formation. Study group behavior, peer pressure, and social influence. Read age-appropriate psychology books. Start volunteering as a peer mediator or mentor at school.",
+    subjects: ["English (Critical Analysis)", "Math (Statistics & Probability)", "Life Science (Human Biology)", "Social Studies (Anthropology)"],
+    extracurriculars: [
+      {
+        name: "Peer Mediation / Conflict Resolution Programs",
+        url: "",
+        description: "Train as a peer mediator — learn active listening, de-escalation, and conflict resolution skills used by psychologists daily.",
+      },
+      {
+        name: "National Junior Honor Society — Service & Leadership",
+        url: "https://www.njhs.us/",
+        description: "Develop leadership and mentoring skills through school and community service projects.",
+      },
+    ],
+    supplemental: [
+      { name: "Blink: The Power of Thinking Without Thinking (Youth Edition)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs117",
+    professionId: "p15",
+    gradeLevelId: "g9",
+    gradeName: "7th Grade",
+    gradeShortCode: "7",
+    description: "Explore different branches of psychology: clinical, cognitive, developmental, social, neuroscience. Read case studies and famous experiments (Milgram, Stanford Prison, Pavlov's dogs). Start developing research skills — learn to design surveys and analyze results. Debate ethical questions in psychology.",
+    subjects: ["English (Analytical Writing)", "Pre-Algebra / Algebra", "Life Science", "Social Studies (Psychology Elective if available)"],
+    extracurriculars: [
+      {
+        name: "Psychology Club (Start One!)",
+        url: "",
+        description: "Start a psychology club — discuss experiments, watch TED talks, and analyze human behavior in media and daily life.",
+      },
+      {
+        name: "Volunteer at a Senior Center / Nursing Home",
+        url: "",
+        description: "Interact with older adults and observe lifespan development firsthand — foundational experience for clinical psychology.",
+      },
+    ],
+    supplemental: [
+      { name: "Crash Course: Psychology (YouTube)", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6", type: "video" },
+      { name: "The Lucifer Effect (Youth Overview) — Philip Zimbardo", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs118",
+    professionId: "p15",
+    gradeLevelId: "g10",
+    gradeName: "8th Grade",
+    gradeShortCode: "8",
+    description: "Prepare for high school psychology courses. Deepen understanding of research methods — independent vs. dependent variables, control groups, correlation vs. causation. Conduct a simple research project: observe behavior in the cafeteria, at recess, or during class and write up your findings.",
+    subjects: ["English (Research Writing)", "Algebra I", "Physical Science", "Social Studies (Sociology Intro)"],
+    extracurriculars: [
+      {
+        name: "Crisis Text Line — Youth Volunteer (Age 16+)",
+        url: "https://www.crisistextline.org/",
+        description: "Train to support people in crisis via text — intensive training in active listening and empathy (minimum age 16, good to know for future).",
+      },
+      {
+        name: "School Newspaper / Yearbook — Human Interest Stories",
+        url: "",
+        description: "Interview students and staff about their experiences — practice the interviewing and listening skills central to psychology.",
+      },
+    ],
+    supplemental: [
+      { name: "TED Talks: Psychology Playlist", url: "https://www.ted.com/playlists/", type: "video" },
+    ],
+  },
+  {
+    id: "rs119",
+    professionId: "p15",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description: "Take AP Psychology if available — this is the gateway course. Focus on research methods, biological bases of behavior, and major psychological perspectives. Volunteer with populations you might want to serve: children, older adults, people with disabilities, or those in crisis.",
+    subjects: ["AP Psychology", "Biology", "Algebra I/II", "English (Research Writing)", "Statistics"],
+    extracurriculars: [
+      {
+        name: "National Alliance on Mental Illness (NAMI) — Youth Programs",
+        url: "https://www.nami.org/",
+        description: "NAMI clubs and awareness programs in high schools — mental health advocacy, peer support, and education.",
+      },
+      {
+        name: "Psychology Research Internship (University-Based)",
+        url: "",
+        description: "Contact local university psychology departments about summer research assistant opportunities for high school students.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: AP Psychology", url: "https://www.khanacademy.org/test-prep/ap-psychology", type: "course" },
+      { name: "Thinking, Fast and Slow — Daniel Kahneman", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs120",
+    professionId: "p15",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description: "Take advanced sciences — biology and chemistry are important for understanding brain chemistry and psychopharmacology. Deepen statistics skills. Explore career paths: clinical psychologist, school psychologist, research psychologist, industrial-organizational psychologist. Each requires different educational paths.",
+    subjects: ["Honors/AP Biology", "Chemistry", "AP Statistics", "English (Literature & Character Analysis)", "Sociology / Anthropology (elective)"],
+    extracurriculars: [
+      {
+        name: "American Psychological Association (APA) — Student Resources",
+        url: "https://www.apa.org/education-career",
+        description: "Explore psychology careers, watch videos of psychologists at work, and learn about educational requirements.",
+      },
+      {
+        name: "Mental Health Awareness Club / Active Minds",
+        url: "https://www.activeminds.org/",
+        description: "Start or join a mental health awareness club — reduce stigma, promote well-being, and educate peers.",
+      },
+    ],
+    supplemental: [
+      { name: "Coursera: Introduction to Psychology (Yale)", url: "https://www.coursera.org/learn/introduction-psychology", type: "course" },
+    ],
+  },
+  {
+    id: "rs121",
+    professionId: "p15",
+    gradeLevelId: "g13",
+    gradeName: "11th Grade",
+    gradeShortCode: "11",
+    description: "Take AP Biology and AP Statistics. Research undergraduate psychology programs — look for schools with strong research opportunities for undergrads. Clinical psychology Ph.D. programs are among the most competitive graduate programs; start building your CV with volunteer work, research experience, and strong grades.",
+    subjects: ["AP Biology", "AP Statistics", "Anatomy & Physiology", "English (Advanced Writing)", "Spanish / Second Language (valuable for clinical work)"],
+    extracurriculars: [
+      {
+        name: "Crisis Hotline Volunteer Training (Age-Appropriate)",
+        url: "",
+        description: "Some organizations offer youth volunteer roles or observer programs — exposure to counseling and mental health support.",
+      },
+      {
+        name: "Undergraduate Psychology Research — Summer Programs",
+        url: "",
+        description: "Apply to university summer research programs like NSF REU (Research Experiences for Undergraduates) psychology tracks.",
+      },
+    ],
+    supplemental: [
+      { name: "The Man Who Mistook His Wife for a Hat — Oliver Sacks", url: "", type: "book" },
+      { name: "APA Psychology Student Network", url: "https://www.apa.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs122",
+    professionId: "p15",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description: "Apply to colleges with strong psychology programs. Look for universities offering undergraduate research opportunities, clinical practicum placements, and faculty mentorship. Consider combined BA/MA programs to accelerate your path. Take AP exams to earn college credit and free up space for research in college.",
+    subjects: ["AP Psychology", "AP Calculus AB", "AP English Literature", "Anatomy / Neuroscience Elective", "Research Methods Elective"],
+    extracurriculars: [
+      {
+        name: "Senior Capstone: Psychology Research Project",
+        url: "",
+        description: "Design and conduct a research study on a psychological topic — survey students, analyze data, and present findings.",
+      },
+      {
+        name: "Psi Chi / Psychology Honor Society (College Preview)",
+        url: "https://www.psichi.org/",
+        description: "Research the honor society you'll join in college — explore their resources and scholarship opportunities.",
+      },
+    ],
+    supplemental: [
+      { name: "edX: The Science of Happiness (UC Berkeley)", url: "https://www.edx.org/learn/happiness", type: "course" },
+    ],
+  },
+  {
+    id: "rs123",
+    professionId: "p15",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description: "Major in Psychology (B.A. or B.S. — B.S. emphasizes more science/math). Complete core coursework: research methods, statistics, abnormal psychology, cognitive psychology, developmental psychology, social psychology, biological psychology. Join a research lab — hands-on experience is essential for grad school admission. Present at undergraduate research conferences.",
+    subjects: ["Research Methods & Statistics", "Abnormal Psychology", "Cognitive Psychology", "Developmental Psychology", "Biological Psychology / Neuroscience"],
+    extracurriculars: [
+      {
+        name: "Psi Chi — International Honor Society in Psychology",
+        url: "https://www.psichi.org/",
+        description: "Join your campus chapter — research grants, convention presentations, leadership development, and grad school networking.",
+      },
+      {
+        name: "Undergraduate Research Assistantship",
+        url: "",
+        description: "Work in a faculty research lab — the strongest signal for graduate school applications is sustained research experience.",
+      },
+      {
+        name: "Crisis Text Line / Hotline Volunteer",
+        url: "https://www.crisistextline.org/",
+        description: "Gain direct counseling-adjacent experience — training in active listening, empathy, and crisis de-escalation.",
+      },
+    ],
+    supplemental: [
+      { name: "GRE Psychology Subject Test Prep", url: "https://www.ets.org/gre.html", type: "program" },
+      { name: "Influence: The Psychology of Persuasion — Robert Cialdini", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs124",
+    professionId: "p15",
+    gradeLevelId: "g16",
+    gradeName: "Graduate",
+    gradeShortCode: "grad",
+    description: "Clinical Psychology: Ph.D. or Psy.D. (4-6 years + 1-year internship). Ph.D. emphasizes research; Psy.D. emphasizes clinical practice. Other paths: School Psychology (Ed.S. or Ph.D.), Industrial-Organizational Psychology (M.A./Ph.D.), Counseling Psychology. Complete supervised clinical hours (1,500-6,000 depending on state). Pass the EPPP (Examination for Professional Practice in Psychology).",
+    subjects: ["Psychopathology & Diagnosis", "Evidence-Based Therapy (CBT, DBT, etc.)", "Psychological Assessment", "Ethics & Professional Practice", "Clinical Practicum & Supervision"],
+    extracurriculars: [
+      {
+        name: "APA Graduate Student (APAGS)",
+        url: "https://www.apa.org/apags",
+        description: "American Psychological Association of Graduate Students — advocacy, grants, internships, and career resources.",
+      },
+      {
+        name: "Clinical Practicum Placements",
+        url: "",
+        description: "Train in hospitals, community mental health centers, university counseling centers, and private practices under licensed supervision.",
+      },
+    ],
+    supplemental: [
+      { name: "EPPP Exam Prep — AATBS / PsychPrep", url: "", type: "program" },
+      { name: "DSM-5-TR (Diagnostic and Statistical Manual)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs125",
+    professionId: "p15",
+    gradeLevelId: "g17",
+    gradeName: "PhD / Doctoral",
+    gradeShortCode: "phd",
+    description: "Post-doctoral fellowship (1-2 years) for clinical specialization — neuropsychology, forensic psychology, child psychology, health psychology. Licensed psychologists must complete continuing education (CE) throughout their careers. Academic psychologists pursue tenure-track positions, research grants, and scholarly publication.",
+    subjects: ["Post-Doctoral Clinical Specialization", "Advanced Assessment & Diagnosis", "Clinical Supervision of Trainees", "Research Program Development", "Grant Writing & Publication"],
+    extracurriculars: [
+      {
+        name: "APA — Division Membership",
+        url: "https://www.apa.org/about/division",
+        description: "Join APA divisions in your specialty area — professional home for networking, conferences, and leadership.",
+      },
+      {
+        name: "ABPP Board Certification",
+        url: "https://abpp.org/",
+        description: "American Board of Professional Psychology certification in your specialty — the highest credential in clinical psychology.",
+      },
+    ],
+    supplemental: [
+      { name: "APA PsycNET — Research Database", url: "https://psycnet.apa.org/", type: "article" },
+    ],
+  },
+
+  // ── Electrician ────────────────────────────────────────────────
+  {
+    id: "rs126",
+    professionId: "p16",
+    gradeLevelId: "g1",
+    gradeName: "Pre-K",
+    gradeShortCode: "prek",
+    description: "Electricians need curiosity about how things work! Encourage exploration with safe electrical toys (lights, switches, battery-powered gadgets). Teach basic safety: electricity is powerful — we never touch outlets or cords with wet hands. Building fine motor skills through crafts and construction play lays groundwork for precision wiring work.",
+    subjects: ["Fine Motor Skills (Crafts & Building)", "Counting & Sorting", "Safety & Rules", "Cause & Effect Play"],
+    extracurriculars: [
+      {
+        name: "Snap Circuits Jr. (Intro Level)",
+        url: "https://www.elenco.com/snap-circuits/",
+        description: "Safe, snap-together electronics kit for ages 5+ — build working circuits with lights, fans, and sounds.",
+      },
+      {
+        name: "Children's Museum — Maker Spaces",
+        url: "https://www.childrensmuseums.org/",
+        description: "Hands-on maker spaces with electronics and building exhibits for young inventors.",
+      },
+    ],
+    supplemental: [
+      { name: "Oscar and the Bird: A Book About Electricity — Geoff Waring", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs127",
+    professionId: "p16",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description: "Build curiosity about electricity in daily life. Point out where electricity comes from: outlets, batteries, solar panels. Simple activities: rub a balloon to create static electricity, build a basic circuit with a battery and bulb. Practice following step-by-step instructions — essential for wiring work.",
+    subjects: ["Early Science (Electricity & Magnetism)", "Counting & Patterns", "Fine Motor Skills (Drawing & Building)", "Following Instructions"],
+    extracurriculars: [
+      {
+        name: "KiwiCo — Tinker Crate",
+        url: "https://www.kiwico.com/tinker",
+        description: "Monthly STEM projects delivered to your door — circuits, motors, and hands-on engineering for ages 5-8.",
+      },
+      {
+        name: "Home Depot Kids Workshops",
+        url: "https://www.homedepot.com/c/kids",
+        description: "Free in-store building workshops — practice using real tools safely with parent supervision.",
+      },
+    ],
+    supplemental: [
+      { name: "Switch On, Switch Off by Melvin Berger", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs128",
+    professionId: "p16",
+    gradeLevelId: "g3",
+    gradeName: "1st Grade",
+    gradeShortCode: "1",
+    description: "Learn about circuits — the path electricity takes. Build simple circuits with batteries, wires, and bulbs. Understand conductors vs. insulators: test household items to see which conduct electricity. Start learning to use basic tools safely with adult supervision.",
+    subjects: ["Reading & Writing", "Math (Measurement & Patterns)", "Science (Circuits & Energy)", "Safety Education"],
+    extracurriculars: [
+      {
+        name: "Snap Circuits — Beginner Sets",
+        url: "https://www.elenco.com/snap-circuits/",
+        description: "Build over 100 projects — doorbells, AM radios, alarms — learning circuit fundamentals hands-on.",
+      },
+      {
+        name: "4-H Electricity & Energy Programs",
+        url: "https://4-h.org/programs/",
+        description: "Youth programs exploring electricity, energy conservation, and renewable energy — great introduction.",
+      },
+    ],
+    supplemental: [
+      { name: "The Magic School Bus and the Electric Field Trip", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs129",
+    professionId: "p16",
+    gradeLevelId: "g4",
+    gradeName: "2nd Grade",
+    gradeShortCode: "2",
+    description: "Explore more complex circuits — series vs. parallel. Build an electromagnet and understand how electricity creates magnetism. Learn about electrical safety: circuit breakers, GFCI outlets, and why we never overload outlets. Practice precision work with detailed building projects.",
+    subjects: ["Reading Comprehension", "Math (Measurement & Geometry)", "Science (Magnetism & Electricity)", "Art (Precision Drawing & Building)"],
+    extracurriculars: [
+      {
+        name: "Science Fair — Electricity Project",
+        url: "",
+        description: "Enter a school science fair with a project demonstrating circuits, electromagnets, or electrical conductivity.",
+      },
+      {
+        name: "Lego Technic / Mindstorms (Intro)",
+        url: "https://www.lego.com/en-us/themes/technic",
+        description: "Build mechanical and motorized models — develops hands-on technical skills and spatial reasoning.",
+      },
+    ],
+    supplemental: [
+      { name: "BrainPOP Jr. — Energy & Electricity", url: "https://jr.brainpop.com/science/energy/", type: "video" },
+    ],
+  },
+  {
+    id: "rs130",
+    professionId: "p16",
+    gradeLevelId: "g5",
+    gradeName: "3rd Grade",
+    gradeShortCode: "3",
+    description: "Learn about energy sources: fossil fuels, nuclear, solar, wind, hydro. Electricians need to understand where electricity comes from and how it reaches homes. Build a simple solar-powered toy. Practice using a multimeter to measure voltage — the electrician's essential diagnostic tool.",
+    subjects: ["Reading (Nonfiction)", "Math (Multiplication & Measurement)", "Science (Energy & Electricity)", "Technology (Basic Tools)"],
+    extracurriculars: [
+      {
+        name: "DIY.org — Electronics Challenges",
+        url: "https://diy.org/",
+        description: "Online community where kids complete electronics challenges, earn badges, and share projects.",
+      },
+      {
+        name: "Local Maker Faire / Engineering Fair",
+        url: "https://makerfaire.com/",
+        description: "Attend Maker Faires to see electronics projects, meet makers, and get inspired by hands-on exhibits.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Electrical Engineering (Intro)", url: "https://www.khanacademy.org/science/electrical-engineering", type: "course" },
+    ],
+  },
+  {
+    id: "rs131",
+    professionId: "p16",
+    gradeLevelId: "g6",
+    gradeName: "4th Grade",
+    gradeShortCode: "4",
+    description: "Advance circuit knowledge: understand voltage, current, and resistance (Ohm's Law at a conceptual level). Build more complex projects with motors, switches, and sensors. Learn to read simple wiring diagrams. Precision, safety, and methodical thinking are electrician superpowers.",
+    subjects: ["English Language Arts", "Math (Fractions & Data)", "Science (Physical Science)", "Technology (Wiring Diagrams)"],
+    extracurriculars: [
+      {
+        name: "Arduino — Getting Started",
+        url: "https://www.arduino.cc/",
+        description: "Begin learning microcontroller basics — program LEDs, sensors, and motors. Bridge between electronics and programming.",
+      },
+      {
+        name: "Shop Class / Industrial Arts",
+        url: "",
+        description: "If your school offers shop class, take it — hands-on experience with tools and materials is invaluable.",
+      },
+    ],
+    supplemental: [
+      { name: "Electronics for Kids — Oyvind Nydal Dahl", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs132",
+    professionId: "p16",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description: "Strengthen math skills — electricians use algebra and geometry daily for load calculations, conduit bending, and circuit design. Build a model house with working lights. Start a project journal documenting your electronics builds with photos, diagrams, and what you learned.",
+    subjects: ["Math (Pre-Algebra & Geometry)", "General Science", "Technology / Electronics", "Art (Model Building)"],
+    extracurriculars: [
+      {
+        name: "FIRST LEGO League",
+        url: "https://www.firstlegoleague.org/",
+        description: "Build and program LEGO robots with motors and sensors — excellent preparation for electrical and control systems.",
+      },
+      {
+        name: "Engineering for Kids — Electrical Engineering",
+        url: "https://engineeringforkids.com/",
+        description: "After-school programs with hands-on electrical projects — circuits, solar cars, and electronic games.",
+      },
+    ],
+    supplemental: [
+      { name: "Tinkercad Circuits (Free Online Simulator)", url: "https://www.tinkercad.com/circuits", type: "program" },
+    ],
+  },
+  {
+    id: "rs133",
+    professionId: "p16",
+    gradeLevelId: "g8",
+    gradeName: "6th Grade",
+    gradeShortCode: "6",
+    description: "Middle school is when many future tradespeople start exploring seriously. Learn about residential wiring: how electricity enters a home, the breaker panel, and how outlets and switches work. Practice more advanced circuit projects. Math at this level directly supports electrical calculations.",
+    subjects: ["English (Technical Reading)", "Pre-Algebra", "Physical Science", "Technology / Industrial Arts"],
+    extracurriculars: [
+      {
+        name: "SkillsUSA — Middle School",
+        url: "https://www.skillsusa.org/",
+        description: "Join SkillsUSA programs introducing construction trades, electrical basics, and career pathways in skilled trades.",
+      },
+      {
+        name: "Boys & Girls Club — STEM/DIY Programs",
+        url: "https://www.bgca.org/",
+        description: "Many clubs offer hands-on STEM programs including electronics, coding, and maker activities.",
+      },
+    ],
+    supplemental: [
+      { name: "Wiring Simplified (HS-level intro)", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs134",
+    professionId: "p16",
+    gradeLevelId: "g9",
+    gradeName: "7th Grade",
+    gradeShortCode: "7",
+    description: "Take algebra and physical science seriously — these are directly applicable. Learn about the National Electrical Code (NEC) basics and why safety standards matter. Visit a trade school or technical college open house. The skilled trades offer excellent earning potential without massive student debt.",
+    subjects: ["Algebra I", "Physical Science", "English (Technical Writing)", "Technology / Industrial Arts"],
+    extracurriculars: [
+      {
+        name: "4-H Electricity & Small Engines",
+        url: "https://4-h.org/programs/",
+        description: "Advanced 4-H programs in electricity, small engines, and mechanical systems — great hands-on preparation.",
+      },
+      {
+        name: "School Robotics / Maker Club",
+        url: "",
+        description: "Join or start a robotics/maker club — wiring, sensors, and power systems are core components of every robot.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy: Algebra I", url: "https://www.khanacademy.org/math/algebra", type: "course" },
+      { name: "Mike Holt's Illustrated Guide to Electrical Exam Preparation", url: "https://www.mikeholt.com/", type: "book" },
+    ],
+  },
+  {
+    id: "rs135",
+    professionId: "p16",
+    gradeLevelId: "g10",
+    gradeName: "8th Grade",
+    gradeShortCode: "8",
+    description: "Research career paths: residential electrician, commercial electrician, industrial electrician, lineman (power line worker), low-voltage technician. Each has different training programs and work environments. Electricians earn while they learn through apprenticeships — often with zero student debt.",
+    subjects: ["Algebra I / Geometry", "Physical Science / Intro Physics", "English (Communication)", "Career & Technical Education (CTE)"],
+    extracurriculars: [
+      {
+        name: "Trade School / Apprenticeship Program Visit",
+        url: "",
+        description: "Visit a local IBEW training center or technical college — see electrical labs, talk to apprentices, and learn about paid training.",
+      },
+      {
+        name: "Summer Construction / Electrical Helper Job",
+        url: "",
+        description: "Some electrical contractors hire summer helpers — exposure to real job sites and experienced electricians.",
+      },
+    ],
+    supplemental: [
+      { name: "IBEW — Become an Electrician", url: "https://www.ibew.org/", type: "article" },
+      { name: "NECA — Electrical Contracting Careers", url: "https://www.necanet.org/", type: "article" },
+    ],
+  },
+  {
+    id: "rs136",
+    professionId: "p16",
+    gradeLevelId: "g11",
+    gradeName: "9th Grade",
+    gradeShortCode: "9",
+    description: "Take algebra, physics, and any Career & Technical Education (CTE) electrical courses your school offers. Start building a professional network — talk to local electricians, visit union halls, attend career fairs. The electrical trade is in high demand and wages are excellent.",
+    subjects: ["Algebra II", "Physics", "CTE: Electrical Trades / Construction", "English (Communication)", "Business / Entrepreneurship (optional)"],
+    extracurriculars: [
+      {
+        name: "SkillsUSA — Electrical Construction Wiring",
+        url: "https://www.skillsusa.org/",
+        description: "Compete in electrical construction wiring events — real-world skills judged by industry professionals.",
+      },
+      {
+        name: "IBEW Youth Outreach / RENEW Program",
+        url: "https://www.ibew.org/",
+        description: "International Brotherhood of Electrical Workers youth programs introducing the electrical trade and apprenticeship pathway.",
+      },
+    ],
+    supplemental: [
+      { name: "NEC (National Electrical Code) — Student Edition", url: "https://www.nfpa.org/", type: "book" },
+      { name: "Khan Academy: Physics", url: "https://www.khanacademy.org/science/physics", type: "course" },
+    ],
+  },
+  {
+    id: "rs137",
+    professionId: "p16",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description: "Take advanced CTE electrical courses if available. Some high schools offer dual-enrollment with technical colleges — earn electrical trainee certification before graduating. Continue building math and physics fundamentals. Consider a part-time job with an electrical contractor as a helper or material handler.",
+    subjects: ["Geometry / Trigonometry", "Physics (Electricity & Magnetism)", "CTE: Advanced Electrical / Construction", "English (Technical Communication)", "Computer Skills (Estimating Software)"],
+    extracurriculars: [
+      {
+        name: "Construction Career Academy / Pre-Apprenticeship",
+        url: "",
+        description: "Some regions offer pre-apprenticeship programs for high school students — hands-on training plus job placement assistance.",
+      },
+      {
+        name: "Summer Electrical Helper Position",
+        url: "",
+        description: "Get paid to work alongside journeyman electricians — learn tool handling, job site safety, and basic wiring skills on real projects.",
+      },
+    ],
+    supplemental: [
+      { name: "Mike Holt's Basic Electrical Theory", url: "https://www.mikeholt.com/", type: "book" },
+    ],
+  },
+  {
+    id: "rs138",
+    professionId: "p16",
+    gradeLevelId: "g13",
+    gradeName: "11th Grade",
+    gradeShortCode: "11",
+    description: "Apply to apprenticeship programs — the primary path to becoming a licensed electrician. IBEW union apprenticeships are competitive: study for the aptitude test (algebra and reading comprehension) and prepare for the interview. Non-union programs through IEC and ABC are also excellent. Apprenticeships are PAID — earn while you learn.",
+    subjects: ["Algebra II / Trigonometry", "Physics", "CTE: Electrical Trades Capstone", "English (Interview Skills)", "Business Math"],
+    extracurriculars: [
+      {
+        name: "IBEW Apprenticeship Application Preparation",
+        url: "https://www.ibew.org/",
+        description: "Prepare for the IBEW/NECA apprenticeship application — aptitude test prep, interview practice, and application guidance.",
+      },
+      {
+        name: "IEC / ABC Apprenticeship Programs",
+        url: "https://www.ieci.org/",
+        description: "Research Independent Electrical Contractors and Associated Builders and Contractors apprenticeship pathways in your area.",
+      },
+    ],
+    supplemental: [
+      { name: "Electrician's Exam Study Guide", url: "", type: "book" },
+      { name: "OSHA 10-Hour Construction Safety", url: "https://www.osha.gov/", type: "program" },
+    ],
+  },
+  {
+    id: "rs139",
+    professionId: "p16",
+    gradeLevelId: "g14",
+    gradeName: "12th Grade",
+    gradeShortCode: "12",
+    description: "Secure an apprenticeship position. If still waiting, enroll in a pre-apprenticeship program or technical college electrical program. Take the OSHA 10 certification. Begin your apprenticeship: 4-5 years of paid on-the-job training (8,000 hours) plus classroom instruction (500-1,000 hours). Congratulations — you're an electrical apprentice!",
+    subjects: ["On-the-Job Training (Apprenticeship)", "Electrical Theory (Classroom)", "NEC Code Study", "Blueprint Reading", "Safety & OSHA Standards"],
+    extracurriculars: [
+      {
+        name: "IBEW/NECA Electrical Apprenticeship",
+        url: "https://www.ibew.org/",
+        description: "The gold standard — paid apprenticeship with classroom instruction, health benefits, pension, and guaranteed wage progression.",
+      },
+      {
+        name: "Technical College Electrical Program",
+        url: "",
+        description: "Alternative pathway — earn a certificate or associate degree in electrical technology while preparing for apprenticeship.",
+      },
+    ],
+    supplemental: [
+      { name: "Ugly's Electrical References", url: "", type: "book" },
+      { name: "Electrical Exam Prep — Tom Henry", url: "https://www.tomhenry.com/", type: "program" },
+    ],
+  },
+  {
+    id: "rs140",
+    professionId: "p16",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description: "Complete your electrical apprenticeship (typically 4-5 years). Accumulate 8,000 hours of supervised on-the-job training. Complete required classroom hours (typically 500-1,000). Pass the journeyman electrician licensing exam. As a licensed journeyman, you can work independently, supervise apprentices, and command excellent wages.",
+    subjects: ["Journeyman Exam Preparation", "Advanced Electrical Theory", "Motor Controls & PLCs", "Fire Alarm & Security Systems", "Renewable Energy Systems (Solar/Wind)"],
+    extracurriculars: [
+      {
+        name: "IBEW Journeyman Membership",
+        url: "https://www.ibew.org/",
+        description: "Full union membership with better wages, health and retirement benefits, and continuing education through the JATC.",
+      },
+      {
+        name: "NICET Certification — Fire Alarm / Electrical Testing",
+        url: "https://www.nicet.org/",
+        description: "Additional certifications that increase earning potential and job opportunities — fire alarm, electrical testing, and more.",
+      },
+    ],
+    supplemental: [
+      { name: "Journeyman Electrician Exam Prep — Mike Holt", url: "https://www.mikeholt.com/", type: "program" },
+      { name: "NFPA 70 (National Electrical Code) — Current Edition", url: "https://www.nfpa.org/", type: "book" },
+    ],
+  },
+  {
+    id: "rs141",
+    professionId: "p16",
+    gradeLevelId: "g16",
+    gradeName: "Graduate",
+    gradeShortCode: "grad",
+    description: "After 2+ years as a journeyman (requirements vary by state), qualify for the master electrician exam. Master electricians can pull permits, own electrical contracting businesses, and design electrical systems. Some pursue an associate or bachelor's in construction management or electrical engineering for career advancement into project management or engineering roles.",
+    subjects: ["Master Electrician Exam Preparation", "Electrical System Design", "Construction Management", "Business Management (for contractors)", "Estimating & Bidding"],
+    extracurriculars: [
+      {
+        name: "NECA — Electrical Contractor Development",
+        url: "https://www.necanet.org/",
+        description: "Resources for electricians starting or growing their own contracting businesses.",
+      },
+      {
+        name: "IEC / ABC — Continuing Education",
+        url: "https://www.ieci.org/",
+        description: "Advanced training in electrical systems, project management, and business skills for electrical professionals.",
+      },
+    ],
+    supplemental: [
+      { name: "Master Electrician Exam Prep — Ray Holder", url: "", type: "book" },
+      { name: "EC&M Magazine (Electrical Construction & Maintenance)", url: "https://www.ecmweb.com/", type: "article" },
+    ],
+  },
+  {
+    id: "rs142",
+    professionId: "p16",
+    gradeLevelId: "g17",
+    gradeName: "PhD / Doctoral",
+    gradeShortCode: "phd",
+    description: "While a Ph.D. isn't required for electricians, career advancement includes: electrical contractor (business owner), electrical inspector (city/county), electrical estimator, project manager, or transition to electrical engineering (B.S./M.S.). Some master electricians teach at technical colleges, develop training curricula, or serve on NEC code-making panels shaping national electrical standards.",
+    subjects: ["Electrical Business Ownership", "Advanced Code & Standards Development", "Electrical Inspection & Plan Review", "Training & Curriculum Development", "Forensic Electrical Investigation"],
+    extracurriculars: [
+      {
+        name: "NFPA Technical Committee Membership",
+        url: "https://www.nfpa.org/",
+        description: "Serve on committees that write the National Electrical Code — shape the standards that govern the electrical industry.",
+      },
+      {
+        name: "IAEI (International Association of Electrical Inspectors)",
+        url: "https://www.iaei.org/",
+        description: "Professional organization for electrical inspectors — certification, education, and code advocacy.",
+      },
+    ],
+    supplemental: [
+      { name: "IEEE Transactions on Industry Applications", url: "https://www.ieee.org/", type: "article" },
+    ],
+  },];
 
 const professionals: Professional[] = [
   {
@@ -2026,7 +3285,38 @@ const professionals: Professional[] = [
     pathBackground: "Born in poverty in rural Alabama, Satcher was one of only three African American students admitted to Morehouse College in 1959. Earned his D.D.S. from Meharry Medical College and later his M.D. from Case Western Reserve University. Served as Director of the CDC and Assistant Secretary for Health before being appointed U.S. Surgeon General (1998-2002). His career demonstrates the profound intersection of dentistry, medicine, and public health policy.",
     photoUrl: "",
   },
-];
+,
+
+  {
+    id: "pro14",
+    name: "Dr. Henry Petroski",
+    title: "Civil Engineer & Author",
+    professionId: "p14",
+    professionName: "Civil Engineer",
+    bio: "One of the most celebrated explainers of engineering. Aleksandar S. Vesic Professor of Civil Engineering at Duke University and author of 20 books including 'To Engineer Is Human' and 'The Pencil.' His work explores the role of failure in successful design and makes engineering accessible to the public.",
+    pathBackground: "B.S. in Mechanical Engineering from Manhattan College. Ph.D. in Theoretical and Applied Mechanics from the University of Illinois Urbana-Champaign. Taught at Duke University for over 35 years. Wrote a regular column for American Scientist and published extensively on engineering failure, design philosophy, and the history of everyday objects. His case studies of bridge collapses and structural failures are used in civil engineering courses worldwide.",
+    photoUrl: "",
+  },
+  {
+    id: "pro15",
+    name: "Dr. Philip Zimbardo",
+    title: "Psychologist & Stanford Professor Emeritus",
+    professionId: "p15",
+    professionName: "Psychologist",
+    bio: "Conducted the landmark 1971 Stanford Prison Experiment, one of the most famous (and controversial) studies in psychology. Professor Emeritus at Stanford University. Author of 'The Lucifer Effect' and 'The Time Paradox.' Founder of the Heroic Imagination Project, teaching people to take courageous action in challenging situations.",
+    pathBackground: "B.A. in Psychology, Sociology, and Anthropology from Brooklyn College. M.S. and Ph.D. in Psychology from Yale University. Taught at Stanford from 1968 until retirement. Served as President of the American Psychological Association (2002). His research spans social psychology, the psychology of evil and heroism, time perspective, and shyness. The Stanford Prison Experiment transformed our understanding of situational power and institutional dynamics.",
+    photoUrl: "",
+  },
+  {
+    id: "pro16",
+    name: "Henry Miller",
+    title: "Master Electrician & IBEW Leader",
+    professionId: "p16",
+    professionName: "Electrician",
+    bio: "Lifelong IBEW member and master electrician who rose from apprentice to international leadership. A powerful advocate for the skilled trades, apprenticeship training, and the dignity of hands-on work. Miller helped modernize electrical training programs and fought for fair wages and safety standards for electrical workers across North America.",
+    pathBackground: "Began his career as an IBEW apprentice in the 1960s, working on commercial and industrial projects across the Midwest. Earned his journeyman license and later master electrician certification. Became a JATC instructor, training hundreds of apprentices. Elected to IBEW leadership positions at local, district, and international levels. Advocated for renewable energy training, updated safety codes, and expanding apprenticeship opportunities to underserved communities. His career exemplifies the electrician's path from apprentice to respected industry leader.",
+    photoUrl: "",
+  },];
 
 const schools: School[] = [
   {
@@ -2119,7 +3409,23 @@ const schools: School[] = [
     description: "First university-based dental school in the U.S. Part of Harvard Medical School's ecosystem — unique D.M.D. program integrated with medical education. Strong research emphasis and specialty training in a world-class academic environment.",
     rankingInfo: "#2 Dental School (QS World Rankings)", websiteUrl: "https://hsdm.harvard.edu/",
   },
-];
+,
+
+  {
+    id: "s19", name: "University of Illinois Urbana-Champaign", state: "IL", type: "public",
+    description: "Top-ranked public engineering university with one of the nation's best civil and environmental engineering programs. The Grainger College of Engineering is renowned for structural engineering, construction materials, and transportation systems research. Strong industry partnerships and co-op programs.",
+    rankingInfo: "#2 Civil Engineering (U.S. News Graduate Rankings)", websiteUrl: "https://www.illinois.edu/",
+  },
+  {
+    id: "s20", name: "IBEW Electrical Training Alliance", state: "National", type: "public",
+    description: "The premier electrical apprenticeship and training program in the United States, jointly administered by the International Brotherhood of Electrical Workers (IBEW) and the National Electrical Contractors Association (NECA). Offers a 5-year paid apprenticeship with classroom instruction and on-the-job training at over 300 training centers nationwide.",
+    rankingInfo: "Largest electrical apprenticeship program in the U.S.", websiteUrl: "https://www.electricaltrainingalliance.org/",
+  },
+  {
+    id: "s21", name: "Lincoln Tech", state: "NJ", type: "private",
+    description: "Leading technical training school with campuses across 14 states. Offers hands-on Electrical & Electronic Systems programs preparing students for careers as electricians, electrical technicians, and low-voltage specialists. Programs combine classroom theory with extensive lab practice and can be completed in 1-2 years.",
+    rankingInfo: "Top Trade School (Forbes)", websiteUrl: "https://www.lincolntech.edu/",
+  },];
 
 const professionSchools: ProfessionSchool[] = [
   // Astronaut schools
@@ -2165,7 +3471,20 @@ const professionSchools: ProfessionSchool[] = [
   // Dentist schools
   { professionId: "p13", schoolId: "s17", programName: "Doctor of Dental Surgery (D.D.S.) / Pre-Dental B.S." },
   { professionId: "p13", schoolId: "s18", programName: "Doctor of Dental Medicine (D.M.D.)" },
-];
+,
+
+  // Civil Engineer schools
+  { professionId: "p14", schoolId: "s3", programName: "Civil & Environmental Engineering (B.S./M.S.)" },
+  { professionId: "p14", schoolId: "s19", programName: "Civil Engineering — Grainger College of Engineering (B.S./M.S.)" },
+  { professionId: "p14", schoolId: "s7", programName: "Civil Engineering (B.S.C.E./M.S.)" },
+  // Psychologist schools
+  { professionId: "p15", schoolId: "s2", programName: "Psychology (B.A./B.S.) — Ph.D. in Clinical Psychology" },
+  { professionId: "p15", schoolId: "s3", programName: "Psychology & Cognitive Science (B.A.) — Ph.D. Program" },
+  { professionId: "p15", schoolId: "s6", programName: "Psychology / Biopsychology, Cognition & Neuroscience (B.S.) — Ph.D." },
+  // Electrician programs
+  { professionId: "p16", schoolId: "s20", programName: "Electrical Apprenticeship (IBEW/NECA — Journeyman)" },
+  { professionId: "p16", schoolId: "s21", programName: "Electrical & Electronic Systems Technology (Certificate/A.A.S.)" },
+  { professionId: "p16", schoolId: "s10", programName: "Electrical Engineering Technology (B.S.) — Industrial & Power Systems" },];
 
 // ── Data access functions (mock → swap for sql() later) ────────────────────
 
