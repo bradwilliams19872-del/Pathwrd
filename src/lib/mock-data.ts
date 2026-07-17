@@ -174,6 +174,15 @@ const professions: Profession[] = [
     category: "STEM",
     iconEmoji: "📊",
   },
+  {
+    id: "p12",
+    slug: "teacher-k12",
+    name: "Teacher (K-12)",
+    description:
+      "Shape young minds and inspire the next generation. K-12 teachers create engaging learning environments, develop curriculum, and help students discover their potential across subjects from reading and math to science and the arts.",
+    category: "Education",
+    iconEmoji: "🍎",
+  },
 ];
 
 const gradeLevels: GradeLevel[] = [
@@ -1357,6 +1366,131 @@ const roadmapSteps: RoadmapStep[] = [
       { name: "Google Data Analytics Certificate", url: "https://www.coursera.org/professional-certificates/google-data-analytics", type: "program" },
     ],
   },
+
+  // ── Teacher (K-12) ──────────────────────────────────────────
+  {
+    id: "rs46",
+    professionId: "p12",
+    gradeLevelId: "g2",
+    gradeName: "Kindergarten",
+    gradeShortCode: "k",
+    description:
+      "Great teachers start with a love of learning and helping others.",
+    subjects: ["Reading & Phonics", "Counting & Numbers", "Social-Emotional Learning", "Creative Play"],
+    extracurriculars: [
+      {
+        name: "Reading Is Fundamental (RIF)",
+        url: "https://www.rif.org/",
+        description: "The nation's largest children's literacy nonprofit — provides books and reading resources.",
+      },
+      {
+        name: "PBS Kids",
+        url: "https://pbskids.org/",
+        description: "Free educational games and videos that build early learning skills.",
+      },
+    ],
+    supplemental: [
+      { name: "Miss Nelson Is Missing by Harry Allard", url: "", type: "book" },
+    ],
+  },
+  {
+    id: "rs47",
+    professionId: "p12",
+    gradeLevelId: "g7",
+    gradeName: "5th Grade",
+    gradeShortCode: "5",
+    description:
+      "Develop strong communication skills and a broad base of knowledge.",
+    subjects: ["English Language Arts", "Math", "Science", "Social Studies"],
+    extracurriculars: [
+      {
+        name: "National Elementary Honor Society",
+        url: "https://www.nehs.org/",
+        description: "Recognition program for elementary students demonstrating academic excellence and leadership.",
+      },
+      {
+        name: "4-H Youth Development",
+        url: "https://4-h.org/",
+        description: "Hands-on programs in STEM, leadership, and healthy living for youth nationwide.",
+      },
+    ],
+    supplemental: [
+      { name: "Khan Academy", url: "https://www.khanacademy.org/", type: "course" },
+    ],
+  },
+  {
+    id: "rs48",
+    professionId: "p12",
+    gradeLevelId: "g12",
+    gradeName: "10th Grade",
+    gradeShortCode: "10",
+    description:
+      "High school is where future teachers can explore their passion.",
+    subjects: ["AP English Language", "AP Psychology", "U.S. History", "Speech & Debate", "Child Development"],
+    extracurriculars: [
+      {
+        name: "Educators Rising",
+        url: "https://www.educatorsrising.org/",
+        description: "National organization for aspiring teachers — competitions, conferences, and classroom experience.",
+      },
+      {
+        name: "National Honor Society Tutoring",
+        url: "https://www.nhs.us/",
+        description: "Peer tutoring through National Honor Society — practice teaching while serving your school.",
+      },
+    ],
+    supplemental: [
+      { name: "Crash Course: Psychology", url: "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6", type: "video" },
+    ],
+  },
+  {
+    id: "rs49",
+    professionId: "p12",
+    gradeLevelId: "g15",
+    gradeName: "Undergraduate",
+    gradeShortCode: "ugrad",
+    description:
+      "Pursue a Bachelor's in Education or subject-area major plus teaching credential.",
+    subjects: ["Educational Psychology", "Curriculum Design", "Classroom Management", "Teaching Practicum"],
+    extracurriculars: [
+      {
+        name: "Student NEA",
+        url: "https://www.nea.org/",
+        description: "National Education Association student program — networking, professional development, and advocacy.",
+      },
+      {
+        name: "Teach For America",
+        url: "https://www.teachforamerica.org/",
+        description: "Leadership program recruiting top graduates to teach in underserved communities for two years.",
+      },
+    ],
+    supplemental: [
+      { name: "Praxis Exam Prep (ETS)", url: "https://www.ets.org/praxis.html", type: "program" },
+    ],
+  },
+  {
+    id: "rs50",
+    professionId: "p12",
+    gradeLevelId: "g16",
+    gradeName: "Graduate",
+    gradeShortCode: "grad",
+    description:
+      "A Master's in Education (M.Ed.) deepens expertise and increases earning potential.",
+    subjects: ["Advanced Educational Theory", "Data-Driven Instruction", "Special Education Law", "Literacy Intervention"],
+    extracurriculars: [
+      {
+        name: "National Board Certification",
+        url: "https://www.nbpts.org/",
+        description: "Advanced teaching credential — the gold standard for teacher excellence and professional growth.",
+      },
+      {
+        name: "ASCD",
+        url: "https://www.ascd.org/",
+        description: "Professional learning community for educators — conferences, publications, and leadership resources.",
+      },
+    ],
+    supplemental: [],
+  },
 ];
 
 const professionals: Professional[] = [
@@ -1470,6 +1604,16 @@ const professionals: Professional[] = [
     pathBackground: "B.A. in Mathematics from UC San Diego. Ph.D. in Applied Mathematics from the University of Maryland. Worked as a research scientist at the Department of Defense and Institute for Defense Analyses. Joined eBay as Chief Scientist of Security and Fraud. Head of Data Products and Chief Scientist at LinkedIn, where he built the 'People You May Know' feature. Served as U.S. Chief Data Scientist in the Obama White House, establishing data-driven governance practices. Currently a senior fellow at Harvard and venture capitalist.",
     photoUrl: "",
   },
+  {
+    id: "pro12",
+    name: "Marva Collins",
+    title: "Educator & Founder of Westside Preparatory School",
+    professionId: "p12",
+    professionName: "Teacher (K-12)",
+    bio: "Renowned educator who proved low-income children labeled 'learning disabled' could excel with high expectations. Received National Humanities Medal in 2004.",
+    pathBackground: "Began her teaching career in the Chicago Public Schools in the 1960s. Frustrated by low expectations for inner-city children, she founded Westside Preparatory School in her own home in 1975 with just $5,000. Her approach combined classical education — phonics, literature, math — with unwavering belief in every child's potential. Students who had been written off as 'unteachable' went on to succeed in college and become professionals. Her story was told in the 1981 TV movie 'The Marva Collins Story' starring Cicely Tyson. Awarded the National Humanities Medal by President George W. Bush in 2004.",
+    photoUrl: "",
+  },
 ];
 
 const schools: School[] = [
@@ -1543,6 +1687,16 @@ const schools: School[] = [
     description: "World-class research university and a pioneer in computer science and data science. CMU's School of Computer Science offers a dedicated undergraduate major in Statistics & Machine Learning, and its Heinz College was one of the first to launch a data science-focused degree. Home to groundbreaking AI and machine learning research.",
     rankingInfo: "#1 Computer Science, #2 Data Science / Analytics (U.S. News)", websiteUrl: "https://www.cmu.edu/",
   },
+  {
+    id: "s15", name: "University of Wisconsin–Madison", state: "WI", type: "public",
+    description: "Home to the #1 ranked School of Education in the nation (U.S. News). A top public research university with outstanding programs in education, teacher preparation, and educational psychology. Deep partnerships with K-12 schools across Wisconsin.",
+    rankingInfo: "#1 School of Education (U.S. News)", websiteUrl: "https://www.wisc.edu/",
+  },
+  {
+    id: "s16", name: "Teachers College, Columbia University", state: "NY", type: "private",
+    description: "The nation's #1 graduate school of education and the oldest and largest graduate school of education in the United States. Affiliated with Columbia University, it produces leaders in education policy, research, and teaching across every discipline.",
+    rankingInfo: "#1 Graduate School of Education (U.S. News)", websiteUrl: "https://www.tc.columbia.edu/",
+  },
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -1583,6 +1737,10 @@ const professionSchools: ProfessionSchool[] = [
   // Data Scientist schools
   { professionId: "p11", schoolId: "s14", programName: "Statistics & Machine Learning (B.S.)" },
   { professionId: "p11", schoolId: "s1", programName: "Data Science / Computer Science (B.S.)" },
+  // Teacher (K-12) schools
+  { professionId: "p12", schoolId: "s15", programName: "Elementary / Secondary Education (B.S.Ed.)" },
+  { professionId: "p12", schoolId: "s16", programName: "Curriculum & Teaching (M.Ed. / M.A.)" },
+  { professionId: "p12", schoolId: "s2", programName: "Stanford Teacher Education Program (STEP) — M.A. + Credential" },
 ];
 
 // ── Data access functions (mock → swap for sql() later) ────────────────────
