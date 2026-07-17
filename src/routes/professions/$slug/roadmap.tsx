@@ -48,7 +48,8 @@ function RoadmapPage() {
   }
 
   const { profession, allSteps, gradeLevels, activeGrade, activeStep } = data;
-  const activeIndex = allSteps.findIndex((s) => s.gradeShortCode === activeGrade);
+  const activeStepIndex = allSteps.findIndex((s) => s.gradeShortCode === activeGrade);
+  const activeGradeIndex = gradeLevels.findIndex((g) => g.shortCode === activeGrade);
 
   const handleGradeChange = (newGrade: string) => {
     navigate({
@@ -94,14 +95,13 @@ function RoadmapPage() {
             return (
               <button
                 key={gl.id}
-                onClick={() => hasStep && handleGradeChange(gl.shortCode)}
-                disabled={!hasStep}
+                onClick={() => handleGradeChange(gl.shortCode)}
                 className={`shrink-0 px-3 py-2 text-xs font-medium rounded-lg transition-colors mx-0.5 first:ml-0 last:mr-0 ${
                   isActive
                     ? "bg-indigo-600 text-white shadow-sm"
                     : hasStep
                       ? "text-gray-600 hover:bg-white hover:text-gray-900"
-                      : "text-gray-300 cursor-not-allowed"
+                      : "text-gray-400 hover:bg-white/60 hover:text-gray-600 border border-dashed border-gray-300"
                 }`}
                 title={hasStep ? gl.name : (gl.name + " — coming soon")}
               >
@@ -144,7 +144,7 @@ function RoadmapPage() {
                   {activeStep.gradeName}
                 </h2>
                 <p className="text-sm text-indigo-600">
-                  Step {activeIndex + 1} of {allSteps.length} in this roadmap
+                  Step {activeStepIndex + 1} of {allSteps.length} in this roadmap
                 </p>
               </div>
             </div>
@@ -246,26 +246,26 @@ function RoadmapPage() {
           )}
 
           <div className="flex items-center justify-between pt-4">
-            {activeIndex > 0 ? (
+            {activeGradeIndex > 0 ? (
               <button
                 onClick={() =>
-                  handleGradeChange(allSteps[activeIndex - 1].gradeShortCode)
+                  handleGradeChange(gradeLevels[activeGradeIndex - 1].shortCode)
                 }
                 className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
               >
-                ← Previous: {allSteps[activeIndex - 1].gradeName}
+                ← Previous: {gradeLevels[activeGradeIndex - 1].name}
               </button>
             ) : (
               <div />
             )}
-            {activeIndex < allSteps.length - 1 ? (
+            {activeGradeIndex < gradeLevels.length - 1 ? (
               <button
                 onClick={() =>
-                  handleGradeChange(allSteps[activeIndex + 1].gradeShortCode)
+                  handleGradeChange(gradeLevels[activeGradeIndex + 1].shortCode)
                 }
                 className="flex items-center gap-1 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 transition-colors"
               >
-                Next: {allSteps[activeIndex + 1].gradeName} →
+                Next: {gradeLevels[activeGradeIndex + 1].name} →
               </button>
             ) : (
               <div />
