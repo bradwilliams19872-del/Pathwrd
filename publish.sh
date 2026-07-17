@@ -16,6 +16,8 @@ mkdir -p .run
 # once node_modules is current.
 bun install
 bun run build
+# Patch route tree: make roadmap a flat sibling route, not nested under $slug
+bun run scripts/patch-route-tree.js
 setsid nohup bun run start > .run/server.log 2>&1 < /dev/null &
 
 # Wait for the new server to actually answer before reporting success, so a
