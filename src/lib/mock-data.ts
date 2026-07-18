@@ -1,3 +1,6 @@
+import { extraRoadmapSteps } from "./roadmap-steps-extra";
+import { remainingRoadmapSteps } from "./roadmap-steps-remaining";
+
 /**
  * Mock data layer for Pathwrd.
  * All functions return hardcoded data now. When DATABASE_URL is connected,
@@ -1893,6 +1896,8 @@ const roadmapSteps: RoadmapStep[] = [
       { name: "Journal of the American Dental Association (JADA)", url: "https://jada.ada.org/", type: "article" },
     ],
   },
+  ...extraRoadmapSteps,
+  ...remainingRoadmapSteps,
 ];
 
 const professionals: Professional[] = [
@@ -2118,6 +2123,41 @@ const schools: School[] = [
     id: "s18", name: "Harvard School of Dental Medicine", state: "MA", type: "private",
     description: "First university-based dental school in the U.S. Part of Harvard Medical School's ecosystem — unique D.M.D. program integrated with medical education. Strong research emphasis and specialty training in a world-class academic environment.",
     rankingInfo: "#2 Dental School (QS World Rankings)", websiteUrl: "https://hsdm.harvard.edu/",
+  },
+  {
+    id: "s19", name: "California Institute of Technology (Caltech)", state: "CA", type: "private",
+    description: "World-renowned science and engineering institute with an extraordinary student-to-faculty ratio (3:1). Caltech manages NASA's Jet Propulsion Laboratory (JPL), giving students unparalleled access to space missions, robotics, and cutting-edge research. Exceptionally strong in aerospace, physics, computer science, and mechanical engineering.",
+    rankingInfo: "#7 National University, #4 Engineering (U.S. News)", websiteUrl: "https://www.caltech.edu/",
+  },
+  {
+    id: "s20", name: "University of Texas at Austin", state: "TX", type: "public",
+    description: "Flagship public university and a powerhouse across engineering, computer science, business, nursing, architecture, and education. Home to the Cockrell School of Engineering, top-ranked CS through Turing Scholars, and McCombs School of Business. Strong ties to Austin's tech scene and NASA Johnson Space Center.",
+    rankingInfo: "#9 Public University, #6 Undergraduate Engineering (U.S. News)", websiteUrl: "https://www.utexas.edu/",
+  },
+  {
+    id: "s21", name: "Thomas Jefferson High School for Science & Technology", state: "VA", type: "public",
+    description: "Consistently ranked the #1 public high school in America. A Virginia governor's school for STEM with advanced research labs, mentorship programs, and specialized concentrations in AI, CS, biotech, and engineering. Feeder to MIT, Stanford, and Ivy League universities.",
+    rankingInfo: "#1 Public High School (U.S. News) — STEM magnet", websiteUrl: "https://tjhsst.fcps.edu/",
+  },
+  {
+    id: "s22", name: "BASIS Scottsdale", state: "AZ", type: "public",
+    description: "Among the top-ranked public high schools in the nation and the flagship of the BASIS Charter School network. Known for its rigorous college-preparatory curriculum, AP-for-all philosophy, and exceptional STEM preparation. Graduates consistently matriculate to top-tier universities.",
+    rankingInfo: "#3 Public High School, #1 Charter School (U.S. News)", websiteUrl: "https://basisscottsdale.org/",
+  },
+  {
+    id: "s23", name: "Illinois Mathematics and Science Academy (IMSA)", state: "IL", type: "public",
+    description: "A top-ranked public residential academy for gifted STEM students. IMSA offers advanced research opportunities through partnerships with Fermilab, Argonne National Laboratory, and Northwestern University. Students engage in mentored research (SIR program) exploring real scientific problems.",
+    rankingInfo: "#1 Public High School in Illinois (Niche) — STEM residential academy", websiteUrl: "https://www.imsa.edu/",
+  },
+  {
+    id: "s24", name: "Stuyvesant High School", state: "NY", type: "public",
+    description: "One of New York City's elite specialized high schools, Stuyvesant is renowned for its rigorous math, science, and technology curriculum. Offers 30+ AP courses and a wide range of electives in law, debate, pre-med, and engineering. Notable alumni include four Nobel laureates.",
+    rankingInfo: "#2 Public High School in New York (U.S. News) — specialized exam school", websiteUrl: "https://stuy.enschool.org/",
+  },
+  {
+    id: "s25", name: "Boston Latin School", state: "MA", type: "public",
+    description: "America's oldest public school (founded 1635) and Boston's premier exam school. Known for its rigorous classical curriculum, strong humanities and pre-law preparation, and top-tier college placement. Alumni include five signers of the Declaration of Independence and countless leaders in law and government.",
+    rankingInfo: "#1 Public High School in Massachusetts (U.S. News) — exam school", websiteUrl: "https://www.bls.org/",
   },
 ];
 
