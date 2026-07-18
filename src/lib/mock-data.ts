@@ -1,5 +1,6 @@
 import { extraRoadmapSteps } from "./roadmap-steps-extra";
 import { remainingRoadmapSteps } from "./roadmap-steps-remaining";
+import { missingRoadmapSteps } from "./roadmap-steps-missing";
 
 /**
  * Mock data layer for Pathwrd.
@@ -1898,6 +1899,7 @@ const roadmapSteps: RoadmapStep[] = [
   },
   ...extraRoadmapSteps,
   ...remainingRoadmapSteps,
+  ...missingRoadmapSteps,
 ];
 
 const professionals: Professional[] = [
