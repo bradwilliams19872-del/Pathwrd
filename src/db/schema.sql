@@ -83,6 +83,33 @@ CREATE TABLE profession_schools (
 );
 
 ------------------------------------------------------------
+-- Users (authentication)
+------------------------------------------------------------
+CREATE TABLE users (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    email               TEXT UNIQUE NOT NULL,
+    password_hash       TEXT NOT NULL,
+    name                TEXT,
+    created_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
+    subscription_status TEXT NOT NULL DEFAULT 'free' CHECK (subscription_status IN ('free', 'active', 'canceled')),
+    stripe_customer_id  TEXT
+);
+
+------------------------------------------------------------
+-- Sessions
+------------------------------------------------------------
+CREATE TABLE sessions (
+    id         UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    token      TEXT UNIQUE NOT NULL,
+    user_id    UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    expires_at TIMESTAMPTZ NOT NULL DEFAULT (now() + interval '7 days')
+);
+
+CREATE INDEX idx_sessions_token ON sessions(token);
+CREATE INDEX idx_sessions_user_id ON sessions(user_id);
+
+------------------------------------------------------------
 -- Seed data: grade levels
 ------------------------------------------------------------
 INSERT INTO grade_levels (name, short_code, sort_order) VALUES

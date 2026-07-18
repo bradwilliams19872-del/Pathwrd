@@ -6,8 +6,16 @@ import {
   createRootRoute,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { createServerFn } from "@tanstack/react-start";
+import { getCurrentUser } from "~/lib/auth";
+import type { AuthUser } from "~/lib/auth";
 
 import appCss from "~/styles/app.css?url";
+
+const getRootUser = createServerFn({ method: "GET" }).handler(async () => {
+  const user = await getCurrentUser();
+  return user;
+});
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,20 +36,22 @@ export const Route = createRootRoute({
       </Link>
     </div>
   ),
+  loader: () => getRootUser(),
   component: RootComponent,
 });
 
 function RootComponent() {
+  const user = Route.useLoaderData();
   return (
     <RootDocument>
-      <NavBar />
+      <NavBar user={user} />
       <Outlet />
       <Footer />
     </RootDocument>
   );
 }
 
-function NavBar() {
+function NavBar({ user }: { user: AuthUser | null }) {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
@@ -56,12 +66,34 @@ function NavBar() {
           <NavLink to="/professions">Professions</NavLink>
           <NavLink to="/spotlights">Spotlights</NavLink>
           <NavLink to="/schools">Schools</NavLink>
-          <Link
-            to="/"
-            className="ml-2 rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 transition-colors"
-          >
-            Get Started
-          </Link>
+          {user ? (
+            <div className="ml-2 flex items-center gap-3">
+              <span className="text-sm text-gray-600">
+                {user.name || user.email}
+              </span>
+              <Link
+                to="/"
+                className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors"
+              >
+                Account
+              </Link>
+            </div>
+          ) : (
+            <div className="ml-2 flex items-center gap-2">
+              <Link
+                to="/login"
+                className="rounded-full px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors"
+              >
+                Sign In
+              </Link>
+              <Link
+                to="/signup"
+                className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 transition-colors"
+              >
+                Sign Up
+              </Link>
+            </div>
+          )}
         </div>
       </nav>
     </header>

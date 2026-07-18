@@ -10,8 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpotlightsRouteImport } from './routes/spotlights'
+import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SchoolsRouteImport } from './routes/schools'
 import { Route as ProfessionsRouteImport } from './routes/professions'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProfessionsIndexRouteImport } from './routes/professions.index'
 import { Route as ProfessionsSlugRouteImport } from './routes/professions/$slug'
@@ -22,6 +24,11 @@ const SpotlightsRoute = SpotlightsRouteImport.update({
   path: '/spotlights',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SchoolsRoute = SchoolsRouteImport.update({
   id: '/schools',
   path: '/schools',
@@ -30,6 +37,11 @@ const SchoolsRoute = SchoolsRouteImport.update({
 const ProfessionsRoute = ProfessionsRouteImport.update({
   id: '/professions',
   path: '/professions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -55,8 +67,10 @@ const ProfessionsSlugRoadmapRoute = ProfessionsSlugRoadmapRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
   '/professions': typeof ProfessionsRouteWithChildren
   '/schools': typeof SchoolsRoute
+  '/signup': typeof SignupRoute
   '/spotlights': typeof SpotlightsRoute
   '/professions/$slug': typeof ProfessionsSlugRouteWithChildren
   '/professions/': typeof ProfessionsIndexRoute
@@ -64,7 +78,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
   '/schools': typeof SchoolsRoute
+  '/signup': typeof SignupRoute
   '/spotlights': typeof SpotlightsRoute
   '/professions/$slug': typeof ProfessionsSlugRouteWithChildren
   '/professions': typeof ProfessionsIndexRoute
@@ -73,8 +89,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
   '/professions': typeof ProfessionsRouteWithChildren
   '/schools': typeof SchoolsRoute
+  '/signup': typeof SignupRoute
   '/spotlights': typeof SpotlightsRoute
   '/professions/$slug': typeof ProfessionsSlugRouteWithChildren
   '/professions/': typeof ProfessionsIndexRoute
@@ -84,8 +102,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/login'
     | '/professions'
     | '/schools'
+    | '/signup'
     | '/spotlights'
     | '/professions/$slug'
     | '/professions/'
@@ -93,7 +113,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/login'
     | '/schools'
+    | '/signup'
     | '/spotlights'
     | '/professions/$slug'
     | '/professions'
@@ -101,8 +123,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/login'
     | '/professions'
     | '/schools'
+    | '/signup'
     | '/spotlights'
     | '/professions/$slug'
     | '/professions/'
@@ -111,8 +135,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LoginRoute: typeof LoginRoute
   ProfessionsRoute: typeof ProfessionsRouteWithChildren
   SchoolsRoute: typeof SchoolsRoute
+  SignupRoute: typeof SignupRoute
   SpotlightsRoute: typeof SpotlightsRoute
 }
 
@@ -123,6 +149,13 @@ declare module '@tanstack/react-router' {
       path: '/spotlights'
       fullPath: '/spotlights'
       preLoaderRoute: typeof SpotlightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/schools': {
@@ -137,6 +170,13 @@ declare module '@tanstack/react-router' {
       path: '/professions'
       fullPath: '/professions'
       preLoaderRoute: typeof ProfessionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -198,8 +238,10 @@ const ProfessionsRouteWithChildren = ProfessionsRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LoginRoute: LoginRoute,
   ProfessionsRoute: ProfessionsRouteWithChildren,
   SchoolsRoute: SchoolsRoute,
+  SignupRoute: SignupRoute,
   SpotlightsRoute: SpotlightsRoute,
 }
 export const routeTree = rootRouteImport
