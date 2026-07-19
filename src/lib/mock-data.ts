@@ -7,6 +7,7 @@ import { newProfessionsBatch5 } from "./new-professions-batch5";
 import { newProfessionsBatch6 } from "./new-professions-batch6";
 import { newProfessionsBatch7 } from "./new-professions-batch7";
 import { newProfessionsBatch8 } from "./new-professions-batch8";
+import { newProfessionsBatch9 } from "./new-professions-batch9";
 
 /**
  * Mock data layer for Pathwrd.
@@ -539,6 +540,52 @@ const professions: Profession[] = [
     category: "Creative",
     iconEmoji: "👗",
   },
+
+  {
+    id: "p47",
+    slug: "ai-ml-engineer",
+    name: "AI/ML Engineer",
+    description:
+      "Build intelligent systems that learn from data — from recommendation algorithms and self-driving cars to large language models and medical diagnostics. AI/ML engineers sit at the frontier of computer science, combining deep mathematical knowledge with software engineering to create the future.",
+    category: "STEM",
+    iconEmoji: "🤖",
+  },
+  {
+    id: "p48",
+    slug: "urban-planner",
+    name: "Urban Planner",
+    description:
+      "Design the cities and communities where millions live, work, and play. Urban planners shape land use, transportation, housing, and public spaces — balancing environmental sustainability, economic vitality, and social equity to build better places for everyone.",
+    category: "Public Service",
+    iconEmoji: "🏙️",
+  },
+  {
+    id: "p49",
+    slug: "diplomat",
+    name: "Diplomat",
+    description:
+      "Represent your country abroad, negotiate peace, and solve global problems through dialogue instead of conflict. Diplomats serve in embassies worldwide, mastering foreign languages, navigating complex political relationships, and advancing their nation's interests on the world stage.",
+    category: "Government",
+    iconEmoji: "🌐",
+  },
+  {
+    id: "p50",
+    slug: "aircraft-mechanic",
+    name: "Aircraft Mechanic",
+    description:
+      "Keep the world's aircraft flying safely. Aircraft mechanics inspect, maintain, and repair planes and helicopters — from single-engine general aviation to massive commercial airliners. A career combining hands-on skill, technical knowledge, and the responsibility of protecting every passenger who takes to the skies.",
+    category: "Trades",
+    iconEmoji: "🔧",
+  },
+  {
+    id: "p51",
+    slug: "meteorologist",
+    name: "Meteorologist",
+    description:
+      "Study the atmosphere to understand and predict the weather that shapes our daily lives. Meteorologists use satellites, radar, computer models, and deep physics knowledge to forecast storms, track hurricanes, and research climate change — protecting lives and property through science.",
+    category: "STEM",
+    iconEmoji: "🌪️",
+  },
 ];
 
 const gradeLevels: GradeLevel[] = [
@@ -559,6 +606,31 @@ const gradeLevels: GradeLevel[] = [
   { id: "g15", name: "Undergraduate", shortCode: "ugrad", sortOrder: 15 },
   { id: "g16", name: "Graduate", shortCode: "grad", sortOrder: 16 },
   { id: "g17", name: "PhD / Doctoral", shortCode: "phd", sortOrder: 17 },
+  {
+    id: "s48", name: "University of Illinois Urbana-Champaign", state: "IL", type: "public",
+    description: "Home to one of the nation's top urban planning programs through the Department of Urban & Regional Planning. Strong GIS, transportation planning, and community development focus with deep ties to Chicago's planning community.",
+    rankingInfo: "#3 Urban Planning Graduate Program (Planetizen)", websiteUrl: "https://www.illinois.edu/",
+  },
+  {
+    id: "s49", name: "Georgetown University", state: "DC", type: "private",
+    description: "The Walsh School of Foreign Service is the oldest and one of the most prestigious international affairs schools in the world. Located in Washington D.C., it offers unmatched access to embassies, the State Department, and global policy organizations.",
+    rankingInfo: "#1 International Affairs (Foreign Policy Magazine)", websiteUrl: "https://sfs.georgetown.edu/",
+  },
+  {
+    id: "s50", name: "Embry-Riddle Aeronautical University", state: "FL", type: "private",
+    description: "The world's premier aviation maintenance educator. Offers FAA Part 147-approved A&P programs alongside bachelor's degrees in Aviation Maintenance Science. State-of-the-art hangars with a fleet of training aircraft for hands-on maintenance experience.",
+    rankingInfo: "#1 Aviation Maintenance Program (U.S. News)", websiteUrl: "https://daytonabeach.erau.edu/",
+  },
+  {
+    id: "s51", name: "Penn State University", state: "PA", type: "public",
+    description: "One of the nation's leading atmospheric science programs. The Department of Meteorology and Atmospheric Science offers B.S., M.S., and Ph.D. degrees with strengths in weather risk, climate science, and operational forecasting. Home to the Penn State Weather Communications Group.",
+    rankingInfo: "#1 Atmospheric Science / Meteorology (U.S. News)", websiteUrl: "https://www.psu.edu/",
+  },
+  {
+    id: "s52", name: "University of Oklahoma", state: "OK", type: "public",
+    description: "Home to the National Weather Center — the epicenter of U.S. weather research and forecasting. The School of Meteorology offers unparalleled access to NOAA's Storm Prediction Center, NWS forecast operations, and world-class severe weather research facilities all in one building.",
+    rankingInfo: "#1 Meteorology / Atmospheric Science (U.S. News)", websiteUrl: "https://www.ou.edu/",
+  },
 ];
 
 // Roadmap steps — key grades per profession (not every grade, for demo clarity)
@@ -2222,6 +2294,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...newProfessionsBatch6,
   ...newProfessionsBatch7,
   ...newProfessionsBatch8,
+  ...newProfessionsBatch9,
 ];
 
 const professionals: Professional[] = [
@@ -2355,6 +2428,21 @@ const professionals: Professional[] = [
     pathBackground: "Born in poverty in rural Alabama, Satcher was one of only three African American students admitted to Morehouse College in 1959. Earned his D.D.S. from Meharry Medical College and later his M.D. from Case Western Reserve University. Served as Director of the CDC and Assistant Secretary for Health before being appointed U.S. Surgeon General (1998-2002). His career demonstrates the profound intersection of dentistry, medicine, and public health policy.",
     photoUrl: "",
   },
+  // AI/ML Engineer schools
+  { professionId: "p47", schoolId: "s14", programName: "Statistics & Machine Learning / Artificial Intelligence (B.S. / M.S. — Carnegie Mellon)" },
+  { professionId: "p47", schoolId: "s1", programName: "Electrical Engineering & Computer Science / AI (B.S. / M.S. — MIT)" },
+  // Urban Planner schools
+  { professionId: "p48", schoolId: "s6", programName: "Urban Planning / Urban Studies (B.S. / M.U.P. — University of Michigan)" },
+  { professionId: "p48", schoolId: "s48", programName: "Urban & Regional Planning (B.A.U.P. / M.U.P. — UIUC)" },
+  // Diplomat schools
+  { professionId: "p49", schoolId: "s5", programName: "International Relations / Government (A.B. — Harvard University)" },
+  { professionId: "p49", schoolId: "s49", programName: "International Affairs / Foreign Service (B.S.F.S. / M.S.F.S. — Georgetown SFS)" },
+  // Aircraft Mechanic schools
+  { professionId: "p50", schoolId: "s11", programName: "Aviation Maintenance Science / A&P Certification (B.S. — Embry-Riddle)" },
+  { professionId: "p50", schoolId: "s50", programName: "Aviation Maintenance Technology / A&P (A.S. / B.S. — Embry-Riddle AMT)" },
+  // Meteorologist schools
+  { professionId: "p51", schoolId: "s51", programName: "Meteorology & Atmospheric Science (B.S. / M.S. / Ph.D. — Penn State)" },
+  { professionId: "p51", schoolId: "s52", programName: "Meteorology (B.S. / M.S. / Ph.D. — OU School of Meteorology)" },
 ];
 
 const schools: School[] = [
