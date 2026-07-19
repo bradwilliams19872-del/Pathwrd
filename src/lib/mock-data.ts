@@ -5,6 +5,7 @@ import { newProfessionsBatch3 } from "./new-professions-batch3";
 import { newProfessionsBatch4 } from "./new-professions-batch4";
 import { newProfessionsBatch5 } from "./new-professions-batch5";
 import { newProfessionsBatch6 } from "./new-professions-batch6";
+import { newProfessionsBatch7 } from "./new-professions-batch7";
 
 /**
  * Mock data layer for Pathwrd.
@@ -446,6 +447,51 @@ const professions: Profession[] = [
       "Identify opportunities, build businesses, and create value from ideas. Entrepreneurs start companies, drive innovation, create jobs, and shape industries — from tech startups to local small businesses to global enterprises.",
     category: "Business",
     iconEmoji: "💼",
+  },
+  {
+    id: "p37",
+    slug: "professor",
+    name: "Professor",
+    description:
+      "Teach, research, and advance human knowledge at the highest level. Professors inspire the next generation of thinkers while pushing the boundaries of their academic discipline through original scholarship and publication.",
+    category: "Education",
+    iconEmoji: "🎓",
+  },
+  {
+    id: "p38",
+    slug: "cybersecurity-analyst",
+    name: "Cybersecurity Analyst",
+    description:
+      "Protect organizations from digital threats by monitoring networks, analyzing vulnerabilities, and responding to security incidents. As cyber attacks grow more sophisticated, cybersecurity analysts serve as the frontline defenders of our digital world.",
+    category: "STEM",
+    iconEmoji: "🔒",
+  },
+  {
+    id: "p39",
+    slug: "real-estate-agent",
+    name: "Real Estate Agent",
+    description:
+      "Guide clients through buying, selling, and renting properties — one of life's most significant financial decisions. Real estate agents combine market expertise, negotiation skills, and local knowledge to help people find and secure their ideal homes.",
+    category: "Business",
+    iconEmoji: "🏠",
+  },
+  {
+    id: "p40",
+    slug: "dietitian",
+    name: "Dietitian",
+    description:
+      "Use the science of nutrition to help people live healthier lives. Registered dietitians assess nutritional needs, develop meal plans, and provide evidence-based guidance to manage health conditions — from diabetes and heart disease to sports performance and eating disorders.",
+    category: "Healthcare",
+    iconEmoji: "🥗",
+  },
+  {
+    id: "p41",
+    slug: "geologist",
+    name: "Geologist",
+    description:
+      "Study the Earth — its rocks, minerals, landforms, and the 4.5-billion-year history written in stone. Geologists explore for natural resources, assess natural hazards like earthquakes and volcanoes, and help us understand the forces that shape our planet.",
+    category: "STEM",
+    iconEmoji: "🌋",
   },
 ];
 
@@ -2128,6 +2174,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...newProfessionsBatch4,
   ...newProfessionsBatch5,
   ...newProfessionsBatch6,
+  ...newProfessionsBatch7,
 ];
 
 const professionals: Professional[] = [
@@ -2470,6 +2517,37 @@ const schools: School[] = [
     rankingInfo: "Top 5 Culinary School (U.S. News)", websiteUrl: "https://www.jwu.edu/",
   },
 
+  {
+    id: "s42", name: "University of Chicago", state: "IL", type: "private",
+    description: "World-renowned research university with a storied tradition of scholarly excellence across the humanities, social sciences, and sciences. Home to 100+ Nobel laureates and a model of rigorous academic inquiry and intellectual freedom.",
+    rankingInfo: "#11 National University (U.S. News)", websiteUrl: "https://www.uchicago.edu/",
+  },
+  {
+    id: "s43", name: "University of California, Los Angeles", state: "CA", type: "public",
+    description: "Top-ranked public research university and a leader across disciplines from film and engineering to medicine and education. UCLA combines academic excellence with a diverse, vibrant campus in the heart of Los Angeles.",
+    rankingInfo: "#1 Public University (U.S. News)", websiteUrl: "https://www.ucla.edu/",
+  },
+  {
+    id: "s44", name: "Colorado School of Mines", state: "CO", type: "public",
+    description: "Premier public university focused on earth science, energy, and the environment. Renowned geology, geophysics, and mining engineering programs with unmatched field opportunities in the Rocky Mountain region.",
+    rankingInfo: "#38 National University, #2 Geology/Earth Science (U.S. News)", websiteUrl: "https://www.mines.edu/",
+  },
+  {
+    id: "s45", name: "University of Arizona", state: "AZ", type: "public",
+    description: "World-class geosciences university in the heart of the desert Southwest. The Department of Geosciences is consistently ranked among the top programs globally, with extraordinary field sites and research in planetary geology, tectonics, and paleontology.",
+    rankingInfo: "#1 Geology/Earth Science Graduate Program (U.S. News)", websiteUrl: "https://www.arizona.edu/",
+  },
+  {
+    id: "s46", name: "New York University", state: "NY", type: "private",
+    description: "Major private research university in the heart of New York City. NYU Stern School of Business offers top-ranked real estate programs, and NYU Schack Institute of Real Estate is one of the largest real estate academic centers in the world.",
+    rankingInfo: "#30 National University, Top Real Estate Program (U.S. News)", websiteUrl: "https://www.nyu.edu/",
+  },
+  {
+    id: "s47", name: "University of Washington", state: "WA", type: "public",
+    description: "Leading public research university and a powerhouse in computer science, engineering, and health sciences. The Paul G. Allen School of Computer Science & Engineering is one of the top cybersecurity research centers in the nation.",
+    rankingInfo: "#7 Public University, Top Cybersecurity/CS (U.S. News)", websiteUrl: "https://www.washington.edu/",
+  },
+
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -2576,6 +2654,22 @@ const professionSchools: ProfessionSchool[] = [
   // Entrepreneur (p36) schools
   { professionId: "p36", schoolId: "s2", programName: "Entrepreneurship / Business (B.S. / M.B.A. — Stanford)" },
   { professionId: "p36", schoolId: "s9", programName: "Entrepreneurship & Innovation (B.S. — Wharton / UPenn)" },
+
+  // Professor (p37) schools
+  { professionId: "p37", schoolId: "s5", programName: "Harvard Graduate School of Arts & Sciences — Ph.D. Programs" },
+  { professionId: "p37", schoolId: "s2", programName: "Stanford University — Doctoral Programs across Humanities, Sciences & Engineering" },
+  // Cybersecurity Analyst (p38) schools
+  { professionId: "p38", schoolId: "s14", programName: "Cybersecurity / Information Security (B.S. / M.S. — Carnegie Mellon)" },
+  { professionId: "p38", schoolId: "s7", programName: "Cybersecurity (B.S. / M.S. — Georgia Tech School of Cybersecurity and Privacy)" },
+  // Real Estate Agent (p39) schools
+  { professionId: "p39", schoolId: "s9", programName: "Real Estate / Business (B.S. — Wharton Real Estate Department)" },
+  { professionId: "p39", schoolId: "s46", programName: "Real Estate (B.S. / M.S. — NYU Schack Institute of Real Estate)" },
+  // Dietitian (p40) schools
+  { professionId: "p40", schoolId: "s12", programName: "Nutritional Sciences (B.S. — Cornell College of Human Ecology)" },
+  { professionId: "p40", schoolId: "s29", programName: "Nutrition / Dietetics (B.S. / M.S. — UNC Gillings School of Global Public Health)" },
+  // Geologist (p41) schools
+  { professionId: "p41", schoolId: "s44", programName: "Geology / Geoscience (B.S. / M.S. — Colorado School of Mines)" },
+  { professionId: "p41", schoolId: "s45", programName: "Geosciences (B.S. / M.S. / Ph.D. — University of Arizona)" },
 
 ];
 
