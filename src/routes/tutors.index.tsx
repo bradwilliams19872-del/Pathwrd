@@ -37,7 +37,6 @@ function TutorsIndexPage() {
     if (selectedProfession) {
       const profTutors = getTutorsByProfession(selectedProfession);
       const profIds = new Set(profTutors.map((t) => t.id));
-      // If we also have a search query, intersect the results
       if (searchQuery.trim()) {
         results = results.filter((t) => profIds.has(t.id));
       } else {
@@ -58,6 +57,41 @@ function TutorsIndexPage() {
         <p className="mt-3 text-lg text-gray-500">
           Connect with expert tutors who can guide your child's learning journey
         </p>
+      </div>
+
+      {/* AI Tutor Card */}
+      <div className="mt-8">
+        <Link
+          to="/tutors/ai"
+          className="block rounded-2xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all group"
+        >
+          <div className="flex items-center gap-5">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-3xl backdrop-blur-sm">
+              🤖
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-white group-hover:underline">
+                  AI Tutor
+                </h3>
+                <span className="rounded-full bg-white/25 px-2.5 py-0.5 text-xs font-bold text-white backdrop-blur-sm">
+                  NEW
+                </span>
+              </div>
+              <p className="mt-1 text-base text-purple-100">
+                Get instant, personalized tutoring for any subject on your roadmap
+              </p>
+              <p className="mt-2 text-sm text-purple-200/80">
+                Available 24/7 • Adapts to your child's grade level • Covers all professions
+              </p>
+            </div>
+            <div className="shrink-0 hidden sm:block">
+              <span className="inline-flex items-center gap-1 rounded-xl bg-white/20 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm group-hover:bg-white/30 transition-colors">
+                Try AI Tutor <span className="text-lg">→</span>
+              </span>
+            </div>
+          </div>
+        </Link>
       </div>
 
       {/* Search & Filter */}

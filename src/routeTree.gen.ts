@@ -18,6 +18,7 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TutorsIndexRouteImport } from './routes/tutors.index'
 import { Route as ProfessionsIndexRouteImport } from './routes/professions.index'
+import { Route as TutorsAiRouteImport } from './routes/tutors/ai'
 import { Route as TutorsTutorIdRouteImport } from './routes/tutors/$tutorId'
 import { Route as ProfessionsSlugIndexRouteImport } from './routes/professions/$slug/index'
 import { Route as ProfessionsSlugRoadmapRouteImport } from './routes/professions/$slug/roadmap'
@@ -67,6 +68,11 @@ const ProfessionsIndexRoute = ProfessionsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ProfessionsRoute,
 } as any)
+const TutorsAiRoute = TutorsAiRouteImport.update({
+  id: '/ai',
+  path: '/ai',
+  getParentRoute: () => TutorsRoute,
+} as any)
 const TutorsTutorIdRoute = TutorsTutorIdRouteImport.update({
   id: '/$tutorId',
   path: '/$tutorId',
@@ -92,6 +98,7 @@ export interface FileRoutesByFullPath {
   '/spotlights': typeof SpotlightsRoute
   '/tutors': typeof TutorsRouteWithChildren
   '/tutors/$tutorId': typeof TutorsTutorIdRoute
+  '/tutors/ai': typeof TutorsAiRoute
   '/professions/': typeof ProfessionsIndexRoute
   '/tutors/': typeof TutorsIndexRoute
   '/professions/$slug/roadmap': typeof ProfessionsSlugRoadmapRoute
@@ -104,6 +111,7 @@ export interface FileRoutesByTo {
   '/signup': typeof SignupRoute
   '/spotlights': typeof SpotlightsRoute
   '/tutors/$tutorId': typeof TutorsTutorIdRoute
+  '/tutors/ai': typeof TutorsAiRoute
   '/professions': typeof ProfessionsIndexRoute
   '/tutors': typeof TutorsIndexRoute
   '/professions/$slug/roadmap': typeof ProfessionsSlugRoadmapRoute
@@ -119,6 +127,7 @@ export interface FileRoutesById {
   '/spotlights': typeof SpotlightsRoute
   '/tutors': typeof TutorsRouteWithChildren
   '/tutors/$tutorId': typeof TutorsTutorIdRoute
+  '/tutors/ai': typeof TutorsAiRoute
   '/professions/': typeof ProfessionsIndexRoute
   '/tutors/': typeof TutorsIndexRoute
   '/professions/$slug/roadmap': typeof ProfessionsSlugRoadmapRoute
@@ -135,6 +144,7 @@ export interface FileRouteTypes {
     | '/spotlights'
     | '/tutors'
     | '/tutors/$tutorId'
+    | '/tutors/ai'
     | '/professions/'
     | '/tutors/'
     | '/professions/$slug/roadmap'
@@ -147,6 +157,7 @@ export interface FileRouteTypes {
     | '/signup'
     | '/spotlights'
     | '/tutors/$tutorId'
+    | '/tutors/ai'
     | '/professions'
     | '/tutors'
     | '/professions/$slug/roadmap'
@@ -161,6 +172,7 @@ export interface FileRouteTypes {
     | '/spotlights'
     | '/tutors'
     | '/tutors/$tutorId'
+    | '/tutors/ai'
     | '/professions/'
     | '/tutors/'
     | '/professions/$slug/roadmap'
@@ -242,6 +254,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfessionsIndexRouteImport
       parentRoute: typeof ProfessionsRoute
     }
+    '/tutors/ai': {
+      id: '/tutors/ai'
+      path: '/ai'
+      fullPath: '/tutors/ai'
+      preLoaderRoute: typeof TutorsAiRouteImport
+      parentRoute: typeof TutorsRoute
+    }
     '/tutors/$tutorId': {
       id: '/tutors/$tutorId'
       path: '/$tutorId'
@@ -284,11 +303,13 @@ const ProfessionsRouteWithChildren = ProfessionsRoute._addFileChildren(
 
 interface TutorsRouteChildren {
   TutorsTutorIdRoute: typeof TutorsTutorIdRoute
+  TutorsAiRoute: typeof TutorsAiRoute
   TutorsIndexRoute: typeof TutorsIndexRoute
 }
 
 const TutorsRouteChildren: TutorsRouteChildren = {
   TutorsTutorIdRoute: TutorsTutorIdRoute,
+  TutorsAiRoute: TutorsAiRoute,
   TutorsIndexRoute: TutorsIndexRoute,
 }
 

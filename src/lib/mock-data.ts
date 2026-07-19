@@ -49,6 +49,33 @@ export interface RoadmapStep {
   subjects: string[];
   extracurriculars: Extracurricular[];
   supplemental: Supplemental[];
+  objectives: string[];
+}
+
+export interface Checkpoint {
+  id: string;
+  professionId: string;
+  gradeLevelId: string;
+  name: string;
+  description: string;
+  badgeId: string;
+}
+
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+  iconEmoji: string;
+  tier: "bronze" | "silver" | "gold" | "platinum";
+}
+
+export interface QuizQuestion {
+  id: string;
+  checkpointId: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
 }
 
 export interface Professional {
@@ -2416,6 +2443,210 @@ const professionSchools: ProfessionSchool[] = [
   { professionId: "p26", schoolId: "s39", programName: "HVACR Engineering Technology (B.S. — Plumbing Focus)" },
 ];
 
+
+// ── Gamification: Checkpoints, Badges, Quizzes ─────────────────────────────
+
+const badges: Badge[] = [
+  { id: "badge-explorer", name: "Explorer", description: "Started the journey — curiosity ignited!", iconEmoji: "🌟", tier: "bronze" },
+  { id: "badge-scholar", name: "Scholar", description: "Built early foundations of knowledge.", iconEmoji: "📚", tier: "bronze" },
+  { id: "badge-achiever", name: "Achiever", description: "Hit the middle-school milestone with solid skills.", iconEmoji: "🏅", tier: "silver" },
+  { id: "badge-master", name: "Master", description: "Mastered high school level challenges.", iconEmoji: "🎯", tier: "silver" },
+  { id: "badge-expert", name: "Expert", description: "Completed undergraduate-level expertise.", iconEmoji: "👑", tier: "gold" },
+  { id: "badge-elite", name: "Elite", description: "Reached the doctoral pinnacle — the highest honor!", iconEmoji: "💎", tier: "platinum" },
+  { id: "badge-pioneer", name: "Pioneer", description: "Blazed the trail from the very first step.", iconEmoji: "🔭", tier: "bronze" },
+  { id: "badge-visionary", name: "Visionary", description: "See the future and chase it relentlessly.", iconEmoji: "🔮", tier: "gold" },
+  { id: "badge-guardian", name: "Guardian", description: "Dedicated to serving and protecting others.", iconEmoji: "🛡️", tier: "silver" },
+  { id: "badge-creator", name: "Creator", description: "Build and design the world around you.", iconEmoji: "🎨", tier: "gold" },
+];
+
+// Checkpoints at grades g1(pre-K), g5(3rd), g8(6th), g12(10th), g15(ugrad), g17(phd)
+const checkpoints: Checkpoint[] = [
+  // Astronaut (p1)
+  { id: "cp-astro-1", professionId: "p1", gradeLevelId: "g1", name: "Stargazer", description: "Look up at the sky and dream of the stars.", badgeId: "badge-explorer" },
+  { id: "cp-astro-2", professionId: "p1", gradeLevelId: "g5", name: "Rocket Builder", description: "Build and launch your first model rocket.", badgeId: "badge-scholar" },
+  { id: "cp-astro-3", professionId: "p1", gradeLevelId: "g8", name: "Mission Planner", description: "Plan a simulated space mission from start to finish.", badgeId: "badge-achiever" },
+  { id: "cp-astro-4", professionId: "p1", gradeLevelId: "g12", name: "Orbital Thinker", description: "Master the physics of getting to space and staying there.", badgeId: "badge-master" },
+  { id: "cp-astro-5", professionId: "p1", gradeLevelId: "g15", name: "Flight Candidate", description: "Complete NASA-level academic and physical preparation.", badgeId: "badge-expert" },
+  { id: "cp-astro-6", professionId: "p1", gradeLevelId: "g17", name: "Space Ready", description: "Achieve the pinnacle of spaceflight readiness.", badgeId: "badge-elite" },
+  // Software Engineer (p2)
+  { id: "cp-swe-1", professionId: "p2", gradeLevelId: "g1", name: "Little Coder", description: "Discover the joy of making things with code.", badgeId: "badge-pioneer" },
+  { id: "cp-swe-2", professionId: "p2", gradeLevelId: "g5", name: "Logic Builder", description: "Solve puzzles and build computational thinking.", badgeId: "badge-scholar" },
+  { id: "cp-swe-3", professionId: "p2", gradeLevelId: "g8", name: "App Maker", description: "Build your first real application from scratch.", badgeId: "badge-achiever" },
+  { id: "cp-swe-4", professionId: "p2", gradeLevelId: "g12", name: "Full-Stack Dev", description: "Master front-end, back-end, and deployment.", badgeId: "badge-master" },
+  { id: "cp-swe-5", professionId: "p2", gradeLevelId: "g15", name: "Systems Architect", description: "Design complex systems that scale.", badgeId: "badge-expert" },
+  { id: "cp-swe-6", professionId: "p2", gradeLevelId: "g17", name: "Tech Innovator", description: "Push the boundaries of computer science research.", badgeId: "badge-elite" },
+  // Doctor (p3)
+  { id: "cp-doc-1", professionId: "p3", gradeLevelId: "g1", name: "Helper", description: "Learn to care for others and stay healthy.", badgeId: "badge-explorer" },
+  { id: "cp-doc-2", professionId: "p3", gradeLevelId: "g5", name: "Body Explorer", description: "Understand how the human body works.", badgeId: "badge-scholar" },
+  { id: "cp-doc-3", professionId: "p3", gradeLevelId: "g8", name: "Junior Diagnostician", description: "Apply scientific thinking to health problems.", badgeId: "badge-achiever" },
+  { id: "cp-doc-4", professionId: "p3", gradeLevelId: "g12", name: "Pre-Med Ready", description: "Complete pre-med coursework with flying colors.", badgeId: "badge-master" },
+  { id: "cp-doc-5", professionId: "p3", gradeLevelId: "g15", name: "Clinical Thinker", description: "Excel in medical school sciences and clinicals.", badgeId: "badge-expert" },
+  { id: "cp-doc-6", professionId: "p3", gradeLevelId: "g17", name: "Healer", description: "Reach the highest level of medical expertise.", badgeId: "badge-elite" },
+  // Architect (p4)
+  { id: "cp-arch-1", professionId: "p4", gradeLevelId: "g1", name: "Builder", description: "Build towers, bridges, and imaginary cities.", badgeId: "badge-creator" },
+  { id: "cp-arch-2", professionId: "p4", gradeLevelId: "g5", name: "Shape Maker", description: "Master geometry and spatial reasoning.", badgeId: "badge-scholar" },
+  { id: "cp-arch-3", professionId: "p4", gradeLevelId: "g8", name: "Designer", description: "Create detailed architectural drawings and models.", badgeId: "badge-achiever" },
+  { id: "cp-arch-4", professionId: "p4", gradeLevelId: "g12", name: "Structural Thinker", description: "Combine art and engineering in design projects.", badgeId: "badge-master" },
+  { id: "cp-arch-5", professionId: "p4", gradeLevelId: "g15", name: "Studio Pro", description: "Complete professional-level design studios.", badgeId: "badge-expert" },
+  { id: "cp-arch-6", professionId: "p4", gradeLevelId: "g17", name: "Master Architect", description: "Achieve architectural licensure and mastery.", badgeId: "badge-elite" },
+  // Lawyer (p5)
+  { id: "cp-law-1", professionId: "p5", gradeLevelId: "g1", name: "Little Advocate", description: "Learn to speak up and listen carefully.", badgeId: "badge-pioneer" },
+  { id: "cp-law-2", professionId: "p5", gradeLevelId: "g5", name: "Debater", description: "Practice making arguments and backing them up.", badgeId: "badge-scholar" },
+  { id: "cp-law-3", professionId: "p5", gradeLevelId: "g8", name: "Case Builder", description: "Research and build a mock legal case.", badgeId: "badge-achiever" },
+  { id: "cp-law-4", professionId: "p5", gradeLevelId: "g12", name: "Critical Thinker", description: "Analyze complex arguments and write persuasively.", badgeId: "badge-master" },
+  { id: "cp-law-5", professionId: "p5", gradeLevelId: "g15", name: "Legal Scholar", description: "Excel in pre-law and LSAT preparation.", badgeId: "badge-expert" },
+  { id: "cp-law-6", professionId: "p5", gradeLevelId: "g17", name: "Jurist", description: "Achieve the highest legal expertise.", badgeId: "badge-elite" },
+  // Nurse (p6)
+  { id: "cp-nurse-1", professionId: "p6", gradeLevelId: "g1", name: "Caring Heart", description: "Show kindness and help others feel better.", badgeId: "badge-guardian" },
+  { id: "cp-nurse-2", professionId: "p6", gradeLevelId: "g5", name: "Health Hero", description: "Learn first aid and healthy habits.", badgeId: "badge-scholar" },
+  { id: "cp-nurse-3", professionId: "p6", gradeLevelId: "g8", name: "Caregiver", description: "Understand patient needs and basic medical care.", badgeId: "badge-achiever" },
+  { id: "cp-nurse-4", professionId: "p6", gradeLevelId: "g12", name: "CNA Certified", description: "Earn your first healthcare certification.", badgeId: "badge-master" },
+  { id: "cp-nurse-5", professionId: "p6", gradeLevelId: "g15", name: "Clinical Nurse", description: "Complete BSN and clinical rotations with excellence.", badgeId: "badge-expert" },
+  { id: "cp-nurse-6", professionId: "p6", gradeLevelId: "g17", name: "Nurse Leader", description: "Achieve advanced practice or doctoral nursing.", badgeId: "badge-visionary" },
+];
+
+const quizQuestions: QuizQuestion[] = [
+  // Astronaut g1 (cp-astro-1)
+  { id: "q-astro-1a", checkpointId: "cp-astro-1", question: "What do astronauts wear to survive in space?", options: ["A raincoat", "A spacesuit", "A swimsuit", "A winter coat"], correctIndex: 1, explanation: "Astronauts wear a spacesuit that gives them air to breathe and protects them from extreme temperatures." },
+  { id: "q-astro-1b", checkpointId: "cp-astro-1", question: "Which planet do astronauts come from?", options: ["Mars", "Venus", "Earth", "Jupiter"], correctIndex: 2, explanation: "All astronauts come from Earth! They travel to space but always return home." },
+  { id: "q-astro-1c", checkpointId: "cp-astro-1", question: "What do astronauts use to travel to space?", options: ["A bicycle", "A rocket", "A hot air balloon", "An airplane"], correctIndex: 1, explanation: "Rockets are powerful enough to escape Earth's gravity and reach space." },
+  // Astronaut g5 (cp-astro-2)
+  { id: "q-astro-2a", checkpointId: "cp-astro-2", question: "What force must a rocket overcome to leave Earth?", options: ["Friction", "Magnetism", "Gravity", "Wind"], correctIndex: 2, explanation: "Gravity pulls everything toward Earth's center. Rockets need enormous thrust to overcome it." },
+  { id: "q-astro-2b", checkpointId: "cp-astro-2", question: "Which subject is most important for future astronauts?", options: ["Only math", "Only science", "Math AND science", "Only reading"], correctIndex: 2, explanation: "Astronauts need both strong math AND science skills — they're a team!" },
+  { id: "q-astro-2c", checkpointId: "cp-astro-2", question: "What does NASA stand for?", options: ["National Animal Space Association", "National Aeronautics and Space Administration", "North American Star Agency", "New Astronomy and Science Academy"], correctIndex: 1, explanation: "NASA = National Aeronautics and Space Administration, the U.S. space agency." },
+  // Astronaut g8 (cp-astro-3)
+  { id: "q-astro-3a", checkpointId: "cp-astro-3", question: "What is the International Space Station (ISS)?", options: ["A hotel on the Moon", "A laboratory orbiting Earth", "A rocket launch site", "A planet"], correctIndex: 1, explanation: "The ISS is a large spacecraft orbiting Earth where astronauts live and conduct scientific research." },
+  { id: "q-astro-3b", checkpointId: "cp-astro-3", question: "Which of these is a real requirement to become a NASA astronaut?", options: ["Must be over 7 feet tall", "Must have a STEM bachelor's degree", "Must be able to fly a plane without training", "Must have been to space before"], correctIndex: 1, explanation: "NASA requires astronaut candidates to have at least a bachelor's degree in a STEM field plus professional experience." },
+  { id: "q-astro-3c", checkpointId: "cp-astro-3", question: "What causes microgravity in orbit?", options: ["There is no gravity in space", "The ISS is constantly falling around Earth", "The Moon pulls all gravity away", "Special anti-gravity machines"], correctIndex: 1, explanation: "Objects in orbit are in a constant state of free fall around Earth, creating the feeling of weightlessness." },
+  // Astronaut g12 (cp-astro-4)
+  { id: "q-astro-4a", checkpointId: "cp-astro-4", question: "Which degree path is LEAST likely to lead to becoming an astronaut?", options: ["Aerospace Engineering", "Physics", "Fine Arts (no STEM minor)", "Biology"], correctIndex: 2, explanation: "NASA requires a STEM degree. Fine Arts alone does not meet the requirement, though combining it with STEM could work." },
+  { id: "q-astro-4b", checkpointId: "cp-astro-4", question: "How many hours of jet aircraft pilot-in-command time does NASA require (if applying as a pilot)?", options: ["100 hours", "500 hours", "1,000+ hours", "10,000 hours"], correctIndex: 2, explanation: "NASA requires at least 1,000 hours of pilot-in-command time in jet aircraft for pilot astronaut candidates." },
+  { id: "q-astro-4c", checkpointId: "cp-astro-4", question: "What physical fitness standard must astronaut candidates meet?", options: ["No standard — anyone can apply", "Must pass a NASA long-duration spaceflight physical", "Must be a professional athlete", "Must be able to hold breath for 5 minutes"], correctIndex: 1, explanation: "All astronaut candidates must pass a rigorous NASA spaceflight physical examination." },
+  // Astronaut g15 (cp-astro-5)
+  { id: "q-astro-5a", checkpointId: "cp-astro-5", question: "Which of these activities would strengthen an astronaut application MOST?", options: ["Playing video games", "SCUBA certification and pilot license", "Watching space movies", "Reading science fiction"], correctIndex: 1, explanation: "SCUBA training simulates weightlessness and EVA conditions, while a pilot license shows operational skills — both valued by NASA." },
+  { id: "q-astro-5b", checkpointId: "cp-astro-5", question: "What is the NASA Pathways Internship?", options: ["A summer camp for kids", "A paid internship that can convert to full-time NASA employment", "A volunteer program for retirees", "An online course"], correctIndex: 1, explanation: "NASA Pathways is a paid internship program for students that can lead to a permanent position at NASA after graduation." },
+  { id: "q-astro-5c", checkpointId: "cp-astro-5", question: "Which military branch produces the most astronaut candidates?", options: ["Army", "Navy", "Air Force", "Coast Guard"], correctIndex: 2, explanation: "The U.S. Air Force has historically produced the most astronaut candidates due to its focus on flight and aerospace operations." },
+  // Astronaut g17 (cp-astro-6)
+  { id: "q-astro-6a", checkpointId: "cp-astro-6", question: "About how often does NASA open astronaut applications?", options: ["Every month", "Every ~4 years", "Once every 20 years", "Only when someone retires"], correctIndex: 1, explanation: "NASA typically opens applications for astronaut candidates approximately every 4 years, and competition is extremely fierce." },
+  { id: "q-astro-6b", checkpointId: "cp-astro-6", question: "What is the dropout rate for astronaut training?", options: ["Almost none drop out", "About 10-20%", "More than 50%", "Everyone drops out eventually"], correctIndex: 1, explanation: "Astronaut training is extremely demanding, and about 10-20% of candidates do not complete the full training program." },
+  // Software Engineer g1 (cp-swe-1)
+  { id: "q-swe-1a", checkpointId: "cp-swe-1", question: "What is coding?", options: ["Writing secret messages", "Giving instructions to a computer", "Building with blocks", "Drawing pictures"], correctIndex: 1, explanation: "Coding means writing step-by-step instructions (code) that tell a computer what to do." },
+  { id: "q-swe-1b", checkpointId: "cp-swe-1", question: "Which is a good first programming activity for young kids?", options: ["Building a rocket", "ScratchJr — programming stories and games", "Writing a novel", "Painting a mural"], correctIndex: 1, explanation: "ScratchJr lets children create interactive stories and games by snapping together programming blocks — perfect for beginners!" },
+  { id: "q-swe-1c", checkpointId: "cp-swe-1", question: "What skill helps future programmers the MOST at this age?", options: ["Memorizing code", "Pattern recognition and logical thinking", "Typing speed", "Drawing"], correctIndex: 1, explanation: "Pattern recognition and logical thinking form the foundation of computational thinking — much more important than early typing or memorization." },
+  // Software Engineer g5 (cp-swe-2)
+  { id: "q-swe-2a", checkpointId: "cp-swe-2", question: "What is an algorithm?", options: ["A type of dance", "A step-by-step set of instructions to solve a problem", "A musical instrument", "A kind of food"], correctIndex: 1, explanation: "An algorithm is a precise set of steps used to solve a problem — just like following a recipe!" },
+  { id: "q-swe-2b", checkpointId: "cp-swe-2", question: "Which of these is a programming language?", options: ["Spanish", "Python", "Dolphin", "Painting"], correctIndex: 1, explanation: "Python is one of the most popular programming languages in the world — it's named after Monty Python, not the snake!" },
+  { id: "q-swe-2c", checkpointId: "cp-swe-2", question: "What does 'debugging' mean?", options: ["Catching real bugs", "Finding and fixing errors in code", "Breaking a computer", "Making a program run slower"], correctIndex: 1, explanation: "Debugging means finding and fixing mistakes (bugs) in your code so the program works correctly." },
+  // Software Engineer g8 (cp-swe-3)
+  { id: "q-swe-3a", checkpointId: "cp-swe-3", question: "What is the difference between front-end and back-end?", options: ["Front is good, back is bad", "Front-end is what users see; back-end is server logic", "They are the same thing", "One is for games only"], correctIndex: 1, explanation: "Front-end is the visual interface users interact with; back-end is the server, database, and logic happening behind the scenes." },
+  { id: "q-swe-3b", checkpointId: "cp-swe-3", question: "What is a bug in software?", options: ["A real insect in the computer", "An error or flaw in the code", "A feature that works perfectly", "A type of computer virus"], correctIndex: 1, explanation: "A bug is a mistake in the code that causes unexpected behavior. The term originated when a real moth was found in an early computer relay!" },
+  { id: "q-swe-3c", checkpointId: "cp-swe-3", question: "Which language runs in web browsers?", options: ["Python", "Java", "JavaScript", "C++"], correctIndex: 2, explanation: "JavaScript is the programming language that runs natively in all web browsers, making it essential for web development." },
+  // Software Engineer g12 (cp-swe-4)
+  { id: "q-swe-4a", checkpointId: "cp-swe-4", question: "What does API stand for?", options: ["Apple Pie Interface", "Application Programming Interface", "Advanced Program Integration", "Automatic Protocol Installer"], correctIndex: 1, explanation: "API (Application Programming Interface) is how different software components communicate with each other." },
+  { id: "q-swe-4b", checkpointId: "cp-swe-4", question: "What is version control used for?", options: ["Controlling which version of Windows you have", "Tracking changes to code and collaborating with others", "Making sure your computer is the newest model", "Controlling game versions"], correctIndex: 1, explanation: "Version control (like Git) tracks changes in code over time, allowing teams to collaborate without losing work." },
+  { id: "q-swe-4c", checkpointId: "cp-swe-4", question: "Which data structure uses LIFO (Last In, First Out)?", options: ["Queue", "Stack", "Array", "Linked list"], correctIndex: 1, explanation: "A stack follows LIFO — think of a stack of plates: the last one placed on top is the first one removed." },
+  // Software Engineer g15 (cp-swe-5)
+  { id: "q-swe-5a", checkpointId: "cp-swe-5", question: "What is Big O notation used for?", options: ["Rating how big a program is", "Describing algorithm efficiency and scalability", "Notating the size of databases", "A grading system for code"], correctIndex: 1, explanation: "Big O notation describes how the runtime or memory usage of an algorithm grows as the input size increases." },
+  { id: "q-swe-5b", checkpointId: "cp-swe-5", question: "What is a relational database?", options: ["A database that has friends", "A database that organizes data into tables with relationships", "A database stored on paper", "A database for relationships"], correctIndex: 1, explanation: "Relational databases store data in tables with rows and columns, using keys to define relationships between tables." },
+  { id: "q-swe-5c", checkpointId: "cp-swe-5", question: "What does CI/CD stand for?", options: ["Computer Integration / Computer Design", "Continuous Integration / Continuous Deployment", "Code Inspection / Code Delivery", "Customer Integration / Customer Development"], correctIndex: 1, explanation: "CI/CD automates the process of testing, integrating, and deploying code changes — a key engineering practice." },
+  // Software Engineer g17 (cp-swe-6)
+  { id: "q-swe-6a", checkpointId: "cp-swe-6", question: "What is the CAP theorem in distributed systems?", options: ["A rule about wearing caps", "Consistency, Availability, Partition tolerance — pick two", "A theorem about computer capacity", "Compile, Assemble, Package"], correctIndex: 1, explanation: "The CAP theorem states that a distributed system can only guarantee two of: Consistency, Availability, and Partition tolerance at the same time." },
+  { id: "q-swe-6b", checkpointId: "cp-swe-6", question: "What characterizes a Turing-complete language?", options: ["It runs on Turing machines only", "It can solve any computational problem given enough time and memory", "It was invented by Alan Turing personally", "It only works on Mac computers"], correctIndex: 1, explanation: "A Turing-complete system can simulate any Turing machine — meaning it can compute anything that is computable." },
+  // Doctor g1 (cp-doc-1)
+  { id: "q-doc-1a", checkpointId: "cp-doc-1", question: "What do doctors do?", options: ["Only give shots", "Help people stay healthy and treat illnesses", "Only work in hospitals", "Just write prescriptions"], correctIndex: 1, explanation: "Doctors help people stay healthy, diagnose illnesses, and treat injuries — they work in many different settings!" },
+  { id: "q-doc-1b", checkpointId: "cp-doc-1", question: "What tool do doctors use to listen to your heartbeat?", options: ["A telescope", "A stethoscope", "A microscope", "A microphone"], correctIndex: 1, explanation: "A stethoscope lets doctors listen to your heart, lungs, and other body sounds." },
+  { id: "q-doc-1c", checkpointId: "cp-doc-1", question: "Why do doctors wash their hands so often?", options: ["Because they like water", "To stop germs from spreading", "It's just a habit", "To keep their hands soft"], correctIndex: 1, explanation: "Hand washing is one of the most important ways doctors prevent infections and keep patients safe." },
+  // Doctor g5 (cp-doc-2)
+  { id: "q-doc-2a", checkpointId: "cp-doc-2", question: "Which organ pumps blood through your body?", options: ["Brain", "Lungs", "Heart", "Stomach"], correctIndex: 2, explanation: "The heart is a powerful muscle that pumps blood to every part of your body, delivering oxygen and nutrients." },
+  { id: "q-doc-2b", checkpointId: "cp-doc-2", question: "What is the largest organ in the human body?", options: ["Heart", "Liver", "Brain", "Skin"], correctIndex: 3, explanation: "Skin is the body's largest organ! It protects us from germs, regulates temperature, and lets us feel touch." },
+  { id: "q-doc-2c", checkpointId: "cp-doc-2", question: "What do vaccines do?", options: ["Make you instantly immune to everything", "Train your immune system to fight specific germs", "Cure all diseases", "Replace all your blood"], correctIndex: 1, explanation: "Vaccines teach your immune system to recognize and fight specific germs before you get sick." },
+  // Doctor g8 (cp-doc-3)
+  { id: "q-doc-3a", checkpointId: "cp-doc-3", question: "What is the scientific method?", options: ["A way to take medicine", "A systematic process of observation, hypothesis, experiment, and conclusion", "A type of surgery", "A way to organize a hospital"], correctIndex: 1, explanation: "The scientific method is how doctors and scientists systematically investigate questions and test treatments." },
+  { id: "q-doc-3b", checkpointId: "cp-doc-3", question: "What does CPR stand for?", options: ["Cardio Pulmonary Resuscitation", "Complete Patient Recovery", "Critical Pulse Reading", "Cardiac Patient Registry"], correctIndex: 0, explanation: "CPR (Cardiopulmonary Resuscitation) is an emergency procedure that combines chest compressions and rescue breathing to keep blood flowing." },
+  { id: "q-doc-3c", checkpointId: "cp-doc-3", question: "How many bones are in the adult human body?", options: ["106", "156", "206", "306"], correctIndex: 2, explanation: "The adult human body has 206 bones. Babies are born with about 270, but some fuse together as we grow." },
+  // Doctor g12 (cp-doc-4)
+  { id: "q-doc-4a", checkpointId: "cp-doc-4", question: "What is the MCAT?", options: ["A medical treatment", "Medical College Admission Test", "A type of medical certification", "A hospital department"], correctIndex: 1, explanation: "The MCAT is the standardized exam required for admission to medical schools in the U.S. and Canada." },
+  { id: "q-doc-4b", checkpointId: "cp-doc-4", question: "Which of these is a prerequisite for most medical schools?", options: ["Art History", "Organic Chemistry", "Astronomy", "Music Theory"], correctIndex: 1, explanation: "Organic Chemistry is a required prerequisite for virtually all medical schools, along with biology, physics, and biochemistry." },
+  { id: "q-doc-4c", checkpointId: "cp-doc-4", question: "How many years is medical school (after undergraduate)?", options: ["2 years", "3 years", "4 years", "6 years"], correctIndex: 2, explanation: "Medical school is 4 years: 2 years of classroom sciences and 2 years of clinical rotations." },
+  // Doctor g15 (cp-doc-5)
+  { id: "q-doc-5a", checkpointId: "cp-doc-5", question: "What comes after medical school?", options: ["You're done — you're a doctor", "Residency (3-7 years of specialized training)", "Immediately open a practice", "Retirement"], correctIndex: 1, explanation: "After medical school, new doctors complete a residency program lasting 3-7 years depending on their chosen specialty." },
+  { id: "q-doc-5b", checkpointId: "cp-doc-5", question: "What is the Hippocratic Oath?", options: ["A pledge to eat healthy", "An ethical oath physicians take to practice medicine honestly", "A promise to never use technology", "A graduation speech"], correctIndex: 1, explanation: "The Hippocratic Oath is a historic ethical pledge that physicians take, promising to put patients first and practice medicine ethically." },
+  { id: "q-doc-5c", checkpointId: "cp-doc-5", question: "What is the difference between an MD and DO?", options: ["No difference at all", "MDs practice allopathic medicine; DOs add osteopathic manipulative treatment", "DOs can't prescribe medicine", "MDs only work in hospitals"], correctIndex: 1, explanation: "Both are fully licensed physicians. DOs receive additional training in osteopathic manipulative treatment — a hands-on approach to diagnosis and treatment." },
+  // Doctor g17 (cp-doc-6)
+  { id: "q-doc-6a", checkpointId: "cp-doc-6", question: "What is a board-certified physician?", options: ["A doctor who serves on a hospital board", "A physician who passed rigorous specialty exams beyond licensure", "A doctor with an office", "Any practicing physician"], correctIndex: 1, explanation: "Board certification means a physician has completed additional training and passed comprehensive exams in their specialty." },
+  { id: "q-doc-6b", checkpointId: "cp-doc-6", question: "What is the longest medical residency?", options: ["Family Medicine (3 years)", "Neurosurgery (7 years)", "Internal Medicine (3 years)", "Pediatrics (3 years)"], correctIndex: 1, explanation: "Neurosurgery has the longest residency at 7 years, reflecting the extreme complexity of brain and spinal surgery." },
+  // Architect g1 (cp-arch-1)
+  { id: "q-arch-1a", checkpointId: "cp-arch-1", question: "What does an architect do?", options: ["Only draws pictures", "Designs buildings and spaces people use", "Only works outside", "Drives construction trucks"], correctIndex: 1, explanation: "Architects design buildings and spaces — they blend art and science to create places where people live, work, and play." },
+  { id: "q-arch-1b", checkpointId: "cp-arch-1", question: "Which shape is strongest for building?", options: ["Circle", "Triangle", "Square", "Heart"], correctIndex: 1, explanation: "Triangles are the strongest shape because they distribute force evenly across all three sides — that's why bridges use so many!" },
+  { id: "q-arch-1c", checkpointId: "cp-arch-1", question: "What do you call a person who builds the architect's design?", options: ["Another architect", "A construction worker / builder", "A doctor", "A pilot"], correctIndex: 1, explanation: "Construction workers and builders take the architect's plans and turn them into real buildings using tools and materials." },
+  // Architect g5 (cp-arch-2)
+  { id: "q-arch-2a", checkpointId: "cp-arch-2", question: "What is a blueprint?", options: ["A blue piece of paper", "A detailed technical drawing of a building design", "A type of paint", "A photograph of a building"], correctIndex: 1, explanation: "Blueprints are detailed technical drawings that show exactly how a building should be constructed." },
+  { id: "q-arch-2b", checkpointId: "cp-arch-2", question: "What does 'scale' mean in architecture?", options: ["A device for weighing things", "The ratio between a drawing's size and actual size", "How tall a building looks", "A type of ladder"], correctIndex: 1, explanation: "Scale is the ratio between a drawing or model and the real building — e.g., 1:100 means 1cm on the drawing equals 100cm in real life." },
+  { id: "q-arch-2c", checkpointId: "cp-arch-2", question: "Why do architects need to know math?", options: ["They don't really need it", "To calculate loads, dimensions, materials, and costs", "Only to impress clients", "Just for fun"], correctIndex: 1, explanation: "Architects use math constantly — for structural calculations, measurements, material quantities, budgets, and ensuring buildings are safe." },
+  // Architect g8 (cp-arch-3)
+  { id: "q-arch-3a", checkpointId: "cp-arch-3", question: "What is CAD software used for?", options: ["Playing games", "Computer-Aided Design — digital drafting and 3D modeling", "Cooking recipes", "Writing essays"], correctIndex: 1, explanation: "CAD (Computer-Aided Design) lets architects create precise digital drawings and 3D models of their designs." },
+  { id: "q-arch-3b", checkpointId: "cp-arch-3", question: "What is the difference between an architect and an engineer?", options: ["They're the same job", "Architects focus on design and aesthetics; engineers focus on structural safety", "Engineers only work outside", "Architects only work in offices"], correctIndex: 1, explanation: "Architects design the look, feel, and function of buildings; engineers ensure they stand up safely and systems work properly." },
+  { id: "q-arch-3c", checkpointId: "cp-arch-3", question: "What famous architect designed the Guggenheim Museum in New York?", options: ["Frank Lloyd Wright", "Leonardo da Vinci", "Pablo Picasso", "Steve Jobs"], correctIndex: 0, explanation: "Frank Lloyd Wright, one of America's most famous architects, designed the iconic spiral-shaped Guggenheim Museum." },
+  // Architect g12 (cp-arch-4)
+  { id: "q-arch-4a", checkpointId: "cp-arch-4", question: "What is a cantilever?", options: ["A type of dance", "A beam supported at only one end, projecting outward", "A kitchen appliance", "A roofing material"], correctIndex: 1, explanation: "A cantilever is a rigid structural element, like a beam, that is anchored at only one end — think of a diving board or a balcony." },
+  { id: "q-arch-4b", checkpointId: "cp-arch-4", question: "What degree do most architects need?", options: ["A 2-year associate degree", "A 5-year B.Arch (Bachelor of Architecture)", "A 1-year certificate", "No degree needed"], correctIndex: 1, explanation: "Most architects earn a 5-year professional B.Arch degree from a NAAB-accredited program, followed by internship and licensure exams." },
+  { id: "q-arch-4c", checkpointId: "cp-arch-4", question: "What is a site analysis?", options: ["Analyzing a website", "Studying a building location — sun, wind, terrain, context", "Testing internet speed", "Reviewing a restaurant location"], correctIndex: 1, explanation: "Site analysis examines the physical and environmental characteristics of a building site to inform the design." },
+  // Architect g15 (cp-arch-5)
+  { id: "q-arch-5a", checkpointId: "cp-arch-5", question: "What is the NAAB?", options: ["National Association of Animal Breeders", "National Architectural Accrediting Board", "North American Architecture Bureau", "New Architects Association Board"], correctIndex: 1, explanation: "NAAB accredits professional architecture degree programs in the U.S. Graduating from a NAAB-accredited program is required for licensure." },
+  { id: "q-arch-5b", checkpointId: "cp-arch-5", question: "What is Revit?", options: ["A revision tool", "Building Information Modeling (BIM) software used by architects", "A review website", "A type of building material"], correctIndex: 1, explanation: "Revit is industry-standard BIM software that creates intelligent 3D models with embedded data about every building component." },
+  { id: "q-arch-5c", checkpointId: "cp-arch-5", question: "What is the Architect Registration Exam (ARE)?", options: ["A college entrance exam", "The multi-part licensure exam to become a registered architect", "A physical fitness test", "An art competition"], correctIndex: 1, explanation: "The ARE is the comprehensive exam required in all U.S. jurisdictions to become a licensed, registered architect." },
+  // Architect g17 (cp-arch-6)
+  { id: "q-arch-6a", checkpointId: "cp-arch-6", question: "What is sustainable architecture?", options: ["Architecture that lasts forever", "Design that minimizes environmental impact and resource use", "Only building with wood", "Cheap construction"], correctIndex: 1, explanation: "Sustainable architecture designs buildings to reduce environmental impact through energy efficiency, renewable materials, and smart site planning." },
+  { id: "q-arch-6b", checkpointId: "cp-arch-6", question: "What does LEED certification mean?", options: ["A building has a pointed roof", "Leadership in Energy and Environmental Design — a green building rating", "The building is very tall", "A type of zoning law"], correctIndex: 1, explanation: "LEED is the most widely used green building rating system, certifying that a building meets high environmental performance standards." },
+  // Lawyer g1 (cp-law-1)
+  { id: "q-law-1a", checkpointId: "cp-law-1", question: "What does a lawyer do?", options: ["Only goes to court", "Helps people understand and follow the law", "Only writes documents", "Arrests people"], correctIndex: 1, explanation: "Lawyers help people understand the law, protect their rights, and solve legal problems — in court and out." },
+  { id: "q-law-1b", checkpointId: "cp-law-1", question: "What is a rule?", options: ["A suggestion you can ignore", "A guideline that tells us what we can and cannot do", "A type of game", "A school subject"], correctIndex: 1, explanation: "Rules (and laws) are guidelines that help people live together safely and fairly in a community." },
+  { id: "q-law-1c", checkpointId: "cp-law-1", question: "What does it mean to be fair?", options: ["Getting everything you want", "Treating everyone equally and justly", "Always winning", "Never sharing"], correctIndex: 1, explanation: "Fairness means treating everyone equally and making decisions that are just and reasonable — a core value in law." },
+  // Lawyer g5 (cp-law-2)
+  { id: "q-law-2a", checkpointId: "cp-law-2", question: "What is an argument in a debate?", options: ["A fight", "A reasoned point supported by evidence", "Yelling loudly", "Interrupting others"], correctIndex: 1, explanation: "In debate and law, an argument is a logical point backed by facts and reasoning, not an emotional fight." },
+  { id: "q-law-2b", checkpointId: "cp-law-2", question: "What is evidence in a legal case?", options: ["A guess", "Facts, documents, or testimony used to prove something", "An opinion", "A rumor"], correctIndex: 1, explanation: "Evidence is factual information — documents, witness testimony, physical objects — used to prove or disprove a legal claim." },
+  { id: "q-law-2c", checkpointId: "cp-law-2", question: "What does 'innocent until proven guilty' mean?", options: ["Everyone is assumed guilty first", "A person is considered innocent unless evidence proves otherwise", "Only guilty people go to court", "Police decide who is guilty"], correctIndex: 1, explanation: "This is a fundamental legal principle: the burden is on the prosecution to prove guilt — the defendant starts presumed innocent." },
+  // Lawyer g8 (cp-law-3)
+  { id: "q-law-3a", checkpointId: "cp-law-3", question: "What are the three branches of U.S. government?", options: ["Army, Navy, Air Force", "Legislative, Executive, Judicial", "Federal, State, Local", "President, Vice President, Cabinet"], correctIndex: 1, explanation: "Legislative (makes laws), Executive (enforces laws), and Judicial (interprets laws) are the three co-equal branches." },
+  { id: "q-law-3b", checkpointId: "cp-law-3", question: "What does the Supreme Court do?", options: ["Writes new laws", "Interprets the Constitution and reviews laws", "Arrests criminals", "Runs the military"], correctIndex: 1, explanation: "The Supreme Court is the highest court — it interprets the Constitution and can strike down laws that violate it." },
+  { id: "q-law-3c", checkpointId: "cp-law-3", question: "What is a contract?", options: ["A verbal promise only", "A legally enforceable agreement between parties", "Any handwritten note", "A suggestion between friends"], correctIndex: 1, explanation: "A contract is a binding agreement between two or more parties that the law will enforce if broken." },
+  // Lawyer g12 (cp-law-4)
+  { id: "q-law-4a", checkpointId: "cp-law-4", question: "What does the LSAT test?", options: ["Legal knowledge", "Reading comprehension, analytical reasoning, and logical reasoning", "Math skills", "Typing speed"], correctIndex: 1, explanation: "The LSAT does NOT test legal knowledge — it measures reading comprehension and logical reasoning skills needed for law school success." },
+  { id: "q-law-4b", checkpointId: "cp-law-4", question: "How many years is law school (J.D.)?", options: ["2 years", "3 years", "4 years", "5 years"], correctIndex: 1, explanation: "The Juris Doctor (J.D.) degree is a 3-year program, followed by the bar exam in the state where you want to practice." },
+  { id: "q-law-4c", checkpointId: "cp-law-4", question: "What is 'precedent' in law?", options: ["Something that has never happened before", "A prior court decision that guides future similar cases", "A type of legal document", "A courtroom procedure"], correctIndex: 1, explanation: "Precedent is the principle that courts should follow prior decisions (stare decisis) when the same legal issues arise again." },
+  // Lawyer g15 (cp-law-5)
+  { id: "q-law-5a", checkpointId: "cp-law-5", question: "What is the bar exam?", options: ["A test about serving drinks", "The licensing exam required to practice law in a state", "A physical fitness test for lawyers", "An etiquette test"], correctIndex: 1, explanation: "The bar exam is the rigorous test that law graduates must pass to be licensed to practice law in a particular state." },
+  { id: "q-law-5b", checkpointId: "cp-law-5", question: "What is the difference between civil law and criminal law?", options: ["No difference", "Civil deals with disputes between people; criminal deals with crimes against society", "Civil is for corporations only", "Criminal is for individuals only"], correctIndex: 1, explanation: "Civil law handles disputes between individuals/organizations; criminal law involves the government prosecuting crimes against society." },
+  { id: "q-law-5c", checkpointId: "cp-law-5", question: "What does 'pro bono' mean?", options: ["For a fee", "For the public good — free legal services", "Against the lawyer", "A type of case"], correctIndex: 1, explanation: "Pro bono (from Latin 'pro bono publico') means providing legal services for free to those who cannot afford representation." },
+  // Lawyer g17 (cp-law-6)
+  { id: "q-law-6a", checkpointId: "cp-law-6", question: "What is a Supreme Court clerk?", options: ["An administrative assistant", "A recent law grad who assists a Justice with research and drafting", "A cleaning person", "A security guard"], correctIndex: 1, explanation: "Supreme Court clerkships are among the most prestigious legal positions — clerks help Justices research cases and draft opinions." },
+  { id: "q-law-6b", checkpointId: "cp-law-6", question: "What does 'amicus curiae' mean?", options: ["Friend of the court", "Enemy of the court", "Judge's friend", "A type of court order"], correctIndex: 0, explanation: "'Amicus curiae' (friend of the court) refers to a person or group not a party to a case who offers information to assist the court." },
+  // Nurse g1 (cp-nurse-1)
+  { id: "q-nurse-1a", checkpointId: "cp-nurse-1", question: "What do nurses do?", options: ["Only give shots", "Care for patients and help them get better", "Only work in hospitals", "Just clean rooms"], correctIndex: 1, explanation: "Nurses provide compassionate care, monitor patients, give medicine, and support people through illness and recovery." },
+  { id: "q-nurse-1b", checkpointId: "cp-nurse-1", question: "What is the best way to stop germs from spreading?", options: ["Hold your breath", "Wash your hands with soap and water", "Wear a hat", "Run away from sick people"], correctIndex: 1, explanation: "Hand washing is the #1 way to prevent the spread of germs and infections — nurses do it dozens of times a day!" },
+  { id: "q-nurse-1c", checkpointId: "cp-nurse-1", question: "What does 'empathy' mean?", options: ["Being angry at others", "Understanding and sharing someone else's feelings", "Being the fastest runner", "Remembering lots of facts"], correctIndex: 1, explanation: "Empathy — understanding how others feel — is one of the most important qualities of a great nurse." },
+  // Nurse g5 (cp-nurse-2)
+  { id: "q-nurse-2a", checkpointId: "cp-nurse-2", question: "What is first aid?", options: ["The first person to help", "Immediate care given to an injured or sick person", "A type of bandage", "A doctor's first visit"], correctIndex: 1, explanation: "First aid is the immediate help you give someone who is hurt or suddenly ill until professional medical help arrives." },
+  { id: "q-nurse-2b", checkpointId: "cp-nurse-2", question: "What should you do if someone is bleeding?", options: ["Ignore it", "Apply pressure with a clean cloth and seek help", "Pour water on it", "Put dirt on it"], correctIndex: 1, explanation: "Apply firm pressure with a clean cloth or bandage to stop bleeding, and get help from an adult or medical professional." },
+  { id: "q-nurse-2c", checkpointId: "cp-nurse-2", question: "What do vital signs measure?", options: ["How important a person is", "Body temperature, heart rate, breathing rate, and blood pressure", "How tall someone is", "What someone ate for breakfast"], correctIndex: 1, explanation: "Vital signs are key measurements that show how well your body is functioning — nurses check them regularly." },
+  // Nurse g8 (cp-nurse-3)
+  { id: "q-nurse-3a", checkpointId: "cp-nurse-3", question: "What is the difference between a doctor and a nurse?", options: ["They do exactly the same thing", "Doctors diagnose; nurses provide ongoing care, monitoring, and patient education", "Nurses only work at night", "Doctors never talk to patients"], correctIndex: 1, explanation: "While there's overlap, doctors focus on diagnosis and treatment plans; nurses provide hands-on care, monitoring, and patient advocacy." },
+  { id: "q-nurse-3b", checkpointId: "cp-nurse-3", question: "What does RN stand for?", options: ["Really Nice", "Registered Nurse", "Regular Nurse", "Regional Nutritionist"], correctIndex: 1, explanation: "RN = Registered Nurse. RNs have completed a nursing program and passed the NCLEX licensing exam." },
+  { id: "q-nurse-3c", checkpointId: "cp-nurse-3", question: "What is patient advocacy?", options: ["Advertising for patients", "Speaking up for the patient's needs and rights", "Arguing with patients", "Selling medicine"], correctIndex: 1, explanation: "Patient advocacy means nurses speak up for what's best for their patients, ensuring their needs and wishes are respected." },
+  // Nurse g12 (cp-nurse-4)
+  { id: "q-nurse-4a", checkpointId: "cp-nurse-4", question: "What does CNA stand for?", options: ["Certified Nurse Advocate", "Certified Nursing Assistant", "Clinical Nurse Administrator", "Care Nurse Associate"], correctIndex: 1, explanation: "CNA = Certified Nursing Assistant. CNAs provide basic patient care under RN supervision — many begin here on the path to RN." },
+  { id: "q-nurse-4b", checkpointId: "cp-nurse-4", question: "What is the NCLEX?", options: ["A nursing school entrance exam", "The national licensing exam to become a Registered Nurse", "A nursing conference", "A nursing specialty certification"], correctIndex: 1, explanation: "The NCLEX-RN is the standardized exam all nursing graduates must pass to become licensed Registered Nurses." },
+  { id: "q-nurse-4c", checkpointId: "cp-nurse-4", question: "What degree do most hospitals prefer for new RNs?", options: ["Associate (ADN)", "Bachelor of Science in Nursing (BSN)", "High school diploma", "Certificate only"], correctIndex: 1, explanation: "While ADN nurses are licensed RNs, most hospitals now prefer or require a BSN, which provides broader training and better career advancement." },
+  // Nurse g15 (cp-nurse-5)
+  { id: "q-nurse-5a", checkpointId: "cp-nurse-5", question: "What is a clinical rotation?", options: ["A spinning class", "Hands-on training in different hospital departments during nursing school", "A nursing party", "A textbook chapter"], correctIndex: 1, explanation: "Clinical rotations place nursing students in real healthcare settings — med-surg, pediatrics, OB, psych, and more — to practice skills." },
+  { id: "q-nurse-5b", checkpointId: "cp-nurse-5", question: "What is the nurse-to-patient ratio?", options: ["How many nurses are friends", "The number of patients assigned to each nurse — affects safety and care quality", "A hospital's size", "A nursing competition"], correctIndex: 1, explanation: "Nurse-to-patient ratios directly impact patient safety and care quality. Lower ratios mean more attention per patient." },
+  { id: "q-nurse-5c", checkpointId: "cp-nurse-5", question: "What specialty focuses on care at the end of life?", options: ["Surgery", "Hospice and palliative care nursing", "Pediatric nursing", "Emergency nursing"], correctIndex: 1, explanation: "Hospice and palliative care nurses specialize in comfort, dignity, and quality of life for patients with terminal illnesses." },
+  // Nurse g17 (cp-nurse-6)
+  { id: "q-nurse-6a", checkpointId: "cp-nurse-6", question: "What is a Nurse Practitioner (NP)?", options: ["A nurse in training", "An advanced practice RN who can diagnose and prescribe medication", "A retired nurse", "A nursing student"], correctIndex: 1, explanation: "NPs hold a master's or doctorate and have advanced training that allows them to diagnose conditions, prescribe medications, and manage patient care." },
+  { id: "q-nurse-6b", checkpointId: "cp-nurse-6", question: "What is evidence-based practice in nursing?", options: ["Guessing what works", "Using the best research evidence combined with clinical expertise and patient values", "Following only tradition", "Ignoring research"], correctIndex: 1, explanation: "Evidence-based practice integrates the latest research with clinical experience and patient preferences to provide the best care." },
+];
+
+
 const tutors: Tutor[] = [
   {
     id: "t1", name: "Dr. Sarah Chen", title: "STEM & Test Prep Tutor",
@@ -2535,6 +2766,48 @@ export function getAllGradeLevels(): GradeLevel[] {
 export function getRoadmap(professionId: string): RoadmapStep[] {
   return roadmapSteps
     .filter((r) => r.professionId === professionId)
+    .map((r) => {
+      if (!r.objectives || r.objectives.length === 0) {
+        const grade = gradeLevels.find((g) => g.id === r.gradeLevelId);
+        const sortOrder = grade?.sortOrder ?? 0;
+        const isEarlyGrade = sortOrder <= 6; // Pre-K through 4th grade
+        const subjects = r.subjects;
+        const objectives: string[] = [];
+        
+        for (let i = 0; i < Math.min(subjects.length, 4); i++) {
+          const subject = subjects[i].replace(/\(.*?\)/, "").trim();
+          if (isEarlyGrade) {
+            const playfulPatterns = [
+              `Play and explore ${subject.toLowerCase()} through fun activities`,
+              `Read picture books about ${subject.toLowerCase()}`,
+              `Practice ${subject.toLowerCase()} with games and puzzles`,
+              `Sing songs and tell stories about ${subject.toLowerCase()}`,
+            ];
+            objectives.push(playfulPatterns[i % playfulPatterns.length]);
+          } else {
+            const patterns = [
+              `Study ${subject.toLowerCase()} fundamentals`,
+              `Practice ${subject.toLowerCase()} exercises weekly`,
+              `Complete ${subject.toLowerCase()} project or worksheet`,
+              `Review and master ${subject.toLowerCase()} concepts`,
+            ];
+            objectives.push(patterns[i % patterns.length]);
+          }
+        }
+        
+        // Ensure at least 2 objectives
+        if (objectives.length < 2 && subjects.length > 0) {
+          if (isEarlyGrade) {
+            objectives.push(`Explore ${subjects[0].replace(/\(.*?\)/, "").trim().toLowerCase()} with hands-on discovery`);
+          } else {
+            objectives.push(`Build deeper understanding of ${subjects[0].replace(/\(.*?\)/, "").trim().toLowerCase()}`);
+          }
+        }
+        
+        return { ...r, objectives };
+      }
+      return r;
+    })
     .sort((a, b) => {
       const ga = gradeLevels.find((g) => g.id === a.gradeLevelId);
       const gb = gradeLevels.find((g) => g.id === b.gradeLevelId);
@@ -2613,6 +2886,39 @@ export function searchTutors(query: string): Tutor[] {
       t.bio.toLowerCase().includes(q) ||
       t.title.toLowerCase().includes(q),
   );
+}
+
+// ── Gamification data access functions ────────────────────────────────────
+
+export function getAllCheckpoints(): Checkpoint[] {
+  return checkpoints;
+}
+
+export function getCheckpointsByProfession(professionId: string): Checkpoint[] {
+  return checkpoints.filter((c) => c.professionId === professionId);
+}
+
+export function getCheckpointForGrade(professionId: string, gradeLevelId: string): Checkpoint | undefined {
+  return checkpoints.find((c) => c.professionId === professionId && c.gradeLevelId === gradeLevelId);
+}
+
+export function getAllBadges(): Badge[] {
+  return badges;
+}
+
+export function getBadgeById(id: string): Badge | undefined {
+  return badges.find((b) => b.id === id);
+}
+
+export function getBadgesByProfession(professionId: string): Badge[] {
+  const profCheckpoints = getCheckpointsByProfession(professionId);
+  return profCheckpoints
+    .map((cp) => badges.find((b) => b.id === cp.badgeId))
+    .filter((b): b is Badge => b !== undefined);
+}
+
+export function getQuizQuestionsByCheckpoint(checkpointId: string): QuizQuestion[] {
+  return quizQuestions.filter((q) => q.checkpointId === checkpointId);
 }
 
 export function getTutorSubjects(): string[] {
