@@ -76,6 +76,19 @@ export interface ProfessionSchool {
   programName: string;
 }
 
+export interface Tutor {
+  id: string;
+  name: string;
+  title: string;
+  bio: string;
+  subjects: string[];
+  hourlyRate: number;
+  rating: number;
+  photoUrl: string;
+  professionIds: string[];
+  availability: string;
+}
+
 // ── Mock data ────────────────────────────────────────────────────────────
 
 const professions: Profession[] = [
@@ -2209,6 +2222,90 @@ const professionSchools: ProfessionSchool[] = [
   { professionId: "p13", schoolId: "s18", programName: "Doctor of Dental Medicine (D.M.D.)" },
 ];
 
+const tutors: Tutor[] = [
+  {
+    id: "t1", name: "Dr. Sarah Chen", title: "STEM & Test Prep Tutor",
+    bio: "Former NASA education specialist with 15 years of tutoring experience. Specializes in making complex STEM concepts accessible and fun for students of all ages.",
+    subjects: ["Mathematics", "Physics", "SAT/ACT Prep", "Computer Science"],
+    hourlyRate: 75, rating: 4.9, photoUrl: "",
+    professionIds: ["p1", "p2", "p7", "p11"],
+    availability: "Weekdays after 4pm, Weekends",
+  },
+  {
+    id: "t2", name: "Marcus Williams", title: "Software Engineering Mentor",
+    bio: "Senior engineer at a FAANG company who loves teaching the next generation of developers. Focuses on practical coding skills and project-based learning.",
+    subjects: ["Python", "JavaScript", "Web Development", "Algorithms", "AP Computer Science"],
+    hourlyRate: 85, rating: 4.8, photoUrl: "",
+    professionIds: ["p2", "p11"],
+    availability: "Weekday evenings, Saturday mornings",
+  },
+  {
+    id: "t3", name: "Emily Rodriguez", title: "Pre-Med & Science Tutor",
+    bio: "Medical student at Johns Hopkins with a passion for helping aspiring doctors. MCAT prep specialist and biology enthusiast.",
+    subjects: ["Biology", "Chemistry", "Organic Chemistry", "MCAT Prep", "Anatomy"],
+    hourlyRate: 65, rating: 4.9, photoUrl: "",
+    professionIds: ["p3", "p6", "p9", "p13"],
+    availability: "Flexible schedule — online sessions available",
+  },
+  {
+    id: "t4", name: "James Okonkwo", title: "Architecture & Design Instructor",
+    bio: "Practicing architect and adjunct professor. Teaches design thinking, drafting, and 3D modeling to aspiring architects of all ages.",
+    subjects: ["Architectural Design", "AutoCAD", "SketchUp", "Portfolio Development", "Art & Design"],
+    hourlyRate: 70, rating: 4.7, photoUrl: "",
+    professionIds: ["p4", "p10"],
+    availability: "Tuesday/Thursday afternoons, Weekends",
+  },
+  {
+    id: "t5", name: "Priya Patel", title: "Law & Debate Coach",
+    bio: "Former litigator turned educator. Coaches mock trial, debate, and helps students develop the critical thinking skills essential for legal careers.",
+    subjects: ["Constitutional Law", "Debate", "Public Speaking", "Legal Writing", "LSAT Prep"],
+    hourlyRate: 80, rating: 4.8, photoUrl: "",
+    professionIds: ["p5"],
+    availability: "After school and weekends",
+  },
+  {
+    id: "t6", name: "Carlos Mendez", title: "Aviation & Engineering Instructor",
+    bio: "Commercial pilot and certified flight instructor with a background in aerospace engineering. Inspires the next generation of aviators.",
+    subjects: ["Aerospace Engineering", "Physics", "Flight Theory", "Mathematics", "Mechanical Engineering"],
+    hourlyRate: 90, rating: 4.9, photoUrl: "",
+    professionIds: ["p1", "p7", "p8"],
+    availability: "Weekday mornings and weekends",
+  },
+  {
+    id: "t7", name: "Aisha Thompson", title: "Art & Creative Design Mentor",
+    bio: "Award-winning graphic designer and illustrator. Helps students build portfolios, master design tools, and find their creative voice.",
+    subjects: ["Graphic Design", "Illustration", "Adobe Creative Suite", "Typography", "Portfolio Prep"],
+    hourlyRate: 60, rating: 4.6, photoUrl: "",
+    professionIds: ["p10"],
+    availability: "Flexible — online and in-person sessions",
+  },
+  {
+    id: "t8", name: "David Kim", title: "Data Science & Math Specialist",
+    bio: "Data scientist at a top tech company with a gift for making statistics and machine learning intuitive. Former math competition champion.",
+    subjects: ["Statistics", "Machine Learning", "Python", "SQL", "Calculus", "Linear Algebra"],
+    hourlyRate: 95, rating: 5.0, photoUrl: "",
+    professionIds: ["p2", "p11"],
+    availability: "Evenings and weekends",
+  },
+  {
+    id: "t9", name: "Rachel O'Brien", title: "Education & Teaching Prep Coach",
+    bio: "Veteran K-12 teacher and curriculum designer. Helps future teachers master classroom management, lesson planning, and teaching exams.",
+    subjects: ["Education Theory", "Classroom Management", "Praxis Prep", "Literacy Instruction", "Child Development"],
+    hourlyRate: 55, rating: 4.7, photoUrl: "",
+    professionIds: ["p12"],
+    availability: "After school hours and summers",
+  },
+  {
+    id: "t10", name: "Tony Ramirez", title: "Skilled Trades & Electrician Instructor",
+    bio: "Master electrician with 20 years in the field. Passionate about introducing young people to rewarding careers in the skilled trades.",
+    subjects: ["Electrical Theory", "Circuit Design", "Safety & Codes", "Apprenticeship Prep", "Math for Trades"],
+    hourlyRate: 50, rating: 4.8, photoUrl: "",
+    professionIds: ["p16"],
+    availability: "Weekday evenings, Saturday all day",
+  },
+];
+
+
 // ── Data access functions (mock → swap for sql() later) ────────────────────
 
 export function getAllProfessions(): Profession[] {
@@ -2297,4 +2394,33 @@ export function getSchoolStates(): string[] {
 
 export function getProfessionSpotlights(professionId: string): Professional[] {
   return professionals.filter((p) => p.professionId === professionId);
+}
+
+// ── Tutor data access functions ───────────────────────────────────────────
+
+export function getAllTutors(): Tutor[] {
+  return tutors;
+}
+
+export function getTutorById(id: string): Tutor | undefined {
+  return tutors.find((t) => t.id === id);
+}
+
+export function getTutorsByProfession(professionId: string): Tutor[] {
+  return tutors.filter((t) => t.professionIds.includes(professionId));
+}
+
+export function searchTutors(query: string): Tutor[] {
+  const q = query.toLowerCase();
+  return tutors.filter(
+    (t) =>
+      t.name.toLowerCase().includes(q) ||
+      t.subjects.some((s) => s.toLowerCase().includes(q)) ||
+      t.bio.toLowerCase().includes(q) ||
+      t.title.toLowerCase().includes(q),
+  );
+}
+
+export function getTutorSubjects(): string[] {
+  return [...new Set(tutors.flatMap((t) => t.subjects))].sort();
 }

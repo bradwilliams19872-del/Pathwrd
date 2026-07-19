@@ -6,6 +6,7 @@ import {
   getRoadmapStep,
   getAllGradeLevels,
   getFirstAvailableGrade,
+  getSchoolsByProfession,
 } from "~/lib/mock-data";
 
 const getRoadmapData = createServerFn({ method: "GET" }).handler(
@@ -16,7 +17,8 @@ const getRoadmapData = createServerFn({ method: "GET" }).handler(
     const gradeLevels = getAllGradeLevels();
     const activeGrade = data.grade || getFirstAvailableGrade(profession.id) || "k";
     const activeStep = getRoadmapStep(profession.id, activeGrade);
-    return { profession, allSteps, gradeLevels, activeGrade, activeStep };
+    const topSchools = getSchoolsByProfession(profession.id).slice(0, 3);
+    return { profession, allSteps, gradeLevels, activeGrade, activeStep, topSchools };
   },
 );
 
@@ -47,7 +49,7 @@ function RoadmapPage() {
     );
   }
 
-  const { profession, allSteps, gradeLevels, activeGrade, activeStep } = data;
+  const { profession, allSteps, gradeLevels, activeGrade, activeStep, topSchools } = data;
   const activeStepIndex = allSteps.findIndex((s) => s.gradeShortCode === activeGrade);
   const activeGradeIndex = gradeLevels.findIndex((g) => g.shortCode === activeGrade);
 
@@ -282,6 +284,65 @@ function RoadmapPage() {
             We are building out detailed guidance for every grade level. Check
             the highlighted grades above for available content.
           </p>
+        </div>
+      )}
+
+      {topSchools && topSchools.length > 0 && (
+        <div className="mt-12">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-2xl">🏫</span>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Top Schools for {profession.name}
+            </h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {topSchools.map(({ school, programName }) => (
+              <div
+                key={school.id}
+                className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start justify-between">
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {school.name}
+                  </h3>
+                  <span
+                    className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${
+                      school.type === "public"
+                        ? "bg-green-50 text-green-700"
+                        : "bg-purple-50 text-purple-700"
+                    }`}
+                  >
+                    {school.type}
+                  </span>
+                </div>
+                <p className="mt-1 text-sm font-medium text-indigo-600">
+                  {programName}
+                </p>
+                <div className="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                  <span>📍 {school.state}</span>
+                  {school.rankingInfo && (
+                    <>
+                      <span>·</span>
+                      <span>🏅 {school.rankingInfo}</span>
+                    </>
+                  )}
+                </div>
+                <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-gray-600">
+                  {school.description}
+                </p>
+                {school.websiteUrl && (
+                  <a
+                    href={school.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-indigo-600 hover:text-indigo-800"
+                  >
+                    Visit website →
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       )}
 

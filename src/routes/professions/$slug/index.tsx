@@ -18,7 +18,7 @@ const getProfessionDetail = createServerFn({ method: "GET" }).handler(
   },
 );
 
-export const Route = createFileRoute("/professions/$slug")({
+export const Route = createFileRoute("/professions/$slug/")({
   loader: ({ params }) => getProfessionDetail({ data: params.slug }),
   component: ProfessionDetail,
 });

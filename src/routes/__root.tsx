@@ -64,6 +64,7 @@ function NavBar({ user }: { user: AuthUser | null }) {
         </Link>
         <div className="flex items-center gap-1 sm:gap-2">
           <NavLink to="/professions">Professions</NavLink>
+          <NavLink to="/tutors">Tutors</NavLink>
           <NavLink to="/spotlights">Spotlights</NavLink>
           <NavLink to="/schools">Schools</NavLink>
           {user ? (
