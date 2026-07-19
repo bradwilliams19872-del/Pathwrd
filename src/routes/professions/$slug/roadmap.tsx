@@ -15,6 +15,8 @@ import {
   getQuizQuestionsByCheckpoint,
 } from "~/lib/mock-data";
 import type { Checkpoint, Badge, QuizQuestion } from "~/lib/mock-data";
+import { chatWithAiTutor, type ChatMessage } from "~/lib/ai-tutor";
+import { useRef, useEffect } from "react";
 
 const getRoadmapData = createServerFn({ method: "GET" }).handler(
   async ({ data }: { data: { slug: string; grade?: string } }) => {
@@ -175,6 +177,14 @@ function RoadmapPage() {
   const data = Route.useLoaderData();
   const navigate = Route.useNavigate();
   const [quizCheckpoint, setQuizCheckpoint] = useState<Checkpoint | null>(null);
+  const [aiOpen, setAiOpen] = useState(false);
+  const [aiMessages, setAiMessages] = useState<ChatMessage[]>([]);
+  const [aiInput, setAiInput] = useState("");
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiFreeLimitReached, setAiFreeLimitReached] = useState(false);
+  const [aiMessagesUsed, setAiMessagesUsed] = useState(0);
+  const aiChatEndRef = useRef<HTMLDivElement>(null);
+  const aiInputRef = useRef<HTMLInputElement>(null);
 
   if (!data) {
     return (
@@ -190,6 +200,47 @@ function RoadmapPage() {
   const { profession, allSteps, gradeLevels, activeGrade, activeStep, topSchools, checkpoints, activeCheckpoint, badges } = data;
   const activeStepIndex = allSteps.findIndex((s) => s.gradeShortCode === activeGrade);
   const activeGradeIndex = gradeLevels.findIndex((g) => g.shortCode === activeGrade);
+
+  useEffect(() => {
+    aiChatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [aiMessages]);
+
+  async function handleAiSend() {
+    const text = aiInput.trim();
+    if (!text || aiLoading || aiFreeLimitReached) return;
+    const userMessage: ChatMessage = { role: "user", content: text };
+    const updatedMessages = [...aiMessages, userMessage];
+    setAiMessages(updatedMessages);
+    setAiInput("");
+    setAiLoading(true);
+    try {
+      const result = await chatWithAiTutor({
+        data: {
+          messages: updatedMessages,
+          professionName: profession.name,
+          gradeName: activeStep?.gradeName ?? activeGrade,
+        },
+      });
+      setAiMessages((prev) => [...prev, { role: "assistant", content: result.reply }]);
+      setAiMessagesUsed(result.messagesUsed);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Something went wrong";
+      if (msg === "FREE_LIMIT_REACHED") {
+        setAiFreeLimitReached(true);
+      } else {
+        setAiMessages((prev) => [...prev, { role: "assistant", content: `Sorry, I ran into an issue: ${msg}. Please try again later.` }]);
+      }
+    } finally {
+      setAiLoading(false);
+    }
+  }
+
+  function handleAiKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleAiSend();
+    }
+  }
 
   const handleGradeChange = (newGrade: string) => {
     navigate({
@@ -494,6 +545,110 @@ function RoadmapPage() {
           questions={getQuizQuestionsByCheckpoint(quizCheckpoint.id)}
           onClose={() => setQuizCheckpoint(null)}
         />
+      )}
+
+      {/* AI Tutor Widget */}
+      {/* Floating button */}
+      <button
+        onClick={() => setAiOpen(!aiOpen)}
+        className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95"
+        title="Ask AI Tutor"
+      >
+        <span className="text-2xl">🤖</span>
+      </button>
+
+      {/* Slide-out panel */}
+      {aiOpen && (
+        <div className="fixed bottom-24 right-6 z-40 w-80 sm:w-96 rounded-2xl border border-gray-200 bg-white shadow-2xl overflow-hidden">
+          {/* Header */}
+          <div className="flex items-center justify-between bg-indigo-600 px-4 py-3 text-white">
+            <div className="flex items-center gap-2">
+              <span>🤖</span>
+              <span className="text-sm font-semibold">AI Tutor</span>
+            </div>
+            <button
+              onClick={() => setAiOpen(false)}
+              className="rounded-full p-1 hover:bg-white/20 transition-colors"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          {/* Context */}
+          <div className="border-b border-gray-100 bg-gray-50 px-4 py-2 text-xs text-gray-500">
+            {profession.iconEmoji} {profession.name} &bull; {activeStep?.gradeName ?? activeGrade}
+          </div>
+          {/* Messages */}
+          <div className="h-64 overflow-y-auto bg-white p-3">
+            {aiMessages.length === 0 && (
+              <div className="flex h-full items-center justify-center text-center">
+                <p className="text-xs text-gray-400">
+                  Ask me anything about {profession.name} or your studies!
+                </p>
+              </div>
+            )}
+            {aiMessages.map((msg, i) => (
+              <div
+                key={i}
+                className={`mb-2 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+              >
+                <div
+                  className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
+                    msg.role === "user"
+                      ? "bg-indigo-600 text-white"
+                      : "border border-gray-200 bg-gray-50 text-gray-800"
+                  }`}
+                >
+                  {msg.content}
+                </div>
+              </div>
+            ))}
+            {aiLoading && (
+              <div className="mb-2 flex justify-start">
+                <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-2">
+                  <div className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-gray-400" style={{ animationDelay: "0ms" }}></span>
+                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-gray-400" style={{ animationDelay: "150ms" }}></span>
+                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-gray-400" style={{ animationDelay: "300ms" }}></span>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div ref={aiChatEndRef} />
+          </div>
+          {/* Input / CTA */}
+          {aiFreeLimitReached ? (
+            <div className="border-t border-gray-100 bg-gradient-to-r from-indigo-50 to-purple-50 px-4 py-3 text-center">
+              <p className="text-xs font-medium text-gray-900">Subscribe for unlimited AI tutoring</p>
+              <Link to="/" className="mt-1 inline-block text-xs font-semibold text-indigo-600 hover:text-indigo-800">
+                Subscribe — $5/month →
+              </Link>
+            </div>
+          ) : (
+            <div className="border-t border-gray-100 p-2">
+              <div className="flex items-center gap-2">
+                <input
+                  ref={aiInputRef}
+                  type="text"
+                  value={aiInput}
+                  onChange={(e) => setAiInput(e.target.value)}
+                  onKeyDown={handleAiKeyDown}
+                  placeholder="Ask a question..."
+                  disabled={aiLoading}
+                  className="flex-1 rounded-lg border border-gray-200 px-3 py-1.5 text-xs text-gray-900 placeholder-gray-400 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-200 disabled:opacity-50"
+                />
+                <button
+                  onClick={handleAiSend}
+                  disabled={aiLoading || !aiInput.trim()}
+                  className="rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-700 disabled:opacity-50 transition-colors"
+                >
+                  {aiLoading ? "..." : "Send"}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       )}
     </main>
   );

@@ -16,6 +16,7 @@ mkdir -p .run
 # once node_modules is current.
 bun install
 bun run build
+bun run scripts/patch-route-tree.js
 setsid nohup env DATABASE_URL="${DATABASE_URL}" bun run start > .run/server.log 2>&1 < /dev/null &
 
 # Wait for the new server to actually answer before reporting success, so a
