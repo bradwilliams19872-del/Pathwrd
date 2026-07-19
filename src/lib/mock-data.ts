@@ -1,6 +1,7 @@
 import { extraRoadmapSteps } from "./roadmap-steps-extra";
 import { remainingRoadmapSteps } from "./roadmap-steps-remaining";
 import { missingRoadmapSteps } from "./roadmap-steps-missing";
+import { newProfessionsBatch3 } from "./new-professions-batch3";
 
 /**
  * Mock data layer for Pathwrd.
@@ -235,6 +236,51 @@ const professions: Profession[] = [
       "Install, maintain, and repair electrical systems that power our homes, businesses, and infrastructure. Electricians are skilled tradespeople who combine technical knowledge with hands-on expertise — one of the highest-demand and best-compensated skilled trades with clear apprenticeship-to-mastery pathways.",
     category: "Trades/Transportation",
     iconEmoji: "⚡",
+  },
+  {
+    id: "p17",
+    slug: "accountant",
+    name: "Accountant",
+    description:
+      "Manage financial records, prepare taxes, audit businesses, and guide financial strategy.",
+    category: "Business",
+    iconEmoji: "💰",
+  },
+  {
+    id: "p18",
+    slug: "physical-therapist",
+    name: "Physical Therapist",
+    description:
+      "Help patients recover from injuries, manage chronic conditions, and improve mobility.",
+    category: "Healthcare",
+    iconEmoji: "🏃",
+  },
+  {
+    id: "p19",
+    slug: "pharmacist",
+    name: "Pharmacist",
+    description:
+      "Dispense medications, counsel patients, and ensure safe use of prescription medicines.",
+    category: "Healthcare",
+    iconEmoji: "💊",
+  },
+  {
+    id: "p20",
+    slug: "environmental-scientist",
+    name: "Environmental Scientist",
+    description:
+      "Study the natural world and develop solutions to environmental problems.",
+    category: "STEM",
+    iconEmoji: "🌍",
+  },
+  {
+    id: "p21",
+    slug: "journalist",
+    name: "Journalist",
+    description:
+      "Investigate, report, and tell the stories that shape public understanding.",
+    category: "Creative",
+    iconEmoji: "📰",
   },
 ];
 
@@ -1913,6 +1959,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...extraRoadmapSteps,
   ...remainingRoadmapSteps,
   ...missingRoadmapSteps,
+  ...newProfessionsBatch3,
 ];
 
 const professionals: Professional[] = [
@@ -2174,6 +2221,41 @@ const schools: School[] = [
     description: "America's oldest public school (founded 1635) and Boston's premier exam school. Known for its rigorous classical curriculum, strong humanities and pre-law preparation, and top-tier college placement. Alumni include five signers of the Declaration of Independence and countless leaders in law and government.",
     rankingInfo: "#1 Public High School in Massachusetts (U.S. News) — exam school", websiteUrl: "https://www.bls.org/",
   },
+  {
+    id: "s26", name: "University of Illinois Urbana-Champaign", state: "IL", type: "public",
+    description: "Top-ranked public university with one of the nation's best accounting programs through the Gies College of Business. Strong CPA exam pass rates and Big 4 recruiting pipeline.",
+    rankingInfo: "#35 National University, #2 Accounting (U.S. News)", websiteUrl: "https://www.illinois.edu/",
+  },
+  {
+    id: "s27", name: "University of Southern California", state: "CA", type: "private",
+    description: "Home to a top-ranked Doctor of Physical Therapy (DPT) program through the USC Division of Biokinesiology and Physical Therapy. Strong clinical training in orthopedics, neurology, and sports medicine.",
+    rankingInfo: "#24 National University, Top DPT Program (U.S. News)", websiteUrl: "https://www.usc.edu/",
+  },
+  {
+    id: "s28", name: "University of Pittsburgh", state: "PA", type: "public",
+    description: "The Pitt School of Health and Rehabilitation Sciences houses a nationally renowned DPT program with strong clinical partnerships through UPMC, a world-class academic medical center.",
+    rankingInfo: "#62 National University, Top PT Program (U.S. News)", websiteUrl: "https://www.pitt.edu/",
+  },
+  {
+    id: "s29", name: "University of North Carolina at Chapel Hill", state: "NC", type: "public",
+    description: "The UNC Eshelman School of Pharmacy is consistently ranked among the nation's top pharmacy schools. Offers a 4-year Pharm.D. program with cutting-edge research and clinical training.",
+    rankingInfo: "#5 Public University, #1 Pharmacy School (U.S. News)", websiteUrl: "https://www.unc.edu/",
+  },
+  {
+    id: "s30", name: "University of California, San Francisco", state: "CA", type: "public",
+    description: "A graduate health sciences powerhouse — UCSF's School of Pharmacy is world-renowned for pharmaceutical research, clinical pharmacy, and drug development. Pharm.D. and Ph.D. programs.",
+    rankingInfo: "#1 Pharmacy School (U.S. News)", websiteUrl: "https://www.ucsf.edu/",
+  },
+  {
+    id: "s31", name: "Northwestern University", state: "IL", type: "private",
+    description: "Home to the Medill School of Journalism — one of the most prestigious journalism programs in the world. Medill integrates hands-on reporting with digital media, data journalism, and investigative techniques.",
+    rankingInfo: "#10 National University, #1 Journalism (Medill)", websiteUrl: "https://www.northwestern.edu/",
+  },
+  {
+    id: "s32", name: "Columbia University", state: "NY", type: "private",
+    description: "The Columbia Journalism School is the gold standard for graduate journalism education. Home of the Pulitzer Prizes, Columbia offers M.S., M.A., and dual-degree programs producing leaders in investigative, digital, and broadcast journalism.",
+    rankingInfo: "#13 National University, #1 Graduate Journalism (Columbia Journalism School)", websiteUrl: "https://www.columbia.edu/",
+  },
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -2220,6 +2302,21 @@ const professionSchools: ProfessionSchool[] = [
   // Dentist schools
   { professionId: "p13", schoolId: "s17", programName: "Doctor of Dental Surgery (D.D.S.) / Pre-Dental B.S." },
   { professionId: "p13", schoolId: "s18", programName: "Doctor of Dental Medicine (D.M.D.)" },
+  // Accountant schools
+  { professionId: "p17", schoolId: "s20", programName: "Accounting (B.B.A. / M.P.A. — McCombs School of Business)" },
+  { professionId: "p17", schoolId: "s26", programName: "Accountancy (B.S. / M.A.S. — Gies College of Business)" },
+  // Physical Therapist schools
+  { professionId: "p18", schoolId: "s27", programName: "Doctor of Physical Therapy (DPT — USC Division of Biokinesiology)" },
+  { professionId: "p18", schoolId: "s28", programName: "Doctor of Physical Therapy (DPT — Pitt SHRS)" },
+  // Pharmacist schools
+  { professionId: "p19", schoolId: "s29", programName: "Doctor of Pharmacy (Pharm.D. — UNC Eshelman School of Pharmacy)" },
+  { professionId: "p19", schoolId: "s30", programName: "Doctor of Pharmacy (Pharm.D. — UCSF School of Pharmacy)" },
+  // Environmental Scientist schools
+  { professionId: "p20", schoolId: "s3", programName: "Environmental Science / Environmental Earth Science (B.S.)" },
+  { professionId: "p20", schoolId: "s2", programName: "Earth Systems Program (B.S. / M.S.)" },
+  // Journalist schools
+  { professionId: "p21", schoolId: "s31", programName: "Journalism (B.S.J. / M.S.J. — Medill School of Journalism)" },
+  { professionId: "p21", schoolId: "s32", programName: "Journalism (M.S. / M.A. — Columbia Journalism School)" },
 ];
 
 const tutors: Tutor[] = [
