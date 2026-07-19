@@ -3,6 +3,7 @@ import { remainingRoadmapSteps } from "./roadmap-steps-remaining";
 import { missingRoadmapSteps } from "./roadmap-steps-missing";
 import { newProfessionsBatch3 } from "./new-professions-batch3";
 import { newProfessionsBatch4 } from "./new-professions-batch4";
+import { newProfessionsBatch5 } from "./new-professions-batch5";
 
 /**
  * Mock data layer for Pathwrd.
@@ -354,6 +355,51 @@ const professions: Profession[] = [
       "Install, repair, and maintain piping systems that keep water flowing in homes and buildings.",
     category: "Trades",
     iconEmoji: "🔧",
+  },
+  {
+    id: "p27",
+    slug: "architect",
+    name: "Architect",
+    description:
+      "Design and Create",
+    category: "Creative",
+    iconEmoji: "🏛️",
+  },
+  {
+    id: "p28",
+    slug: "veterinarian",
+    name: "Veterinarian",
+    description:
+      "Healthcare",
+    category: "Healthcare",
+    iconEmoji: "🐾",
+  },
+  {
+    id: "p29",
+    slug: "pilot",
+    name: "Pilot",
+    description:
+      "Transportation",
+    category: "Transportation",
+    iconEmoji: "✈️",
+  },
+  {
+    id: "p30",
+    slug: "chef",
+    name: "Chef",
+    description:
+      "Creative",
+    category: "Creative",
+    iconEmoji: "👨‍🍳",
+  },
+  {
+    id: "p31",
+    slug: "mechanical-engineer",
+    name: "Mechanical Engineer",
+    description:
+      "STEM",
+    category: "STEM",
+    iconEmoji: "⚙️",
   },
 ];
 
@@ -2034,6 +2080,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...missingRoadmapSteps,
   ...newProfessionsBatch3,
   ...newProfessionsBatch4,
+  ...newProfessionsBatch5,
 ];
 
 const professionals: Professional[] = [
@@ -2365,6 +2412,17 @@ const schools: School[] = [
     description: "Offers a unique B.S. in HVACR Engineering Technology and Energy Management — one of the few bachelor's-level programs for plumbing/HVAC professionals. Prepares students for master plumber licensing and construction management roles.",
     rankingInfo: "Top HVACR/Plumbing Engineering Technology Program", websiteUrl: "https://www.ferris.edu/",
   },
+  {
+    id: "s40", name: "The Culinary Institute of America", state: "NY", type: "private",
+    description: "The world's premier culinary college. Founded in 1946, the CIA offers associate and bachelor's degrees in culinary arts, baking & pastry arts, and food business management. Campuses in Hyde Park NY, Napa CA, San Antonio TX, and Singapore.",
+    rankingInfo: "#1 Culinary School in America", websiteUrl: "https://www.ciachef.edu/",
+  },
+  {
+    id: "s41", name: "Johnson & Wales University", state: "RI", type: "private",
+    description: "Renowned culinary and hospitality university with a hands-on approach to culinary education. Offers degrees in Culinary Arts, Baking & Pastry Arts, and Culinary Nutrition across campuses in Providence RI, Charlotte NC, Denver CO, and Miami FL.",
+    rankingInfo: "Top 5 Culinary School (U.S. News)", websiteUrl: "https://www.jwu.edu/",
+  },
+
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -2441,6 +2499,22 @@ const professionSchools: ProfessionSchool[] = [
   // Plumber schools
   { professionId: "p26", schoolId: "s38", programName: "Plumbing & HVAC Technology (Certificate / Diploma)" },
   { professionId: "p26", schoolId: "s39", programName: "HVACR Engineering Technology (B.S. — Plumbing Focus)" },
+  // Architect (p27) schools
+  { professionId: "p27", schoolId: "s7", programName: "Architecture (B.S. / M.Arch — Georgia Tech School of Architecture)" },
+  { professionId: "p27", schoolId: "s8", programName: "Architecture (M.Arch I / M.Arch II — Yale School of Architecture)" },
+  // Veterinarian (p28) schools
+  { professionId: "p28", schoolId: "s12", programName: "Veterinary Medicine (D.V.M. — Cornell College of Veterinary Medicine)" },
+  { professionId: "p28", schoolId: "s3", programName: "Animal Science / Pre-Vet Track (B.S. — UC Berkeley)" },
+  // Pilot (p29) schools
+  { professionId: "p29", schoolId: "s11", programName: "Aeronautical Science / Professional Flight (B.S. — Embry-Riddle)" },
+  { professionId: "p29", schoolId: "s10", programName: "Professional Flight Technology (B.S. — Purdue University)" },
+  // Chef (p30) schools
+  { professionId: "p30", schoolId: "s40", programName: "Culinary Arts (A.O.S. / B.P.S. — The Culinary Institute of America)" },
+  { professionId: "p30", schoolId: "s41", programName: "Culinary Arts & Food Service Management (B.S. — Johnson & Wales)" },
+  // Mechanical Engineer (p31) schools
+  { professionId: "p31", schoolId: "s1", programName: "Mechanical Engineering (B.S. / M.S. — MIT)" },
+  { professionId: "p31", schoolId: "s7", programName: "Mechanical Engineering (B.S.M.E. — Georgia Tech)" },
+
 ];
 
 
