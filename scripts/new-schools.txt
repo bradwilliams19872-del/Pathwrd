@@ -1,0 +1,35 @@
+  {
+    id: "s33", name: "Oklahoma State University", state: "OK", type: "public",
+    description: "Home to one of the nation's top Fire Protection and Safety Engineering Technology programs. OSU's College of Engineering, Architecture and Technology offers hands-on fire science training with live-burn labs and strong connections to municipal fire departments nationwide.",
+    rankingInfo: "#1 Fire Protection & Safety Engineering (U.S. News)", websiteUrl: "https://www.okstate.edu/",
+  },
+  {
+    id: "s34", name: "University of New Haven", state: "CT", type: "private",
+    description: "Renowned for its Fire Science and Emergency Management programs through the Henry C. Lee College of Criminal Justice and Forensic Sciences. Offers B.S. in Fire Science, Fire/Arson Investigation, and Emergency Management.",
+    rankingInfo: "Top Fire Science Program (FESHE recognized)", websiteUrl: "https://www.newhaven.edu/",
+  },
+  {
+    id: "s35", name: "University of California, San Diego", state: "CA", type: "public",
+    description: "Home to the Scripps Institution of Oceanography — one of the world's premier marine research institutions. Offers B.S. in Marine Biology, Oceanic and Atmospheric Sciences through a world-class research faculty.",
+    rankingInfo: "#28 National University, Top Marine Biology (Scripps)", websiteUrl: "https://www.ucsd.edu/",
+  },
+  {
+    id: "s36", name: "University of Michigan School of Social Work", state: "MI", type: "public",
+    description: "Consistently ranked as the #1 School of Social Work in the nation. Offers B.S.W., M.S.W., and Ph.D. programs with specializations in clinical practice, community organizing, and social policy.",
+    rankingInfo: "#1 Social Work Graduate School (U.S. News)", websiteUrl: "https://ssw.umich.edu/",
+  },
+  {
+    id: "s37", name: "Washington University in St. Louis", state: "MO", type: "private",
+    description: "The Brown School at WashU is a top-ranked school of social work and public health. Offers a highly regarded M.S.W. program with concentrations in clinical social work, social impact, and policy.",
+    rankingInfo: "#2 Social Work Graduate School (U.S. News)", websiteUrl: "https://www.wustl.edu/",
+  },
+  {
+    id: "s38", name: "Dunwoody College of Technology", state: "MN", type: "private",
+    description: "A leading private technical college with a strong Plumbing & HVAC program. Combines classroom learning with hands-on lab work on real plumbing systems — graduates are ready for apprenticeship entry and journeyman licensing.",
+    rankingInfo: "Top Technical College — Plumbing Program", websiteUrl: "https://www.dunwoody.edu/",
+  },
+  {
+    id: "s39", name: "Ferris State University", state: "MI", type: "public",
+    description: "Offers a unique B.S. in HVACR Engineering Technology and Energy Management — one of the few bachelor's-level programs for plumbing/HVAC professionals. Prepares students for master plumber licensing and construction management roles.",
+    rankingInfo: "Top HVACR/Plumbing Engineering Technology Program", websiteUrl: "https://www.ferris.edu/",
+  },

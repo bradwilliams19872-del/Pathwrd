@@ -2,6 +2,7 @@ import { extraRoadmapSteps } from "./roadmap-steps-extra";
 import { remainingRoadmapSteps } from "./roadmap-steps-remaining";
 import { missingRoadmapSteps } from "./roadmap-steps-missing";
 import { newProfessionsBatch3 } from "./new-professions-batch3";
+import { newProfessionsBatch4 } from "./new-professions-batch4";
 
 /**
  * Mock data layer for Pathwrd.
@@ -281,6 +282,51 @@ const professions: Profession[] = [
       "Investigate, report, and tell the stories that shape public understanding.",
     category: "Creative",
     iconEmoji: "📰",
+  },
+  {
+    id: "p22",
+    slug: "firefighter",
+    name: "Firefighter",
+    description:
+      "Protect communities by responding to fires, rescuing people, and providing emergency medical care.",
+    category: "Public Service",
+    iconEmoji: "🚒",
+  },
+  {
+    id: "p23",
+    slug: "marine-biologist",
+    name: "Marine Biologist",
+    description:
+      "Study ocean life and ecosystems to understand and protect marine environments.",
+    category: "STEM",
+    iconEmoji: "🐋",
+  },
+  {
+    id: "p24",
+    slug: "marketing-manager",
+    name: "Marketing Manager",
+    description:
+      "Lead marketing strategies to connect products with customers and drive brand growth.",
+    category: "Business",
+    iconEmoji: "📈",
+  },
+  {
+    id: "p25",
+    slug: "social-worker",
+    name: "Social Worker",
+    description:
+      "Help people overcome life challenges and connect them with essential resources and support.",
+    category: "Social Services",
+    iconEmoji: "🤲",
+  },
+  {
+    id: "p26",
+    slug: "plumber",
+    name: "Plumber",
+    description:
+      "Install, repair, and maintain piping systems that keep water flowing in homes and buildings.",
+    category: "Trades",
+    iconEmoji: "🔧",
   },
 ];
 
@@ -1960,6 +2006,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...remainingRoadmapSteps,
   ...missingRoadmapSteps,
   ...newProfessionsBatch3,
+  ...newProfessionsBatch4,
 ];
 
 const professionals: Professional[] = [
@@ -2256,6 +2303,41 @@ const schools: School[] = [
     description: "The Columbia Journalism School is the gold standard for graduate journalism education. Home of the Pulitzer Prizes, Columbia offers M.S., M.A., and dual-degree programs producing leaders in investigative, digital, and broadcast journalism.",
     rankingInfo: "#13 National University, #1 Graduate Journalism (Columbia Journalism School)", websiteUrl: "https://www.columbia.edu/",
   },
+  {
+    id: "s33", name: "Oklahoma State University", state: "OK", type: "public",
+    description: "Home to one of the nation's top Fire Protection and Safety Engineering Technology programs. OSU's College of Engineering, Architecture and Technology offers hands-on fire science training with live-burn labs and strong connections to municipal fire departments nationwide.",
+    rankingInfo: "#1 Fire Protection & Safety Engineering (U.S. News)", websiteUrl: "https://www.okstate.edu/",
+  },
+  {
+    id: "s34", name: "University of New Haven", state: "CT", type: "private",
+    description: "Renowned for its Fire Science and Emergency Management programs through the Henry C. Lee College of Criminal Justice and Forensic Sciences. Offers B.S. in Fire Science, Fire/Arson Investigation, and Emergency Management.",
+    rankingInfo: "Top Fire Science Program (FESHE recognized)", websiteUrl: "https://www.newhaven.edu/",
+  },
+  {
+    id: "s35", name: "University of California, San Diego", state: "CA", type: "public",
+    description: "Home to the Scripps Institution of Oceanography — one of the world's premier marine research institutions. Offers B.S. in Marine Biology, Oceanic and Atmospheric Sciences through a world-class research faculty.",
+    rankingInfo: "#28 National University, Top Marine Biology (Scripps)", websiteUrl: "https://www.ucsd.edu/",
+  },
+  {
+    id: "s36", name: "University of Michigan School of Social Work", state: "MI", type: "public",
+    description: "Consistently ranked as the #1 School of Social Work in the nation. Offers B.S.W., M.S.W., and Ph.D. programs with specializations in clinical practice, community organizing, and social policy.",
+    rankingInfo: "#1 Social Work Graduate School (U.S. News)", websiteUrl: "https://ssw.umich.edu/",
+  },
+  {
+    id: "s37", name: "Washington University in St. Louis", state: "MO", type: "private",
+    description: "The Brown School at WashU is a top-ranked school of social work and public health. Offers a highly regarded M.S.W. program with concentrations in clinical social work, social impact, and policy.",
+    rankingInfo: "#2 Social Work Graduate School (U.S. News)", websiteUrl: "https://www.wustl.edu/",
+  },
+  {
+    id: "s38", name: "Dunwoody College of Technology", state: "MN", type: "private",
+    description: "A leading private technical college with a strong Plumbing & HVAC program. Combines classroom learning with hands-on lab work on real plumbing systems — graduates are ready for apprenticeship entry and journeyman licensing.",
+    rankingInfo: "Top Technical College — Plumbing Program", websiteUrl: "https://www.dunwoody.edu/",
+  },
+  {
+    id: "s39", name: "Ferris State University", state: "MI", type: "public",
+    description: "Offers a unique B.S. in HVACR Engineering Technology and Energy Management — one of the few bachelor's-level programs for plumbing/HVAC professionals. Prepares students for master plumber licensing and construction management roles.",
+    rankingInfo: "Top HVACR/Plumbing Engineering Technology Program", websiteUrl: "https://www.ferris.edu/",
+  },
 ];
 
 const professionSchools: ProfessionSchool[] = [
@@ -2317,6 +2399,21 @@ const professionSchools: ProfessionSchool[] = [
   // Journalist schools
   { professionId: "p21", schoolId: "s31", programName: "Journalism (B.S.J. / M.S.J. — Medill School of Journalism)" },
   { professionId: "p21", schoolId: "s32", programName: "Journalism (M.S. / M.A. — Columbia Journalism School)" },
+  // Firefighter schools
+  { professionId: "p22", schoolId: "s33", programName: "Fire Protection & Safety Engineering Technology (B.S.)" },
+  { professionId: "p22", schoolId: "s34", programName: "Fire Science / Emergency Management (B.S.)" },
+  // Marine Biologist schools
+  { professionId: "p23", schoolId: "s35", programName: "Marine Biology (B.S. — Scripps Institution of Oceanography)" },
+  { professionId: "p23", schoolId: "s3", programName: "Marine Biology / Integrative Biology (B.S.)" },
+  // Marketing Manager schools
+  { professionId: "p24", schoolId: "s9", programName: "Marketing (B.S. — Wharton School)" },
+  { professionId: "p24", schoolId: "s31", programName: "Marketing (B.S. / M.B.A. — Kellogg School of Management)" },
+  // Social Worker schools
+  { professionId: "p25", schoolId: "s36", programName: "Social Work (B.S.W. / M.S.W. — UMich School of Social Work)" },
+  { professionId: "p25", schoolId: "s37", programName: "Social Work (M.S.W. — Brown School at WashU)" },
+  // Plumber schools
+  { professionId: "p26", schoolId: "s38", programName: "Plumbing & HVAC Technology (Certificate / Diploma)" },
+  { professionId: "p26", schoolId: "s39", programName: "HVACR Engineering Technology (B.S. — Plumbing Focus)" },
 ];
 
 const tutors: Tutor[] = [
