@@ -4,6 +4,7 @@ import { missingRoadmapSteps } from "./roadmap-steps-missing";
 import { newProfessionsBatch3 } from "./new-professions-batch3";
 import { newProfessionsBatch4 } from "./new-professions-batch4";
 import { newProfessionsBatch5 } from "./new-professions-batch5";
+import { newProfessionsBatch6 } from "./new-professions-batch6";
 
 /**
  * Mock data layer for Pathwrd.
@@ -400,6 +401,51 @@ const professions: Profession[] = [
       "STEM",
     category: "STEM",
     iconEmoji: "⚙️",
+  },
+  {
+    id: "p32",
+    slug: "nurse",
+    name: "Nurse",
+    description:
+      "Provide compassionate patient care, advocate for health, and save lives at the bedside. Nurses work across hospitals, clinics, schools, and communities — the largest and most trusted healthcare profession.",
+    category: "Healthcare",
+    iconEmoji: "🏥",
+  },
+  {
+    id: "p33",
+    slug: "dentist",
+    name: "Dentist",
+    description:
+      "Diagnose and treat oral health issues — from cavities and gum disease to complex dental surgeries. Dentists improve patients' health, confidence, and quality of life through preventive care, restorative procedures, and patient education.",
+    category: "Healthcare",
+    iconEmoji: "🦷",
+  },
+  {
+    id: "p34",
+    slug: "graphic-designer",
+    name: "Graphic Designer",
+    description:
+      "Communicate ideas through visual storytelling — typography, imagery, color, and layout. Graphic designers create logos, branding, publications, websites, packaging, and more. A career at the intersection of art, psychology, and technology.",
+    category: "Creative",
+    iconEmoji: "🎨",
+  },
+  {
+    id: "p35",
+    slug: "police-officer",
+    name: "Police Officer",
+    description:
+      "Protect and serve communities by enforcing laws, preventing crime, and responding to emergencies. Police officers build trust, ensure public safety, and uphold justice through courage, integrity, and community partnership.",
+    category: "Public Service",
+    iconEmoji: "👮",
+  },
+  {
+    id: "p36",
+    slug: "entrepreneur",
+    name: "Entrepreneur",
+    description:
+      "Identify opportunities, build businesses, and create value from ideas. Entrepreneurs start companies, drive innovation, create jobs, and shape industries — from tech startups to local small businesses to global enterprises.",
+    category: "Business",
+    iconEmoji: "💼",
   },
 ];
 
@@ -2081,6 +2127,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...newProfessionsBatch3,
   ...newProfessionsBatch4,
   ...newProfessionsBatch5,
+  ...newProfessionsBatch6,
 ];
 
 const professionals: Professional[] = [
@@ -2514,6 +2561,21 @@ const professionSchools: ProfessionSchool[] = [
   // Mechanical Engineer (p31) schools
   { professionId: "p31", schoolId: "s1", programName: "Mechanical Engineering (B.S. / M.S. — MIT)" },
   { professionId: "p31", schoolId: "s7", programName: "Mechanical Engineering (B.S.M.E. — Georgia Tech)" },
+  // Nurse (p32) schools
+  { professionId: "p32", schoolId: "s9", programName: "Penn Nursing (B.S.N. / M.S.N.)" },
+  { professionId: "p32", schoolId: "s4", programName: "Johns Hopkins School of Nursing (B.S.N.)" },
+  // Dentist (p33) schools
+  { professionId: "p33", schoolId: "s17", programName: "Doctor of Dental Surgery (D.D.S. — UMich School of Dentistry)" },
+  { professionId: "p33", schoolId: "s18", programName: "Doctor of Dental Medicine (D.M.D. — Harvard School of Dental Medicine)" },
+  // Graphic Designer (p34) schools
+  { professionId: "p34", schoolId: "s13", programName: "Graphic Design (B.F.A. — Rhode Island School of Design)" },
+  { professionId: "p34", schoolId: "s14", programName: "Design / Communication Design (B.F.A. — Carnegie Mellon)" },
+  // Police Officer (p35) schools
+  { professionId: "p35", schoolId: "s3", programName: "Criminal Justice / Criminology (B.A. — UC Berkeley)" },
+  { professionId: "p35", schoolId: "s20", programName: "Criminal Justice (B.S. — UT Austin)" },
+  // Entrepreneur (p36) schools
+  { professionId: "p36", schoolId: "s2", programName: "Entrepreneurship / Business (B.S. / M.B.A. — Stanford)" },
+  { professionId: "p36", schoolId: "s9", programName: "Entrepreneurship & Innovation (B.S. — Wharton / UPenn)" },
 
 ];
 
