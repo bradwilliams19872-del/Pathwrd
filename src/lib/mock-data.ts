@@ -6,6 +6,7 @@ import { newProfessionsBatch4 } from "./new-professions-batch4";
 import { newProfessionsBatch5 } from "./new-professions-batch5";
 import { newProfessionsBatch6 } from "./new-professions-batch6";
 import { newProfessionsBatch7 } from "./new-professions-batch7";
+import { newProfessionsBatch8 } from "./new-professions-batch8";
 
 /**
  * Mock data layer for Pathwrd.
@@ -492,6 +493,51 @@ const professions: Profession[] = [
       "Study the Earth — its rocks, minerals, landforms, and the 4.5-billion-year history written in stone. Geologists explore for natural resources, assess natural hazards like earthquakes and volcanoes, and help us understand the forces that shape our planet.",
     category: "STEM",
     iconEmoji: "🌋",
+  },
+  {
+    id: "p42",
+    slug: "speech-pathologist",
+    name: "Speech Pathologist",
+    description:
+      "Help people find their voice. Speech-language pathologists diagnose and treat communication disorders — from childhood speech delays and stuttering to adult stroke recovery and swallowing difficulties. They transform lives by giving people the ability to connect, express themselves, and be heard.",
+    category: "Healthcare",
+    iconEmoji: "🗣️",
+  },
+  {
+    id: "p43",
+    slug: "film-director",
+    name: "Film Director",
+    description:
+      "Bring stories to life on screen. Film directors are the creative visionaries behind movies, television shows, and documentaries — guiding actors, cinematographers, editors, and designers to create a unified artistic vision that moves and inspires audiences around the world.",
+    category: "Creative",
+    iconEmoji: "🎬",
+  },
+  {
+    id: "p44",
+    slug: "occupational-therapist",
+    name: "Occupational Therapist",
+    description:
+      "Empower people to live life to the fullest. Occupational therapists help individuals of all ages overcome physical, cognitive, and developmental challenges to perform everyday activities — from dressing and eating to working and playing — after injury, illness, or disability.",
+    category: "Healthcare",
+    iconEmoji: "🤲",
+  },
+  {
+    id: "p45",
+    slug: "investment-banker",
+    name: "Investment Banker",
+    description:
+      "Orchestrate the flow of capital that powers the global economy. Investment bankers advise corporations and governments on mergers, acquisitions, and raising capital — structuring complex financial deals that shape industries and drive economic growth.",
+    category: "Business",
+    iconEmoji: "💹",
+  },
+  {
+    id: "p46",
+    slug: "fashion-designer",
+    name: "Fashion Designer",
+    description:
+      "Shape how the world dresses and expresses itself. Fashion designers create clothing, accessories, and footwear that blend artistry with function — setting trends, building brands, and turning textiles into statements that define culture and personal identity.",
+    category: "Creative",
+    iconEmoji: "👗",
   },
 ];
 
@@ -2175,6 +2221,7 @@ const roadmapSteps: RoadmapStep[] = [
   ...newProfessionsBatch5,
   ...newProfessionsBatch6,
   ...newProfessionsBatch7,
+  ...newProfessionsBatch8,
 ];
 
 const professionals: Professional[] = [
@@ -2670,6 +2717,21 @@ const professionSchools: ProfessionSchool[] = [
   // Geologist (p41) schools
   { professionId: "p41", schoolId: "s44", programName: "Geology / Geoscience (B.S. / M.S. — Colorado School of Mines)" },
   { professionId: "p41", schoolId: "s45", programName: "Geosciences (B.S. / M.S. / Ph.D. — University of Arizona)" },
+  // Speech Pathologist (p42) schools
+  { professionId: "p42", schoolId: "s4", programName: "Speech-Language Pathology (M.S. — Johns Hopkins Department of Hearing and Speech)" },
+  { professionId: "p42", schoolId: "s30", programName: "Speech-Language Pathology (M.S. — UCSF Graduate Division)" },
+  // Film Director (p43) schools
+  { professionId: "p43", schoolId: "s27", programName: "Film & Television Production (B.A. / M.F.A. — USC School of Cinematic Arts)" },
+  { professionId: "p43", schoolId: "s43", programName: "Film, Television & Digital Media (B.A. / M.F.A. — UCLA School of Theater, Film and Television)" },
+  // Occupational Therapist (p44) schools
+  { professionId: "p44", schoolId: "s37", programName: "Occupational Therapy (M.S. / O.T.D. — Washington University in St. Louis)" },
+  { professionId: "p44", schoolId: "s28", programName: "Occupational Therapy (M.S. / O.T.D. — University of Pittsburgh)" },
+  // Investment Banker (p45) schools
+  { professionId: "p45", schoolId: "s9", programName: "Finance / Economics (B.S. — Wharton School, University of Pennsylvania)" },
+  { professionId: "p45", schoolId: "s32", programName: "Finance / Economics (B.S. — Columbia University)" },
+  // Fashion Designer (p46) schools
+  { professionId: "p46", schoolId: "s13", programName: "Fashion Design (B.F.A. — Rhode Island School of Design)" },
+  { professionId: "p46", schoolId: "s46", programName: "Fashion Design (B.F.A. / M.F.A. — NYU Steinhardt)" },
 
 ];
 
